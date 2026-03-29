@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>格安SIM・スマホプラン比較【2026年最新】| 暮らしお得</title>
+<meta name="description" content="楽天モバイル・ahamo・LINEMO等の格安SIM 10社を中立比較。各社のメリット・デメリット・通信品質を正直にレビュー。乗り換えで年間¥48,000以上節約。">
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+  /* Tab navigation */
+  .rank-tab {
+    background: none; border: none;
+    padding: 12px 20px;
+    font-size: 13px; font-weight: 700;
+    color: var(--ink-muted);
+    cursor: pointer; font-family: inherit;
+    border-bottom: 3px solid transparent;
+    margin-bottom: -2px;
+    transition: all .15s;
+    white-space: nowrap;
+  }
+  .rank-tab:hover { color: var(--ink); }
+  .rank-tab.active {
+    color: var(--pink);
+    border-bottom-color: var(--pink);
+  }
+
+  /* Rank badge on cards */
+  .rank-badge {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 24px; height: 24px; border-radius: 50%;
+    font-size: 12px; font-weight: 900; color: #fff;
+    flex-shrink: 0;
+  }
+  .rank-1 { background: var(--pink); }
+  .rank-2 { background: #333; }
+  .rank-3 { background: #888; }
+  .rank-other { background: var(--border); color: var(--ink-muted); }
+
+  .timeline { margin: 16px 0; }
+  }
+  .timeline-step:first-child { border-radius: 10px 0 0 10px; }
+  .timeline-step:last-child { border-radius: 0 10px 10px 0; }
+  .timeline-step.current { background: var(--crimson-light); border-color: var(--pink); }
+  .timeline-year { font-size: 13px; font-weight: 800; margin-bottom: 4px; }
+  .timeline-data { font-size: 18px; font-weight: 900; color: var(--pink); }
+  .timeline-note { font-size: 10px; color: var(--ink-muted); margin-top: 3px; }
+
+  @media (max-width: 768px) {
+    .plan-top { grid-template-columns: 1fr 1fr; }
+    .carrier-col { grid-column: 1 / -1; }
+    .cta-col { flex-direction: row; grid-column: 1 / -1; }
+    .plan-bottom { grid-template-columns: 1fr; }
+    .timeline { flex-direction: column; }
+    .timeline-step { border-radius: 0 !important; }
+    .timeline-step:first-child { border-radius: 10px 10px 0 0 !important; }
+    .timeline-step:last-child { border-radius: 0 0 10px 10px !important; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ── HEADER ── -->
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">暮らし<span>お得</span></a>
+    <ul class="nav-links">
+      <li><a href="../index.html">トップ</a></li>
+      <li><a href="index.html" class="active">格安SIM比較</a></li>
+      <li><a href="../credit-cards/index.html">クレジットカード</a></li>
+    </ul>
+    <div class="lang-switcher">
+      <button class="lang-btn" data-lang="ja">日本語</button>
+      <button class="lang-btn" data-lang="en">EN</button>
+      <button class="lang-btn" data-lang="zh-tw">繁中</button>
+      <button class="lang-btn" data-lang="vi">Vi</button>
+      <button class="lang-btn" data-lang="my">MY</button>
+    </div>
+  </div>
+</header>
+
+<!-- ── HERO ── -->
+<section style="padding:48px 24px 40px; border-bottom:1px solid var(--border);">
+  <div class="wrap-narrow" style="text-align:center;">
+    <p class="section-label">格安SIM・スマホプラン比較 2026</p>
+    <h1 style="font-size:clamp(22px,4vw,34px); font-weight:900;">メリット・デメリットで正直比較</h1>
+    <p style="font-size:14px; color:var(--ink-muted); margin-top:8px;">10キャリアの料金・速度・通信品質・弱点を忖度なしで掲載しています</p>
+  </div>
+</section>
+
+<!-- ── MAIN ── -->
+<div class="wrap" style="padding-top:32px;">
+
+  <!-- ── RANKING TABS ── -->
+  <div class="ranking-tabs" style="display:flex; gap:0; border-bottom:2px solid var(--border); margin-bottom:24px; overflow-x:auto;">
+    <button class="rank-tab active" data-tab="overall">総合ランキング</button>
+    <button class="rank-tab" data-tab="cost">コスパ重視</button>
+    <button class="rank-tab" data-tab="speed">速度・安定性重視</button>
+    <button class="rank-tab" data-tab="light">ライトユーザー向け</button>
+    <button class="rank-tab" data-tab="foreigner">外国人向け</button>
+  </div>
+
+  <!-- Tab descriptions -->
+  <div class="tab-desc" data-for="overall" style="margin-bottom:20px;">
+    <h2 class="section-heading">格安SIM 総合ランキング <span class="tag-new">2026年3月</span></h2>
+    <p class="section-desc">料金・速度・サービス・ポイント還元を総合評価。※価格はすべて税込</p>
+  </div>
+  <div class="tab-desc" data-for="cost" style="margin-bottom:20px; display:none;">
+    <h2 class="section-heading">コスパ重視ランキング</h2>
+    <p class="section-desc">月額料金の安さ × データ量のバランスで評価</p>
+  </div>
+  <div class="tab-desc" data-for="speed" style="margin-bottom:20px; display:none;">
+    <h2 class="section-heading">速度・安定性ランキング</h2>
+    <p class="section-desc">みんなのネット回線速度・価格.com実測・複数サイトの2026年3月データに基づく。昼12時台に速度低下しないMNO回線が上位</p>
+    <div style="margin-top:12px; padding:14px 16px; background:var(--bg-alt); border-radius:12px; font-size:12px; color:var(--ink-soft); line-height:1.7;">
+      <strong>参考実測値（2026年3月）：</strong>
+      ahamo 127Mbps / povo 140Mbps / LINEMO 119-124Mbps / UQ mobile 107-109Mbps / mineo 87Mbps（昼は低下） / 楽天モバイル 62-82Mbps / IIJmio 74Mbps（昼は低下）
+      <br><span style="color:var(--ink-faint);">出典：みんなのネット回線速度、価格.comマガジン、各比較サイト実測データ</span>
+    </div>
+  </div>
+  <div class="tab-desc" data-for="light" style="margin-bottom:20px; display:none;">
+    <h2 class="section-heading">ライトユーザー向けランキング</h2>
+    <p class="section-desc">月5GB以下・とにかく安く使いたい人向け</p>
+  </div>
+  <div class="tab-desc" data-for="foreigner" style="margin-bottom:20px; display:none;">
+    <h2 class="section-heading">外国人にもおすすめランキング</h2>
+    <p class="section-desc">在留カードで申込可・英語対応・オンライン完結で選定</p>
+  </div>
+
+  <!-- ═══ PLAN CARDS ═══ -->
+  <!-- Each card has data-carrier for JS reordering -->
+
+  <div id="plans-container">
+
+  <!-- 1. Rakuten Mobile -->
+  <div class="plan-card" data-carrier="rakuten">
+    <div class="plan-top">
+      <div class="carrier-col">
+        <div class="carrier-logo logo-rakuten">R</div>
+        <div>
+          <div class="carrier-name">楽天モバイル</div>
+          <div class="carrier-sub">最強プラン（MNO）</div>
+        </div>
+      </div>
+      <div class="data-col">
+        <div class="data-main">∞</div>
+        <div class="data-note">3GB / 20GB / 無制限</div>
+      </div>
+      <div class="price-col">
+        <div class="price-val best">¥968〜</div>
+        <div class="price-unit">無制限 ¥3,168</div>
+      </div>
+      <div class="speed-col">制限なし<br><small style="color:var(--ink-muted)">無制限</small></div>
+      <div class="contract-col no-contract">縛りなし<br>解約金¥0</div>
+      <div class="cta-col">
+        <a href="#" class="btn btn-sm btn-pink">公式サイト →</a>
+        <a href="#" class="btn btn-sm btn-ghost" style="font-size:12px;">詳細</a>
+      </div>
+    </div>
+    <div class="plan-bottom">
+      <div class="pro-list">
+        <strong>メリット</strong>
+        <ul>
+          <li>データ無制限¥3,168は国内最安クラス</li>
+          <li>Rakuten Linkで国内通話が無料</li>
+          <li>海外100ヵ国以上で2GBまで無料ローミング</li>
+          <li>楽天市場SPU +5倍（楽天経済圏ユーザーに大きい）</li>
+          <li>家族割 -¥110/月、こども割 -¥440/月</li>
+          <li>3GB¥968〜の段階制で無駄がない</li>
+        </ul>
+      </div>
+      <div class="con-list">
+        <strong>デメリット</strong>
+        <ul>
+          <li>地下・ビル内で電波が弱い場合がある（プラチナバンド展開中）</li>
+          <li>Rakuten Link通話の音質がVoLTEより劣る</li>
+          <li>一部エリアはau回線ローミング（自社回線ではない）</li>
+          <li>店舗数が大手3社より少ない</li>
+          <li>楽天経済圏に興味がなければポイントの恩恵が薄い</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. ahamo -->
+  <div class="plan-card" data-carrier="ahamo">
+    <div class="plan-top">
+      <div class="carrier-col">
+        <div class="carrier-logo logo-docomo">ah</div>
+        <div>
+          <div class="carrier-name">ahamo</div>
+          <div class="carrier-sub">docomo系（オンライン専用）</div>
+        </div>
+      </div>
+      <div class="data-col">
+        <div class="data-main">30GB</div>
+        <div class="data-note">大盛り110GBも有</div>
+      </div>
+      <div class="price-col">
+        <div class="price-val">¥2,970</div>
+        <div class="price-unit">大盛り¥4,950</div>
+      </div>
+      <div class="speed-col">1Mbps<br><small style="color:var(--ink-muted)">制限後</small></div>
+      <div class="contract-col no-contract">縛りなし</div>
+      <div class="cta-col">
+        <a href="#" class="btn btn-sm btn-ghost">公式サイト →</a>
+        <a href="#" class="btn btn-sm btn-ghost" style="font-size:12px;">詳細</a>
+      </div>
+    </div>
+    <div class="plan-bottom">
+      <div class="pro-list">
+        <strong>メリット</strong>
+        <ul>
+          <li>ドコモ回線で通信品質トップクラス</li>
+          <li>5分かけ放題が標準付帯</li>
+          <li>30GB ¥2,970はシンプルでわかりやすい</li>
+          <li>海外82ヵ国でデータ通信可能</li>
+          <li>実測速度が格安SIM中で最速レベル</li>
+        </ul>
+      </div>
+      <div class="con-list">
+        <strong>デメリット</strong>
+        <ul>
+          <li>店頭サポートは有料（¥3,300/回）</li>
+          <li>家族割の対象外（カウントのみ）</li>
+          <li>データ繰り越しなし</li>
+          <li>小容量プランがない（30GBからのみ）</li>
+          <li>キャリアメール非対応</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. LINEMO -->
+  <div class="plan-card" data-carrier="linemo">
+    <div class="plan-top">
+      <div class="carrier-col">
+        <div class="carrier-logo logo-linemo">L</div>
+        <div>
+          <div class="carrier-name">LINEMO</div>
+          <div class="carrier-sub">SoftBank系（ベストプラン）</div>
+        </div>
+      </div>
+      <div class="data-col">
+        <div class="data-main">10GB</div>
+        <div class="data-note">V 30GB</div>
+      </div>
+      <div class="price-col">
+        <div class="price-val">¥990〜</div>
+        <div class="price-unit">V ¥2,970</div>
+      </div>
+      <div class="speed-col">1Mbps<br><small style="color:var(--ink-muted)">制限後</small></div>
+      <div class="contract-col no-contract">縛りなし</div>
+      <div class="cta-col">
+        <a href="#" class="btn btn-sm btn-ghost">公式サイト →</a>
+        <a href="#" class="btn btn-sm btn-ghost" style="font-size:12px;">詳細</a>
+      </div>
+    </div>
+    <div class="plan-bottom">
+      <div class="pro-list">
+        <strong>メリット</strong>
+        <ul>
+          <li>LINEのトーク・通話がデータ消費ゼロ（LINEギガフリー）</li>
+          <li>SoftBank回線で通信品質が安定</li>
+          <li>3GBまで¥990は業界最安水準</li>
+          <li>段階制で使った分だけ支払い</li>
+        </ul>
+      </div>
+      <div class="con-list">
+        <strong>デメリット</strong>
+        <ul>
+          <li>店頭サポートなし（完全オンライン）</li>
+          <li>プランが2種類のみで選択肢が少ない</li>
+          <li>家族割なし</li>
+          <li>留守電・転送電話は有料オプション</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. IIJmio -->
+  <div class="plan-card" data-carrier="iijmio">
+    <div class="plan-top">
+      <div class="carrier-col">
+        <div class="carrier-logo logo-iij">IIJ</div>
+        <div>
+          <div class="carrier-name">IIJmio</div>
+          <div class="carrier-sub">ギガプラン（MVNO）</div>
+        </div>
+      </div>
+      <div class="data-col">
+        <div class="data-main">5GB</div>
+        <div class="data-note">2〜50GB選択可</div>
+      </div>
+      <div class="price-col">
+        <div class="price-val">¥950</div>
+        <div class="price-unit">2GB ¥850〜</div>
+      </div>
+      <div class="speed-col">200kbps<br><small style="color:var(--ink-muted)">制限後</small></div>
+      <div class="contract-col no-contract">縛りなし</div>
+      <div class="cta-col">
+        <a href="#" class="btn btn-sm btn-ghost">公式サイト →</a>
+        <a href="#" class="btn btn-sm btn-ghost" style="font-size:12px;">詳細</a>
+      </div>
+    </div>
+    <div class="plan-bottom">
+      <div class="pro-list">
+        <strong>メリット</strong>
+        <ul>
+          <li>GB単価が業界最安クラス</li>
+          <li>2〜50GBまで細かく選べる</li>
+          <li>eSIM対応・複数回線まとめ管理が便利</li>
+          <li>端末セット販売が豊富で安い</li>
+          <li>データシェア・繰り越し対応</li>
+        </ul>
+      </div>
+      <div class="con-list">
+        <strong>デメリット</strong>
+        <ul>
+          <li>昼12時台は通信速度が大幅低下（MVNO共通の課題）</li>
+          <li>店頭サポートがほぼない</li>
+          <li>通話オプションの自由度が低い</li>
+          <li>初期費用（SIM発行手数料）がかかる</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5. mineo -->
+  <div class="plan-card" data-carrier="mineo">
+    <div class="plan-top">
+      <div class="carrier-col">
+        <div class="carrier-logo logo-mineo">m</div>
+        <div>
+          <div class="carrier-name">mineo</div>
+          <div class="carrier-sub">マイピタ / マイそく（MVNO）</div>
+        </div>
+      </div>
+      <div class="data-col">
+        <div class="data-main">7GB</div>
+        <div class="data-note">3〜50GB / 使い放題</div>
+      </div>
+      <div class="price-col">
+        <div class="price-val">¥1,518</div>
+        <div class="price-unit">3GB ¥1,298〜</div>
+      </div>
+      <div class="speed-col">200kbps<br><small style="color:var(--ink-muted)">制限後</small></div>
+      <div class="contract-col no-contract">縛りなし</div>
+      <div class="cta-col">
+        <a href="#" class="btn btn-sm btn-ghost">公式サイト →</a>
+        <a href="#" class="btn btn-sm btn-ghost" style="font-size:12px;">詳細</a>
+      </div>
+    </div>
+    <div class="plan-bottom">
+      <div class="pro-list">
+        <strong>メリット</strong>
+        <ul>
+          <li>「マイそく」で最大3Mbps使い放題¥990（ユニーク）</li>
+          <li>3大キャリア回線から選べる（ドコモ/au/SoftBank）</li>
+          <li>コミュニティ（マイネ王）でのサポートが充実</li>
+          <li>余ったデータを他ユーザーとシェアできる「フリータンク」</li>
+        </ul>
+      </div>
+      <div class="con-list">
+        <strong>デメリット</strong>
+        <ul>
+          <li>マイそくは平日昼12時台が最大32kbps（ほぼ使えない）</li>
+          <li>MVNOのため混雑時の速度低下あり</li>
+          <li>料金はIIJmioより若干高い</li>
+          <li>5G対応が限定的</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- 6. povo -->
+  <div class="plan-card" data-carrier="povo">
+    <div class="plan-top">
+      <div class="carrier-col">
+        <div class="carrier-logo logo-povo">pv</div>
+        <div>
+          <div class="carrier-name">povo 2.0</div>
+          <div class="carrier-sub">au系（トッピング制）</div>
+        </div>
+      </div>
+      <div class="data-col">
+        <div class="data-main">都度</div>
+        <div class="data-note">3GB ¥990/30日</div>
+      </div>
+      <div class="price-col">
+        <div class="price-val">¥0〜</div>
+        <div class="price-unit">基本料¥0</div>
+      </div>
+      <div class="speed-col">128kbps<br><small style="color:var(--ink-muted)">基本時</small></div>
+      <div class="contract-col no-contract">縛りなし</div>
+      <div class="cta-col">
+        <a href="#" class="btn btn-sm btn-ghost">公式サイト →</a>
+        <a href="#" class="btn btn-sm btn-ghost" style="font-size:12px;">詳細</a>
+      </div>
+    </div>
+    <div class="plan-bottom">
+      <div class="pro-list">
+        <strong>メリット</strong>
+        <ul>
+          <li>基本料¥0で回線維持できる（サブ回線に最適）</li>
+          <li>au回線で通信品質が高い</li>
+          <li>24時間使い放題¥330が便利（旅行・出張時）</li>
+          <li>使わない月は¥0で維持可能</li>
+        </ul>
+      </div>
+      <div class="con-list">
+        <strong>デメリット</strong>
+        <ul>
+          <li>月額プラン制ではなく都度購入が面倒</li>
+          <li>データトッピングに有効期限がある</li>
+          <li>180日間トッピング未購入で利用停止の可能性</li>
+          <li>店頭サポートなし（完全オンライン）</li>
+          <li>かけ放題がない</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- 7. UQ mobile -->
+  <div class="plan-card" data-carrier="uq">
+    <div class="plan-top">
+      <div class="carrier-col">
+        <div class="carrier-logo logo-uq">UQ</div>
+        <div>
+          <div class="carrier-name">UQ mobile</div>
+          <div class="carrier-sub">au系（サブブランド）</div>
+        </div>
+      </div>
+      <div class="data-col">
+        <div class="data-main">20GB</div>
+        <div class="data-note">コミコミプラン</div>
+      </div>
+      <div class="price-col">
+        <div class="price-val">¥3,278</div>
+        <div class="price-unit">ミニミニ4GB ¥2,365〜</div>
+      </div>
+      <div class="speed-col">1Mbps<br><small style="color:var(--ink-muted)">制限後</small></div>
+      <div class="contract-col no-contract">縛りなし</div>
+      <div class="cta-col">
+        <a href="#" class="btn btn-sm btn-ghost">公式サイト →</a>
+        <a href="#" class="btn btn-sm btn-ghost" style="font-size:12px;">詳細</a>
+      </div>
+    </div>
+    <div class="plan-bottom">
+      <div class="pro-list">
+        <strong>メリット</strong>
+        <ul>
+          <li>au回線で通信品質が安定（MVNOではない）</li>
+          <li>全国のau/UQショップで対面サポート可</li>
+          <li>データ繰り越し対応</li>
+          <li>自宅セット割でさらに安くなる</li>
+        </ul>
+      </div>
+      <div class="con-list">
+        <strong>デメリット</strong>
+        <ul>
+          <li>最安¥2,365〜でMVNOよりは割高</li>
+          <li>割引なしだと価格メリットが薄い</li>
+          <li>プラン構成がやや複雑</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- 8. docomo -->
+  <div class="plan-card" data-carrier="docomo">
+    <div class="plan-top">
+      <div class="carrier-col">
+        <div class="carrier-logo logo-docomo">d</div>
+        <div>
+          <div class="carrier-name">NTTドコモ</div>
+          <div class="carrier-sub">ドコモ MAX / mini</div>
+        </div>
+      </div>
+      <div class="data-col">
+        <div class="data-main">無制限</div>
+        <div class="data-note">mini 4GB/10GBも有</div>
+      </div>
+      <div class="price-col">
+        <div class="price-val">¥7,315</div>
+        <div class="price-unit">mini ¥1,628〜</div>
+      </div>
+      <div class="speed-col">1Mbps<br><small style="color:var(--ink-muted)">制限後</small></div>
+      <div class="contract-col no-contract">縛りなし</div>
+      <div class="cta-col">
+        <a href="#" class="btn btn-sm btn-ghost">公式サイト →</a>
+        <a href="#" class="btn btn-sm btn-ghost" style="font-size:12px;">詳細</a>
+      </div>
+    </div>
+    <div class="plan-bottom">
+      <div class="pro-list">
+        <strong>メリット</strong>
+        <ul>
+          <li>通信品質・エリアカバーが国内最高水準</li>
+          <li>全国のドコモショップで手厚いサポート</li>
+          <li>家族割・光セット割で大幅値引き可能</li>
+          <li>dポイント経済圏が充実</li>
+        </ul>
+      </div>
+      <div class="con-list">
+        <strong>デメリット</strong>
+        <ul>
+          <li>無制限¥7,315は格安SIMの2倍以上</li>
+          <li>割引なしの場合、価格が非常に高い</li>
+          <li>プラン体系が頻繁に変わり複雑</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- 9. au -->
+  <div class="plan-card" data-carrier="au">
+    <div class="plan-top">
+      <div class="carrier-col">
+        <div class="carrier-logo logo-au">au</div>
+        <div>
+          <div class="carrier-name">au (KDDI)</div>
+          <div class="carrier-sub">バリューリンクプラン / 使い放題MAX+</div>
+        </div>
+      </div>
+      <div class="data-col">
+        <div class="data-main">無制限</div>
+        <div class="data-note">使い放題MAX+</div>
+      </div>
+      <div class="price-col">
+        <div class="price-val">¥7,238</div>
+        <div class="price-unit">月額（税込）</div>
+      </div>
+      <div class="speed-col">1Mbps<br><small style="color:var(--ink-muted)">制限後</small></div>
+      <div class="contract-col no-contract">縛りなし</div>
+      <div class="cta-col">
+        <a href="#" class="btn btn-sm btn-ghost">公式サイト →</a>
+        <a href="#" class="btn btn-sm btn-ghost" style="font-size:12px;">詳細</a>
+      </div>
+    </div>
+    <div class="plan-bottom">
+      <div class="pro-list">
+        <strong>メリット</strong>
+        <ul>
+          <li>エンタメバンドルが豊富（Netflix, DAZN等）</li>
+          <li>通信品質が高い（全国エリア充実）</li>
+          <li>auショップで対面サポート可</li>
+          <li>Pontaポイント連携</li>
+        </ul>
+      </div>
+      <div class="con-list">
+        <strong>デメリット</strong>
+        <ul>
+          <li>月額¥7,238〜は高額</li>
+          <li>エンタメ不要でも価格が変わらない</li>
+          <li>プランが複雑で比較しにくい</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- 10. SoftBank -->
+  <div class="plan-card" data-carrier="softbank">
+    <div class="plan-top">
+      <div class="carrier-col">
+        <div class="carrier-logo logo-soft">S</div>
+        <div>
+          <div class="carrier-name">SoftBank</div>
+          <div class="carrier-sub">メリハリ無制限+</div>
+        </div>
+      </div>
+      <div class="data-col">
+        <div class="data-main">無制限</div>
+        <div class="data-note">ペイトク無制限も有</div>
+      </div>
+      <div class="price-col">
+        <div class="price-val">¥7,425</div>
+        <div class="price-unit">月額（税込）</div>
+      </div>
+      <div class="speed-col">1Mbps<br><small style="color:var(--ink-muted)">制限後</small></div>
+      <div class="contract-col no-contract">縛りなし</div>
+      <div class="cta-col">
+        <a href="#" class="btn btn-sm btn-ghost">公式サイト →</a>
+        <a href="#" class="btn btn-sm btn-ghost" style="font-size:12px;">詳細</a>
+      </div>
+    </div>
+    <div class="plan-bottom">
+      <div class="pro-list">
+        <strong>メリット</strong>
+        <ul>
+          <li>PayPayポイント高還元（ペイトクプラン）</li>
+          <li>通信品質が安定</li>
+          <li>SoftBankショップで対面サポート</li>
+          <li>Yahoo!プレミアム特典付き</li>
+        </ul>
+      </div>
+      <div class="con-list">
+        <strong>デメリット</strong>
+        <ul>
+          <li>月額¥7,425は3大キャリアで最高額</li>
+          <li>ペイトク無制限¥9,625はかなり高い</li>
+          <li>PayPay経済圏に興味がないとメリットが薄い</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  </div><!-- /plans-container -->
+
+  <!-- ═══ RAKUTEN COVERAGE IMPROVEMENT ═══ -->
+  <h2 class="section-heading mt-4">楽天モバイルの電波問題 — 本当に改善しているのか？</h2>
+  <p class="section-desc">「楽天は地下で繋がらない」はまだ本当？最新データで検証します</p>
+
+  <div class="card mb-3">
+    <h3 style="font-size:16px; font-weight:800; margin-bottom:16px;">人口カバー率の推移</h3>
+    <div class="timeline">
+      <div class="timeline-step">
+        <div class="timeline-year">2021</div>
+        <div class="timeline-data">73%</div>
+        <div class="timeline-note">サービス開始初期<br>au回線に大きく依存</div>
+      </div>
+      <div class="timeline-step">
+        <div class="timeline-year">2022</div>
+        <div class="timeline-data">96%</div>
+        <div class="timeline-note">総務省への計画を<br>4年前倒しで達成</div>
+      </div>
+      <div class="timeline-step">
+        <div class="timeline-year">2023</div>
+        <div class="timeline-data">99%</div>
+        <div class="timeline-note">基地局6万超<br>99.9%到達</div>
+      </div>
+      <div class="timeline-step">
+        <div class="timeline-year">2024</div>
+        <div class="timeline-data">99.9%</div>
+        <div class="timeline-note">プラチナバンド<br>(700MHz) 運用開始</div>
+      </div>
+      <div class="timeline-step current">
+        <div class="timeline-year">2026</div>
+        <div class="timeline-data">拡大中</div>
+        <div class="timeline-note">地下鉄95%対策済<br>7月完了予定</div>
+      </div>
+    </div>
+
+    <div style="margin-top:20px;">
+      <h4 style="font-size:14px; font-weight:800; margin-bottom:10px;">地下鉄・ビル内の改善状況</h4>
+      <div class="grid-2" style="gap:12px;">
+        <div style="background:var(--green-bg); border-radius:8px; padding:14px;">
+          <div style="font-size:12px; font-weight:700; color:var(--green); margin-bottom:6px;">改善済み（2026年3月時点）</div>
+          <ul style="font-size:12px; color:#1b5e20; line-height:1.8; padding-left:16px;">
+            <li>東京メトロ・都営地下鉄：約95%対策完了（7月に100%予定）</li>
+            <li>小田急・東急・京成・りんかい線・京王・相鉄・東京モノレール：地下区間100%完了</li>
+            <li>通信帯域を5MHz→20MHzに拡張（4倍のトラフィック対応）</li>
+            <li>83.2%のユーザーが電波改善を実感（2024年比 +5.4pt）</li>
+          </ul>
+        </div>
+        <div style="background:var(--orange-bg); border-radius:8px; padding:14px;">
+          <div style="font-size:12px; font-weight:700; color:var(--orange); margin-bottom:6px;">まだ課題あり</div>
+          <ul style="font-size:12px; color:#9a3412; line-height:1.8; padding-left:16px;">
+            <li>プラチナバンド(700MHz)はまだ全国展開途中</li>
+            <li>地方の一部はau回線ローミングに依存</li>
+            <li>大型商業施設・地下駐車場は電波が入りにくい場所あり</li>
+            <li>大手3社のBand 1/3/8に比べ屋内浸透力は発展途上</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:16px; padding:14px; background:#f8fafc; border-radius:8px; font-size:13px; color:var(--ink-muted); line-height:1.7;">
+      <strong style="color:var(--ink);">編集部の見解：</strong>
+      2021年の「繋がらない楽天モバイル」とは別物になりつつあります。特に東京近郊の地下鉄は2026年7月に完全対策完了予定。ただし、地方在住・ビル内利用が多い方はドコモ回線のahamoの方が安心です。
+      楽天モバイルの最新エリアマップは<a href="https://network.mobile.rakuten.co.jp/area/" style="color:var(--pink); text-decoration:underline;">公式サイト</a>で確認できます。
+    </div>
+  </div>
+
+  <!-- ═══ HOW TO CHOOSE ═══ -->
+  <h2 class="section-heading">あなたに合うSIMの選び方</h2>
+  <div class="grid-2 mb-3">
+    <div class="card">
+      <div style="font-size:14px; font-weight:800; margin-bottom:8px; color:var(--pink);">コスパ重視・楽天経済圏ユーザー</div>
+      <div style="font-size:13px; color:var(--ink-muted); line-height:1.7;">
+        → <strong>楽天モバイル</strong>が最有力。無制限¥3,168 + SPUでポイント還元。地下利用が少ない方に。
+      </div>
+    </div>
+    <div class="card">
+      <div style="font-size:14px; font-weight:800; margin-bottom:8px; color:var(--pink);">通信品質最優先</div>
+      <div style="font-size:13px; color:var(--ink-muted); line-height:1.7;">
+        → <strong>ahamo</strong>がベスト。ドコモ回線で速度・安定性トップ。30GB ¥2,970。
+      </div>
+    </div>
+    <div class="card">
+      <div style="font-size:14px; font-weight:800; margin-bottom:8px; color:var(--pink);">LINE中心・ライトユーザー</div>
+      <div style="font-size:13px; color:var(--ink-muted); line-height:1.7;">
+        → <strong>LINEMO</strong>。LINEデータフリーで3GB ¥990。LINEをよく使う方に最適。
+      </div>
+    </div>
+    <div class="card">
+      <div style="font-size:14px; font-weight:800; margin-bottom:8px; color:var(--pink);">とにかく安く・データ少量</div>
+      <div style="font-size:13px; color:var(--ink-muted); line-height:1.7;">
+        → <strong>IIJmio</strong> or <strong>povo</strong>。IIJmioは2GB ¥850〜、povoは月¥0維持も可能。
+      </div>
+    </div>
+    <div class="card">
+      <div style="font-size:14px; font-weight:800; margin-bottom:8px; color:var(--pink);">店頭サポートが必要</div>
+      <div style="font-size:13px; color:var(--ink-muted); line-height:1.7;">
+        → <strong>UQ mobile</strong> or <strong>ワイモバイル</strong>。全国のau/SoftBankショップで対面相談可。
+      </div>
+    </div>
+    <div class="card">
+      <div style="font-size:14px; font-weight:800; margin-bottom:8px; color:var(--pink);">外国人・日本語に不安</div>
+      <div style="font-size:13px; color:var(--ink-muted); line-height:1.7;">
+        → <strong>楽天モバイル</strong>（英語サポートあり）or <strong>ahamo</strong>（オンライン完結でシンプル）。在留カードで申込可。
+      </div>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <div class="faq-section">
+    <h2 class="section-heading">よくある質問</h2>
+    <div class="faq-item">
+      <div class="faq-q">楽天モバイルは地下鉄で使えますか？</div>
+      <div class="faq-a">2026年3月時点で東京メトロ・都営地下鉄の約95%が対策済み、7月に完了予定です。小田急・東急・京成等の私鉄地下区間は100%対応済み。ただし一部地下商業施設では繋がりにくい場所が残っています。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">MVNOはなぜ昼に遅くなるのですか？</div>
+      <div class="faq-a">MVNOは大手キャリアから通信帯域を借りているため、利用者が集中する昼12〜13時は帯域が逼迫し速度が低下します。ahamo・LINEMO・povo・UQ mobileはMVNOではないためこの問題は起きません。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">外国人でも申し込めますか？</div>
+      <div class="faq-a">在留カード（中長期在留者）があれば、ほとんどの格安SIMに申込可能です。楽天モバイルは英語サポートもあり、外国人の方でも比較的スムーズに契約できます。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">このサイトの掲載順位はどう決めていますか？</div>
+      <div class="faq-a">料金・通信品質・ユーザー評価・独自性を総合的に評価しています。当サイトはアフィリエイトプログラムに参加していますが、掲載順位は報酬額によって操作されることはありません。各社のデメリットも正直に掲載しています。</div>
+    </div>
+  </div>
+
+</div><!-- /wrap -->
+
+<div class="wrap">
+  <div class="disclaimer">
+    <strong>広告表示：</strong>当サイトは各社のアフィリエイトプログラムに参加しています。掲載順位は編集部の独自基準に基づきます。
+    <strong>情報の正確性：</strong>2026年3月時点。変更される場合があります。通信速度は規格上の最大値です。
+  </div>
+</div>
+<footer>
+  <div class="footer-links">
+    <a href="../index.html">トップ</a>
+    <a href="index.html">格安SIM</a>
+    <a href="../credit-cards/index.html">クレカ</a>
+    <a href="#">プライバシーポリシー</a>
+    <a href="#">運営者情報</a>
+  </div>
+  <p>© 2026 暮らしお得</p>
+</footer>
+
+<script src="../assets/lang.js"></script>
+<script>
+(function() {
+  // Ranking orders per tab (carrier data-carrier values)
+  // Speed ranking based on みんそく, kakakumag, 実測データ (March 2026)
+  // povo 140Mbps, ahamo 127Mbps, LINEMO 124Mbps, UQ 108Mbps,
+  // mineo 87Mbps, Rakuten 82Mbps, IIJmio 74Mbps
+  // Note: MVNOs (mineo, IIJmio) drop heavily at lunch 12pm
+  const RANKINGS = {
+    overall:     ['rakuten','ahamo','linemo','iijmio','mineo','povo','uq','docomo','au','softbank'],
+    cost:        ['iijmio','rakuten','povo','mineo','linemo','ahamo','uq','docomo','au','softbank'],
+    speed:       ['ahamo','povo','linemo','uq','softbank','au','docomo','mineo','rakuten','iijmio'],
+    light:       ['povo','iijmio','linemo','mineo','rakuten','uq','ahamo','docomo','au','softbank'],
+    foreigner:   ['rakuten','ahamo','linemo','povo','iijmio','mineo','uq','docomo','au','softbank']
+  };
+
+  const container = document.getElementById('plans-container');
+  const tabs = document.querySelectorAll('.rank-tab');
+  const descs = document.querySelectorAll('.tab-desc');
+
+  function applyTab(tabName) {
+    // Update active tab
+    tabs.forEach(t => t.classList.toggle('active', t.dataset.tab === tabName));
+    descs.forEach(d => d.style.display = d.dataset.for === tabName ? '' : 'none');
+
+    // Reorder cards
+    const order = RANKINGS[tabName] || RANKINGS.overall;
+    const cards = [...container.querySelectorAll('.plan-card')];
+
+    // Remove existing rank badges
+    cards.forEach(c => {
+      const existing = c.querySelector('.rank-badge');
+      if (existing) existing.remove();
+      c.classList.remove('pick');
+    });
+
+    // Sort and re-append
+    order.forEach((carrier, i) => {
+      const card = cards.find(c => c.dataset.carrier === carrier);
+      if (!card) return;
+      container.appendChild(card);
+
+      // Add rank badge
+      const carrierCol = card.querySelector('.carrier-col');
+      if (carrierCol) {
+        const badge = document.createElement('span');
+        badge.className = 'rank-badge ' + (i === 0 ? 'rank-1' : i === 1 ? 'rank-2' : i === 2 ? 'rank-3' : 'rank-other');
+        badge.textContent = i + 1;
+        carrierCol.insertBefore(badge, carrierCol.firstChild);
+      }
+
+      // Highlight #1
+      if (i === 0) card.classList.add('pick');
+    });
+  }
+
+  // Bind tab clicks
+  tabs.forEach(tab => {
+    tab.addEventListener('click', function() {
+      applyTab(this.dataset.tab);
+    });
+  });
+
+  // Initialize with default tab
+  applyTab('overall');
+})();
+</script>
+
+</body>
+</html>

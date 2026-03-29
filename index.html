@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>暮らしお得｜固定費を見直して年間10万円節約</title>
+<meta name="description" content="スマホ代・クレジットカードの固定費を見直すだけで年間10万円以上節約。格安SIM・クレカを中立比較。">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="index.html">暮らし<span>お得</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">トップ</a></li>
+      <li><a href="sim/index.html">格安SIM比較</a></li>
+      <li><a href="credit-cards/index.html">クレジットカード</a></li>
+    </ul>
+    <div class="lang-switcher">
+      <button class="lang-btn" data-lang="ja">日本語</button>
+      <button class="lang-btn" data-lang="en">EN</button>
+      <button class="lang-btn" data-lang="zh-tw">繁中</button>
+      <button class="lang-btn" data-lang="vi">Vi</button>
+      <button class="lang-btn" data-lang="my">MY</button>
+    </div>
+  </div>
+</header>
+
+<!-- ── HERO: editorial, no gradient ── -->
+<section style="padding:64px 24px 48px; text-align:center; border-bottom:1px solid var(--border);">
+  <div style="max-width:620px; margin:0 auto;">
+    <p style="font-size:11px; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:var(--ink-faint); margin-bottom:12px;">固定費の見直しガイド</p>
+    <h1 style="font-size:clamp(28px,5vw,44px); font-weight:900; line-height:1.2; margin-bottom:16px;">
+      スマホ代とクレカを<br>変えるだけで、年間
+    </h1>
+    <div id="hero-amount" style="font-family:'Noto Sans JP',sans-serif; font-size:clamp(48px,8vw,72px); font-weight:900; color:var(--pink); line-height:1; margin-bottom:12px;">¥63,984</div>
+    <p style="font-size:11px; color:var(--ink-faint); margin-bottom:24px;">節約できます（大手キャリア+低還元カード利用の場合）</p>
+    <div style="display:flex; gap:12px; justify-content:center; flex-wrap:wrap;">
+      <a href="sim/index.html" class="btn btn-pink">格安SIM比較</a>
+      <a href="credit-cards/index.html" class="btn btn-ghost">クレジットカード比較</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── SIMULATOR ── -->
+<section style="padding:48px 24px 0;">
+  <div style="max-width:720px; margin:0 auto;">
+    <p class="section-label">節約シミュレーター</p>
+    <h2 class="section-heading">あなたの場合は？</h2>
+    <p class="section-desc mb-s">当てはまるものを選んでください。金額はリアルタイムで変わります。</p>
+
+    <div style="margin-top:24px;">
+      <label style="font-size:12px; font-weight:600; color:var(--ink-muted); display:block; margin-bottom:8px;">現在のスマホ契約</label>
+      <div style="display:flex; gap:6px; flex-wrap:wrap;">
+        <button class="chip selected" data-value="7500" data-group="mobile">大手キャリア ¥7,000〜</button>
+        <button class="chip" data-value="4000" data-group="mobile">サブブランド ¥3,500〜</button>
+        <button class="chip" data-value="2000" data-group="mobile">格安SIM利用中</button>
+      </div>
+    </div>
+
+    <div style="margin-top:16px;">
+      <label style="font-size:12px; font-weight:600; color:var(--ink-muted); display:block; margin-bottom:8px;">クレジットカードの還元率</label>
+      <div style="display:flex; gap:6px; flex-wrap:wrap;">
+        <button class="chip selected" data-value="0.5" data-group="card">〜0.5%</button>
+        <button class="chip" data-value="1.0" data-group="card">1.0%</button>
+        <button class="chip" data-value="1.5" data-group="card">1.5%以上</button>
+      </div>
+    </div>
+
+    <div style="margin-top:16px;">
+      <label style="font-size:12px; font-weight:600; color:var(--ink-muted); display:block; margin-bottom:8px;">月のカード利用額</label>
+      <div style="display:flex; gap:6px; flex-wrap:wrap;">
+        <button class="chip" data-value="50000" data-group="spend">¥50,000</button>
+        <button class="chip selected" data-value="100000" data-group="spend">¥100,000</button>
+        <button class="chip" data-value="200000" data-group="spend">¥200,000</button>
+        <button class="chip" data-value="300000" data-group="spend">¥300,000+</button>
+      </div>
+    </div>
+
+    <!-- Result -->
+    <div id="sim-result" style="margin-top:28px; padding:24px; background:var(--surface-sunken); border:1px solid var(--border); border-radius:8px;">
+      <div style="display:flex; align-items:baseline; gap:16px; flex-wrap:wrap;">
+        <div>
+          <div style="font-size:11px; font-weight:600; color:var(--ink-faint); letter-spacing:0.06em; text-transform:uppercase;">年間の節約効果</div>
+          <div id="sim-total" style="font-family:'Noto Sans JP',sans-serif; font-size:36px; font-weight:900; color:var(--pink);"></div>
+        </div>
+        <div id="sim-breakdown" style="display:flex; gap:16px; flex-wrap:wrap;"></div>
+      </div>
+    </div>
+
+    <!-- NISA -->
+    <div style="margin-top:24px; padding:20px; border:1px solid var(--border); border-radius:8px;">
+      <div style="display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:8px; margin-bottom:14px;">
+        <div>
+          <div style="font-size:14px; font-weight:700;">この節約額をNISAで積立投資していたら？</div>
+          <div style="font-size:12px; color:var(--ink-muted);">毎月の節約分をそのまま積立に回した場合の過去シミュレーション</div>
+        </div>
+        <div style="display:flex; gap:4px;">
+          <button class="chip selected" data-value="2020" data-group="nisa-start" style="padding:4px 10px; font-size:11px;">2020年〜</button>
+          <button class="chip" data-value="2022" data-group="nisa-start" style="padding:4px 10px; font-size:11px;">2022年〜</button>
+        </div>
+      </div>
+
+      <div id="nisa-result" style="display:grid; grid-template-columns:repeat(4,1fr); gap:8px;"></div>
+
+      <p style="font-size:10px; color:var(--ink-faint); margin-top:12px; line-height:1.6;">
+        このシミュレーションは過去の市場実績に基づく参考値です。将来の運用成果を保証するものではありません。投資には元本割れのリスクがあります。特定の金融商品の購入を推奨するものではありません。NISAの制度詳細は金融庁公式サイトをご確認ください。ETF価格は2026年3月の概算値。為替変動・手数料は含みません。
+      </p>
+    </div>
+
+    <div style="font-size:11px; color:var(--ink-faint); margin-top:8px;">※概算です。実際の金額はプラン・利用状況により変わります</div>
+  </div>
+</section>
+
+<!-- ── COMPARE LINKS ── -->
+<section style="padding:48px 24px;">
+  <div style="max-width:720px; margin:0 auto;">
+    <p class="section-label">比較ページ</p>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:8px;">
+      <a href="sim/index.html" style="text-decoration:none; display:block; padding:24px; border:1px solid var(--border); border-radius:8px; transition:border-color .15s;">
+        <div style="font-size:12px; color:var(--ink-faint); margin-bottom:4px;">10社比較・メリットデメリット掲載</div>
+        <div style="font-size:17px; font-weight:700; color:var(--ink); margin-bottom:4px;">格安SIM比較</div>
+        <div style="font-size:13px; color:var(--ink-muted);">料金・速度・通信品質・弱点まで正直比較。大手から乗り換えで月¥4,000の節約も。</div>
+        <div style="font-size:13px; color:var(--pink); font-weight:600; margin-top:8px;">比較する →</div>
+      </a>
+      <a href="credit-cards/index.html" style="text-decoration:none; display:block; padding:24px; border:1px solid var(--border); border-radius:8px; transition:border-color .15s;">
+        <div style="font-size:12px; color:var(--ink-faint); margin-bottom:4px;">目的別・年収別の最適カード提案</div>
+        <div style="font-size:17px; font-weight:700; color:var(--ink); margin-bottom:4px;">クレジットカード比較</div>
+        <div style="font-size:13px; color:var(--ink-muted);">年会費無料で還元率最大10%超。新規入会ボーナスの賢い活用法も解説。</div>
+        <div style="font-size:13px; color:var(--pink); font-weight:600; margin-top:8px;">比較する →</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ── LANGUAGE NOTICE ── -->
+<section style="padding:0 24px 48px;">
+  <div style="max-width:720px; margin:0 auto; text-align:center;">
+    <p style="font-size:12px; color:var(--ink-faint); line-height:1.8;">
+      このサイトは <strong>日本語 / English / 繁體中文 / Tiếng Việt / မြန်မာ</strong> に対応しています。<br>
+      ブラウザの言語設定に合わせて自動検出されます。
+    </p>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<div class="wrap">
+  <div class="disclaimer">
+    <strong>広告表示に関する開示：</strong>当サイトは各社のアフィリエイトプログラムに参加しています。リンク経由のお申し込みで運営者が報酬を受け取る場合があります。掲載順位は編集部の独自基準に基づきます。情報は2026年3月時点のもので、変更される場合があります。
+  </div>
+</div>
+<footer>
+  <div class="footer-links">
+    <a href="sim/index.html">格安SIM</a>
+    <a href="credit-cards/index.html">クレカ</a>
+    <a href="#">プライバシーポリシー</a>
+    <a href="#">運営者情報</a>
+  </div>
+  <p>© 2026 暮らしお得</p>
+</footer>
+
+<script src="assets/lang.js"></script>
+<script>
+(function() {
+  const state = { mobile: 7500, card: 0.5, spend: 100000, 'nisa-start': 2020 };
+  const TARGET_MOBILE = 3168;
+  const TARGET_CARD_RATE = 1.5;
+
+  const PRICES = {
+    VT:     { 2020:80, 2021:93, 2022:107, 2023:88, 2024:107, 2025:125, 2026:135 },
+    SPY:    { 2020:323, 2021:375, 2022:477, 2023:390, 2024:475, 2025:595, 2026:634 },
+    QQQ:    { 2020:212, 2021:315, 2022:398, 2023:270, 2024:408, 2025:525, 2026:563 },
+    'N225': { 2020:23200, 2021:27400, 2022:28800, 2023:26000, 2024:33500, 2025:39800, 2026:37000 }
+  };
+  const LABELS = { VT:'VT 全世界株', SPY:'SPY S&P500', QQQ:'QQQ NASDAQ', 'N225':'日経225' };
+
+  function getPrice(ticker, year, month) {
+    const p = PRICES[ticker];
+    const years = Object.keys(p).map(Number).sort((a,b)=>a-b);
+    const t = year + (month-1)/12;
+    for (let i=0; i<years.length-1; i++) {
+      const y0=years[i], y1=years[i+1];
+      if (t>=y0 && t<=y1) return p[y0]+(p[y1]-p[y0])*((t-y0)/(y1-y0));
+    }
+    return p[years[years.length-1]];
+  }
+
+  function dca(ticker, monthly, startYear) {
+    let shares=0, invested=0;
+    for (let y=startYear; y<=2026; y++) {
+      const end = y===2026 ? 3 : 12;
+      for (let m=1; m<=end; m++) {
+        shares += monthly/getPrice(ticker,y,m);
+        invested += monthly;
+      }
+    }
+    const value = Math.round(shares * PRICES[ticker][2026]);
+    return { invested: Math.round(invested), value, gain: value - Math.round(invested) };
+  }
+
+  document.querySelectorAll('.chip').forEach(btn => {
+    btn.addEventListener('click', function() {
+      const g = this.dataset.group, v = parseFloat(this.dataset.value);
+      document.querySelectorAll('.chip[data-group="'+g+'"]').forEach(b=>b.classList.remove('selected'));
+      this.classList.add('selected');
+      state[g] = v;
+      calc();
+    });
+  });
+
+  function calc() {
+    const mSave = Math.max(0, state.mobile - TARGET_MOBILE);
+    const cSave = Math.max(0, state.spend*(TARGET_CARD_RATE/100) - state.spend*(state.card/100));
+    const monthly = mSave + cSave;
+    const yearly = Math.round(monthly*12);
+
+    document.getElementById('hero-amount').textContent = '¥'+yearly.toLocaleString();
+    document.getElementById('sim-total').textContent = '¥'+yearly.toLocaleString()+'/年';
+    document.getElementById('sim-breakdown').innerHTML =
+      '<div style="font-size:12px;color:var(--ink-muted);">スマホ -¥'+Math.round(mSave).toLocaleString()+'/月</div>'+
+      '<div style="font-size:12px;color:var(--ink-muted);">ポイント +¥'+Math.round(cSave).toLocaleString()+'/月</div>';
+
+    const start = state['nisa-start'];
+    let h = '';
+    for (const t of ['VT','SPY','QQQ','N225']) {
+      const r = dca(t, monthly, start);
+      const pct = r.invested>0 ? Math.round(r.gain/r.invested*100) : 0;
+      const c = r.gain>=0 ? 'var(--pink)' : 'var(--danger)';
+      h += '<div style="padding:12px;background:var(--surface-raised);border:1px solid var(--border);border-radius:6px;text-align:center;">'+
+        '<div style="font-size:10px;color:var(--ink-faint);margin-bottom:2px;">'+LABELS[t]+'</div>'+
+        '<div style="font-family:\'Noto Serif JP\',serif;font-size:19px;font-weight:900;color:var(--ink);">¥'+r.value.toLocaleString()+'</div>'+
+        '<div style="font-size:11px;color:'+c+';font-weight:600;">'+(r.gain>=0?'+':'')+pct+'% ('+(r.gain>=0?'+':'')+'¥'+r.gain.toLocaleString()+')</div>'+
+        '<div style="font-size:10px;color:var(--ink-faint);margin-top:2px;">元本 ¥'+r.invested.toLocaleString()+'</div>'+
+      '</div>';
+    }
+    document.getElementById('nisa-result').innerHTML = h;
+  }
+
+  calc();
+})();
+</script>
+
+</body>
+</html>

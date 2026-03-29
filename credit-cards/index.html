@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>クレジットカード比較｜還元率・年会費・マイルで選ぶベストカード【2026年】| 暮らしお得</title>
+<meta name="description" content="年会費無料で還元率の高いクレジットカードを比較。楽天カード・JCB CARD W・三井住友NL等を年収別・目的別に徹底比較。新規入会特典の賢い活用法も。">
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+  /* Card-specific styles */
+  .cc-row {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 20px 24px;
+    margin-bottom: 12px;
+    display: grid;
+    grid-template-columns: 200px 1fr 1fr 1fr auto;
+    gap: 20px; align-items: center;
+    box-shadow: 0 4px var(--border-light);
+    transition: box-shadow .15s;
+  }
+  .cc-row:hover { box-shadow: 0 4px 12px rgba(0,0,0,.08); }
+  .cc-row.featured {
+    border: 2px solid var(--pink);
+  }
+  .cc-info { display: flex; align-items: center; gap: 12px; }
+  .cc-logo {
+    width: 44px; height: 44px; border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 16px; font-weight: 900; color: #fff;
+    flex-shrink: 0;
+  }
+  .cc-name { font-size: 15px; font-weight: 800; }
+  .cc-brand { font-size: 11px; color: var(--ink-muted); }
+  .cc-fee { text-align: center; }
+  .cc-fee-val { font-size: 18px; font-weight: 900; }
+  .cc-fee-val.free { color: var(--green); }
+  .cc-fee-note { font-size: 11px; color: var(--ink-muted); }
+  .cc-rate { text-align: center; }
+  .cc-rate-val { font-size: 20px; font-weight: 900; }
+  .cc-rate-note { font-size: 11px; color: var(--ink-muted); }
+  .cc-bonus { text-align: center; }
+  .cc-bonus-val { font-size: 14px; font-weight: 700; color: var(--pink); }
+  .cc-bonus-note { font-size: 11px; color: var(--ink-muted); }
+  .cc-cta { display: flex; flex-direction: column; gap: 6px; align-items: flex-end; }
+
+  .cc-cols {
+    display: grid;
+    grid-template-columns: 200px 1fr 1fr 1fr auto;
+    gap: 20px; padding: 0 24px; margin-bottom: 8px;
+  }
+
+  /* Strategy cards */
+  .strategy-card {
+    background: var(--bg); border: 1px solid var(--border);
+    border-radius: 16px; padding: 24px; margin-bottom: 12px;
+    box-shadow: 0 4px var(--border-light);
+  }
+  .strategy-title { font-size: 16px; font-weight: 800; margin-bottom: 10px; }
+  .strategy-cards-list {
+    display: flex; gap: 10px; flex-wrap: wrap; margin: 12px 0;
+  }
+  .mini-card {
+    background: var(--bg); border: 1px solid var(--border);
+    border-radius: 8px; padding: 8px 14px;
+    font-size: 12px; font-weight: 600;
+  }
+  .mini-card.highlight {
+    background: var(--pink-bg); border-color: var(--pink);
+    color: var(--pink);
+  }
+  .arrow { color: var(--ink-muted); font-size: 14px; display: flex; align-items: center; }
+
+  .shop-opt {
+    border: 2px solid var(--border); background: var(--bg);
+    border-radius: 50px; padding: 8px 16px;
+    font-size: 13px; cursor: pointer; color: var(--ink-soft);
+    font-weight: 700; font-family: inherit;
+    transition: all .12s;
+  }
+  .shop-opt:hover { border-color: var(--pink); color: var(--pink); }
+  .shop-opt.selected {
+    background: var(--pink); color: #fff;
+    border-color: var(--pink);
+  }
+
+  @media (max-width: 768px) {
+    .cc-row {
+      grid-template-columns: 1fr 1fr;
+    }
+    .cc-info { grid-column: 1 / -1; }
+    .cc-cta { flex-direction: row; grid-column: 1 / -1; }
+    .cc-cols { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ── HEADER ── -->
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">暮らし<span>お得</span></a>
+    <ul class="nav-links">
+      <li><a href="../index.html">トップ</a></li>
+      <li><a href="../sim/index.html">格安SIM比較</a></li>
+      <li><a href="index.html" class="active">クレジットカード</a></li>
+    </ul>
+    <div class="lang-switcher">
+      <button class="lang-btn" data-lang="ja">日本語</button>
+      <button class="lang-btn" data-lang="en">EN</button>
+      <button class="lang-btn" data-lang="zh-tw">繁中</button>
+      <button class="lang-btn" data-lang="vi">Vi</button>
+      <button class="lang-btn" data-lang="my">MY</button>
+    </div>
+  </div>
+</header>
+
+<!-- ── HERO ── -->
+<section style="padding:48px 16px 40px; border-bottom:1px solid var(--border-light);">
+  <div class="wrap-narrow" style="text-align:center;">
+    <p class="section-label">クレジットカード比較 2026</p>
+    <h1 style="font-size:clamp(22px,4vw,32px); font-weight:900; line-height:1.3;">年会費・還元率・特典で選ぶ<br>ベストカード</h1>
+    <p style="font-size:14px; color:var(--ink-muted); margin-top:10px;">10枚を目的別に比較。新規入会ボーナスの賢い活用法も解説</p>
+  </div>
+</section>
+
+<!-- ── MAIN ── -->
+<div class="wrap" style="padding-top:32px;">
+
+  <!-- Filter -->
+  <div class="filter-bar">
+    <span class="filter-label">目的：</span>
+    <button class="filter-chip active">すべて</button>
+    <button class="filter-chip">高還元率</button>
+    <button class="filter-chip">マイル</button>
+    <button class="filter-chip">年会費無料</button>
+    <button class="filter-chip">ゴールド+</button>
+  </div>
+
+  <h2 class="section-heading" style="margin-top:24px;">クレジットカード比較表 <span class="tag-new">2026年版</span></h2>
+  <div class="cc-cols">
+    <div class="col-head">カード名</div>
+    <div class="col-head center">年会費</div>
+    <div class="col-head center">還元率</div>
+    <div class="col-head center">入会特典</div>
+    <div class="col-head"></div>
+  </div>
+
+  <!-- ── CARD ROWS ── -->
+
+  <!-- 1. Rakuten Card (FEATURED) -->
+  <div class="cc-row featured">
+    <div class="cc-info">
+      <div class="cc-logo logo-rakuten">R</div>
+      <div>
+        <div class="cc-name">楽天カード</div>
+        <div class="cc-brand">Visa / Mastercard / JCB / AMEX</div>
+        <span class="tag tag-red">⭐ おすすめ</span>
+      </div>
+    </div>
+    <div class="cc-fee">
+      <div class="cc-fee-val free">無料</div>
+      <div class="cc-fee-note">永年無料</div>
+    </div>
+    <div class="cc-rate">
+      <div class="cc-rate-val" style="color:var(--pink);">1.0〜3.0%</div>
+      <div class="cc-rate-note">楽天市場3%+SPU</div>
+    </div>
+    <div class="cc-bonus">
+      <div class="cc-bonus-val">最大8,000P</div>
+      <div class="cc-bonus-note">新規入会+利用</div>
+    </div>
+    <div class="cc-cta">
+      <a href="#" class="btn btn-sm btn-pink">申し込む →</a>
+      <a href="#" class="btn btn-sm btn-ghost" style="font-size:12px;">詳細</a>
+    </div>
+  </div>
+
+  <!-- 2. Rakuten Gold Card -->
+  <div class="cc-row featured" style="border-color:#c9a84c;">
+    <div class="cc-info">
+      <div class="cc-logo" style="background:#c9a84c;">R</div>
+      <div>
+        <div class="cc-name">楽天ゴールドカード</div>
+        <div class="cc-brand">Visa / Mastercard / JCB</div>
+        <span class="tag tag-warm">ゴールド</span>
+      </div>
+    </div>
+    <div class="cc-fee">
+      <div class="cc-fee-val">¥2,200</div>
+      <div class="cc-fee-note">年額（税込）</div>
+    </div>
+    <div class="cc-rate">
+      <div class="cc-rate-val" style="color:var(--pink);">1.0〜5.0%</div>
+      <div class="cc-rate-note">楽天市場5%+SPU</div>
+    </div>
+    <div class="cc-bonus">
+      <div class="cc-bonus-val">最大8,000P</div>
+      <div class="cc-bonus-note">新規入会+利用</div>
+    </div>
+    <div class="cc-cta">
+      <a href="#" class="btn btn-sm btn-pink">申し込む →</a>
+      <a href="#" class="btn btn-sm btn-ghost" style="font-size:12px;">詳細</a>
+    </div>
+  </div>
+
+  <!-- 3. Rakuten Premium Card -->
+  <div class="cc-row featured" style="border-color:#333;">
+    <div class="cc-info">
+      <div class="cc-logo" style="background:#222;">R</div>
+      <div>
+        <div class="cc-name">楽天プレミアムカード</div>
+        <div class="cc-brand">Visa / Mastercard / JCB</div>
+        <span class="tag" style="background:#222; color:#fff;">プレミアム</span>
+      </div>
+    </div>
+    <div class="cc-fee">
+      <div class="cc-fee-val">¥11,000</div>
+      <div class="cc-fee-note">年額（税込）</div>
+    </div>
+    <div class="cc-rate">
+      <div class="cc-rate-val" style="color:var(--pink);">1.0〜5.0%</div>
+      <div class="cc-rate-note">楽天市場5%+SPU</div>
+    </div>
+    <div class="cc-bonus">
+      <div class="cc-bonus-val">最大5,000P</div>
+      <div class="cc-bonus-note">+プライオリティパス</div>
+    </div>
+    <div class="cc-cta">
+      <a href="#" class="btn btn-sm btn-pink">申し込む →</a>
+      <a href="#" class="btn btn-sm btn-ghost" style="font-size:12px;">詳細</a>
+    </div>
+  </div>
+
+  <!-- 4. JCB CARD W -->
+  <div class="cc-row">
+    <div class="cc-info">
+      <div class="cc-logo logo-jcb">JCB</div>
+      <div>
+        <div class="cc-name">JCB CARD W</div>
+        <div class="cc-brand">JCB / 18〜39歳限定</div>
+      </div>
+    </div>
+    <div class="cc-fee">
+      <div class="cc-fee-val free">無料</div>
+      <div class="cc-fee-note">永年無料</div>
+    </div>
+    <div class="cc-rate">
+      <div class="cc-rate-val">1.0〜10.5%</div>
+      <div class="cc-rate-note">常時2倍・優待店最大21倍</div>
+    </div>
+    <div class="cc-bonus">
+      <div class="cc-bonus-val" style="color:#003a70;">Amazon ¥20,000分</div>
+      <div class="cc-bonus-note">キャンペーン時</div>
+    </div>
+    <div class="cc-cta">
+      <a href="#" class="btn btn-sm btn-ghost">申し込む →</a>
+      <a href="#" class="btn btn-sm btn-ghost" style="font-size:12px;">詳細</a>
+    </div>
+  </div>
+
+  <!-- 5. 三井住友カード(NL) -->
+  <div class="cc-row">
+    <div class="cc-info">
+      <div class="cc-logo logo-smbc">三</div>
+      <div>
+        <div class="cc-name">三井住友カード(NL)</div>
+        <div class="cc-brand">Visa / Mastercard</div>
+      </div>
+    </div>
+    <div class="cc-fee">
+      <div class="cc-fee-val free">無料</div>
+      <div class="cc-fee-note">永年無料</div>
+    </div>
+    <div class="cc-rate">
+      <div class="cc-rate-val">0.5〜7.0%</div>
+      <div class="cc-rate-note">コンビニ・飲食店で最大7%</div>
+    </div>
+    <div class="cc-bonus">
+      <div class="cc-bonus-val" style="color:#0d6e37;">最大6,000P</div>
+      <div class="cc-bonus-note">Vポイント</div>
+    </div>
+    <div class="cc-cta">
+      <a href="#" class="btn btn-sm btn-ghost">申し込む →</a>
+      <a href="#" class="btn btn-sm btn-ghost" style="font-size:12px;">詳細</a>
+    </div>
+  </div>
+
+  <!-- 6. PayPay Card -->
+  <div class="cc-row">
+    <div class="cc-info">
+      <div class="cc-logo logo-paypay">PP</div>
+      <div>
+        <div class="cc-name">PayPayカード</div>
+        <div class="cc-brand">Visa / Mastercard / JCB</div>
+      </div>
+    </div>
+    <div class="cc-fee">
+      <div class="cc-fee-val free">無料</div>
+      <div class="cc-fee-note">永年無料</div>
+    </div>
+    <div class="cc-rate">
+      <div class="cc-rate-val">1.0〜5.0%</div>
+      <div class="cc-rate-note">PayPay連携で高還元</div>
+    </div>
+    <div class="cc-bonus">
+      <div class="cc-bonus-val" style="color:#ff0033;">最大5,000P</div>
+      <div class="cc-bonus-note">PayPayポイント</div>
+    </div>
+    <div class="cc-cta">
+      <a href="#" class="btn btn-sm btn-ghost">申し込む →</a>
+      <a href="#" class="btn btn-sm btn-ghost" style="font-size:12px;">詳細</a>
+    </div>
+  </div>
+
+  <!-- 7. ORICO THE POINT -->
+  <div class="cc-row">
+    <div class="cc-info">
+      <div class="cc-logo logo-orico">O</div>
+      <div>
+        <div class="cc-name">Orico Card THE POINT</div>
+        <div class="cc-brand">Mastercard / JCB</div>
+      </div>
+    </div>
+    <div class="cc-fee">
+      <div class="cc-fee-val free">無料</div>
+      <div class="cc-fee-note">永年無料</div>
+    </div>
+    <div class="cc-rate">
+      <div class="cc-rate-val">1.0〜7.0%</div>
+      <div class="cc-rate-note">入会後6ヶ月2.0%</div>
+    </div>
+    <div class="cc-bonus">
+      <div class="cc-bonus-val" style="color:#00205c;">最大8,000P</div>
+      <div class="cc-bonus-note">オリコポイント</div>
+    </div>
+    <div class="cc-cta">
+      <a href="#" class="btn btn-sm btn-ghost">申し込む →</a>
+      <a href="#" class="btn btn-sm btn-ghost" style="font-size:12px;">詳細</a>
+    </div>
+  </div>
+
+  <!-- 8. 三井住友Gold(NL) -->
+  <div class="cc-row">
+    <div class="cc-info">
+      <div class="cc-logo" style="background:linear-gradient(135deg,#c9a84c,#a07d2f);">三</div>
+      <div>
+        <div class="cc-name">三井住友ゴールド(NL)</div>
+        <div class="cc-brand">Visa / Mastercard</div>
+        <span class="tag tag-warm">ゴールド</span>
+      </div>
+    </div>
+    <div class="cc-fee">
+      <div class="cc-fee-val">¥5,500</div>
+      <div class="cc-fee-note">年100万利用で翌年無料</div>
+    </div>
+    <div class="cc-rate">
+      <div class="cc-rate-val">0.5〜7.0%</div>
+      <div class="cc-rate-note">+年100万利用で1万P</div>
+    </div>
+    <div class="cc-bonus">
+      <div class="cc-bonus-val" style="color:#0d6e37;">最大7,000P</div>
+      <div class="cc-bonus-note">Vポイント</div>
+    </div>
+    <div class="cc-cta">
+      <a href="#" class="btn btn-sm btn-ghost">申し込む →</a>
+      <a href="#" class="btn btn-sm btn-ghost" style="font-size:12px;">詳細</a>
+    </div>
+  </div>
+
+  <!-- 9. ANA ワイドゴールドカード -->
+  <div class="cc-row">
+    <div class="cc-info">
+      <div class="cc-logo logo-amex" style="background:#00467f;">ANA</div>
+      <div>
+        <div class="cc-name">ANA ワイドゴールドカード</div>
+        <div class="cc-brand">Visa / Mastercard / JCB</div>
+        <span class="tag tag-red">マイル向け</span>
+      </div>
+    </div>
+    <div class="cc-fee">
+      <div class="cc-fee-val">¥15,400</div>
+      <div class="cc-fee-note">年額（税込）</div>
+    </div>
+    <div class="cc-rate">
+      <div class="cc-rate-val">1.0%</div>
+      <div class="cc-rate-note">100円=1マイル</div>
+    </div>
+    <div class="cc-bonus">
+      <div class="cc-bonus-val" style="color:#00467f;">2,000マイル</div>
+      <div class="cc-bonus-note">入会+毎年継続</div>
+    </div>
+    <div class="cc-cta">
+      <a href="#" class="btn btn-sm btn-ghost">申し込む →</a>
+      <a href="#" class="btn btn-sm btn-ghost" style="font-size:12px;">詳細</a>
+    </div>
+  </div>
+
+  <!-- 10. AMEX Gold -->
+  <div class="cc-row">
+    <div class="cc-info">
+      <div class="cc-logo logo-amex">AX</div>
+      <div>
+        <div class="cc-name">アメックス・ゴールド・プリファード</div>
+        <div class="cc-brand">American Express</div>
+        <span class="tag tag-warm">プレミアム</span>
+      </div>
+    </div>
+    <div class="cc-fee">
+      <div class="cc-fee-val">¥39,600</div>
+      <div class="cc-fee-note">年額（税込）</div>
+    </div>
+    <div class="cc-rate">
+      <div class="cc-rate-val">1.0〜3.0%</div>
+      <div class="cc-rate-note">海外3%・コンシェルジュ</div>
+    </div>
+    <div class="cc-bonus">
+      <div class="cc-bonus-val" style="color:#006fcf;">最大50,000P</div>
+      <div class="cc-bonus-note">利用条件あり</div>
+    </div>
+    <div class="cc-cta">
+      <a href="#" class="btn btn-sm btn-ghost">申し込む →</a>
+      <a href="#" class="btn btn-sm btn-ghost" style="font-size:12px;">詳細</a>
+    </div>
+  </div>
+
+  <!-- ── STRATEGY SECTION ── -->
+  <h2 class="section-heading mt-4">目的別おすすめ戦略</h2>
+
+  <!-- Strategy 1: Beginners / Low income -->
+  <div class="strategy-card">
+    <span class="tag tag-green mb-1">年収〜300万円 / 初めての1枚</span>
+    <div class="strategy-title">まず1枚持つなら：楽天カード</div>
+    <div style="font-size:13px; color:var(--ink-muted); line-height:1.7; margin-bottom:12px;">
+      審査が比較的通りやすく、年会費無料、還元率1%。楽天モバイルと合わせればSPUでポイント加速。
+      外国人の方でも在留カード+銀行口座があれば申込可能。まずはこの1枚から始めましょう。
+    </div>
+    <div class="strategy-cards-list">
+      <div class="mini-card highlight">楽天カード（メイン）</div>
+    </div>
+  </div>
+
+  <!-- Strategy 2: Maximize points -->
+  <div class="strategy-card">
+    <span class="tag tag-red mb-1">年収300〜500万円 / ポイント最大化</span>
+    <div class="strategy-title">楽天経済圏フル活用：楽天カード + 三井住友NL</div>
+    <div style="font-size:13px; color:var(--ink-muted); line-height:1.7; margin-bottom:12px;">
+      楽天カードを楽天市場・固定費支払いのメインに。三井住友NLをコンビニ・飲食店用のサブに。
+      それぞれの得意分野で使い分けることで、還元率を最大化できます。
+    </div>
+    <div class="strategy-cards-list">
+      <div class="mini-card highlight">楽天カード（メイン）</div>
+      <span class="arrow">+</span>
+      <div class="mini-card">三井住友NL（コンビニ用）</div>
+    </div>
+  </div>
+
+  <!-- Strategy 3: Miles -->
+  <div class="strategy-card">
+    <span class="tag tag-red mb-1">海外旅行好き / マイル派</span>
+    <div class="strategy-title">マイルを貯めるなら：ANA ワイドゴールド + 楽天カード</div>
+    <div style="font-size:13px; color:var(--ink-muted); line-height:1.7; margin-bottom:12px;">
+      メインの支払いをANAカードでマイルに集中。楽天カードは楽天市場専用でポイントを稼ぎ、楽天ポイントをANAマイルに交換（2P→1マイル）することも可能。年1回の海外旅行で年会費は簡単に回収できます。
+    </div>
+    <div class="strategy-cards-list">
+      <div class="mini-card">ANAワイドゴールド（メイン）</div>
+      <span class="arrow">+</span>
+      <div class="mini-card highlight">楽天カード（楽天市場用）</div>
+    </div>
+  </div>
+
+  <!-- Strategy 4: New joiner bonus stacking -->
+  <div class="strategy-card" style="border:2px solid var(--pink); background:var(--pink-bg);">
+    <span class="tag tag-red mb-1">🎁 裏技・新規入会ボーナス最大化</span>
+    <div class="strategy-title">入会特典スタッキング戦略（順番が重要！）</div>
+    <div style="font-size:13px; color:var(--ink-muted); line-height:1.7; margin-bottom:12px;">
+      複数のカードに順番に申し込むことで、新規入会ボーナスを最大化できます。
+      <strong style="color:var(--ink);">ポイント：1ヶ月に1枚ペース</strong>で申し込むのがコツ。短期間に複数申し込むと審査に通りにくくなります（多重申込ブラック）。
+    </div>
+    <div style="font-size:14px; font-weight:700; margin-bottom:10px;">おすすめ申込順序：</div>
+    <div class="strategy-cards-list">
+      <div class="mini-card highlight">① 楽天カード<br><small style="color:var(--ink-muted)">最大8,000P</small></div>
+      <span class="arrow">→</span>
+      <div class="mini-card">② JCB CARD W<br><small style="color:var(--ink-muted)">Amazon ¥20,000分</small></div>
+      <span class="arrow">→</span>
+      <div class="mini-card">③ 三井住友NL<br><small style="color:var(--ink-muted)">最大6,000P</small></div>
+      <span class="arrow">→</span>
+      <div class="mini-card">④ PayPayカード<br><small style="color:var(--ink-muted)">最大5,000P</small></div>
+    </div>
+    <div style="margin-top:14px; background:#fff; border-radius:8px; padding:14px; font-size:13px;">
+      <strong style="color:var(--pink);">合計：最大¥39,000相当</strong> の入会特典（ポイント・ギフト券）を獲得可能。すべて年会費無料カードなので維持コストゼロ。
+      <br><small style="color:var(--ink-muted);">※特典内容は時期により変動します。申込前に各公式サイトで最新情報をご確認ください。</small>
+    </div>
+  </div>
+
+  <!-- Strategy 5: High income -->
+  <div class="strategy-card">
+    <span class="tag tag-warm mb-1">年収800万円〜 / プレミアム</span>
+    <div class="strategy-title">ステータス＋実利：アメックスゴールド + 楽天プレミアム</div>
+    <div style="font-size:13px; color:var(--ink-muted); line-height:1.7; margin-bottom:12px;">
+      アメックスゴールドで海外利用3%還元+空港ラウンジ+コンシェルジュ。楽天プレミアムでプライオリティパス（通常$469相当）が無料。
+      二枚で海外旅行・国内生活の両方をカバーします。
+    </div>
+    <div class="strategy-cards-list">
+      <div class="mini-card">アメックスゴールド（海外メイン）</div>
+      <span class="arrow">+</span>
+      <div class="mini-card highlight">楽天プレミアム（国内+ラウンジ）</div>
+    </div>
+  </div>
+
+  <!-- ═══ GROCERY REBATE SIMULATOR ═══ -->
+  <h2 class="section-heading mt-4">お買い物シミュレーション — どこで買うとお得？</h2>
+  <p class="section-desc">同じ日用品・食料品を買った場合のポイント還元を比較します</p>
+
+  <div style="background:#fff; border:1px solid var(--border); border-radius:16px; padding:28px 32px; margin-bottom:24px; box-shadow:0 4px 20px rgba(0,0,0,.06);">
+
+    <div style="margin-bottom:20px;">
+      <label style="font-size:13px; font-weight:700; display:block; margin-bottom:8px;">月のネット通販利用額は？</label>
+      <div style="display:flex; gap:8px; flex-wrap:wrap;">
+        <button class="shop-opt selected" data-value="30000" data-group="shop-spend">¥30,000</button>
+        <button class="shop-opt" data-value="50000" data-group="shop-spend">¥50,000</button>
+        <button class="shop-opt" data-value="100000" data-group="shop-spend">¥100,000</button>
+        <button class="shop-opt" data-value="200000" data-group="shop-spend">¥200,000</button>
+      </div>
+    </div>
+
+    <!-- Comparison table -->
+    <div id="shop-compare" style="display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:20px;">
+      <!-- Filled by JS -->
+    </div>
+
+    <!-- Points → NISA simulation -->
+    <div style="background:#f8fafc; border:1px solid var(--border); border-radius:12px; padding:20px;">
+      <div style="font-size:14px; font-weight:800; margin-bottom:4px;">もし楽天ポイントをNISAで運用したら？</div>
+      <div style="font-size:12px; color:var(--ink-muted); margin-bottom:14px;">楽天証券では楽天ポイントで投資信託を購入可能。毎月のポイントを全額つみたてNISAに回した場合：</div>
+
+      <div id="points-nisa-result" style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:10px;">
+        <!-- Filled by JS -->
+      </div>
+
+      <div style="font-size:10px; color:#999; margin-top:14px; line-height:1.6; padding:10px; background:#fff; border-radius:8px; border:1px solid var(--border);">
+        <strong style="color:#666;">重要な注意事項：</strong>
+        このシミュレーションは仮定に基づく参考値です。A社の還元率はA社プライム会員・A社カード利用時の概算です。
+        楽天市場の還元率はSPU適用時の目安であり、カテゴリやキャンペーンにより変動します。
+        楽天ポイント投資はポイントで投資信託を購入する仕組みであり、元本割れのリスクがあります。
+        投資シミュレーションは過去実績に基づく参考値で、将来の成果を保証するものではありません。
+        特定の金融商品・サービスの購入を推奨するものではありません。
+      </div>
+    </div>
+  </div>
+
+  <!-- Cross-link to SIM -->
+  <div class="banner-crimson mt-3">
+    <div class="div">
+      <h3>固定費をまとめると、ポイント還元がさらにアップ</h3>
+      <p>スマホ代の見直しがまだの方は、SIM比較ページもご覧ください。</p>
+    </div>
+    <a href="../sim/index.html" class="btn btn-pink" style="background:#fff; color:var(--pink);">格安SIM比較を見る →</a>
+  </div>
+
+  <!-- FAQ -->
+  <div class="faq-section mt-4">
+    <h2 class="section-heading">よくある質問</h2>
+    <div class="faq-item">
+      <div class="faq-q">クレジットカードは何枚持つのがベスト？</div>
+      <div class="faq-a">メイン1枚+サブ1〜2枚が管理しやすくおすすめです。メインを楽天カード（楽天市場・固定費用）、サブを三井住友NL（コンビニ・飲食店用）にすると、それぞれの高還元率を活かせます。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">外国人でも日本のクレジットカードは作れる？</div>
+      <div class="faq-a">在留カード（中長期在留者）と日本の銀行口座があれば申込可能です。楽天カードは特に外国人の方でも比較的審査が通りやすいことで知られています。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">新規入会ボーナスを複数もらっても大丈夫？</div>
+      <div class="faq-a">問題ありません。ただし短期間（1ヶ月以内）に3枚以上申し込むと、審査に通りにくくなる場合があります。1ヶ月に1枚のペースで順番に申し込むのがおすすめです。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">楽天カードと楽天ゴールドカード、どちらがいい？</div>
+      <div class="faq-a">楽天市場で年間12万円以上使うならゴールドカード（年¥2,200）がお得。楽天市場のポイントが+2%になるため、12万円利用時点で年会費をポイントで回収できます。それ以下なら無料の楽天カードで十分です。</div>
+    </div>
+  </div>
+
+</div><!-- /section -->
+
+<div class="wrap">
+  <div class="disclaimer">
+    <strong>広告表示：</strong>当サイトは各社のアフィリエイトプログラムに参加しています。掲載順位は編集部の独自基準に基づきます。
+    <strong>情報の正確性：</strong>2026年3月時点。リボ払い・キャッシングは高金利のため一括払いを推奨します。
+  </div>
+</div>
+<footer>
+  <div class="footer-links">
+    <a href="../index.html">トップ</a>
+    <a href="../sim/index.html">格安SIM</a>
+    <a href="index.html">クレカ</a>
+    <a href="#">プライバシーポリシー</a>
+    <a href="#">運営者情報</a>
+  </div>
+  <p>© 2026 暮らしお得</p>
+</footer>
+
+<script src="../assets/lang.js"></script>
+<script>
+// Filter chips
+document.querySelectorAll('.filter-chip').forEach(chip => {
+  chip.addEventListener('click', function() {
+    const siblings = [...this.parentNode.children].filter(c => c.classList.contains('filter-chip'));
+    siblings.forEach(c => c.classList.remove('active'));
+    this.classList.add('active');
+  });
+});
+
+// Grocery rebate simulator
+(function() {
+  const shopState = { 'shop-spend': 30000 };
+
+  // Rebate rates
+  const A_RATE = 0.02;      // A社: ~2% (prime + A社カード)
+  const RAKUTEN_BASE = 0.03; // 楽天: 3% base (カード+市場)
+  const RAKUTEN_SPU = 0.05;  // 楽天+SPU (mobile etc): ~5%
+  const RAKUTEN_EVENT = 0.10; // 楽天: お買い物マラソン等で最大10%
+
+  // Approximate annual returns for point investment (based on VT-like global fund)
+  const ANNUAL_RETURNS = { 2020:0.166, 2021:0.183, 2022:-0.18, 2023:0.22, 2024:0.165, 2025:0.224 };
+
+  function simulatePointNISA(monthlyPoints, startYear) {
+    let total = 0;
+    const endYear = 2026;
+    const endMonth = 3;
+    for (let y = startYear; y <= endYear; y++) {
+      const months = (y === endYear) ? endMonth : 12;
+      const ret = ANNUAL_RETURNS[y] || 0;
+      const monthlyReturn = Math.pow(1 + ret, 1/12) - 1;
+      for (let m = 0; m < months; m++) {
+        total = (total + monthlyPoints) * (1 + monthlyReturn);
+      }
+    }
+    return Math.round(total);
+  }
+
+  document.querySelectorAll('.shop-opt').forEach(btn => {
+    btn.addEventListener('click', function() {
+      const group = this.getAttribute('data-group');
+      const value = parseFloat(this.getAttribute('data-value'));
+      document.querySelectorAll('.shop-opt[data-group="' + group + '"]')
+        .forEach(b => b.classList.remove('selected'));
+      this.classList.add('selected');
+      shopState[group] = value;
+      calcShop();
+    });
+  });
+
+  function calcShop() {
+    const spend = shopState['shop-spend'];
+
+    const aMonthly = Math.round(spend * A_RATE);
+    const aYearly = aMonthly * 12;
+    const rBaseMonthly = Math.round(spend * RAKUTEN_BASE);
+    const rSpuMonthly = Math.round(spend * RAKUTEN_SPU);
+    const rEventMonthly = Math.round(spend * RAKUTEN_EVENT);
+
+    const compareEl = document.getElementById('shop-compare');
+    compareEl.innerHTML =
+      // A社
+      '<div style="background:#f8f8f8; border:1px solid var(--border); border-radius:12px; padding:20px; text-align:center;">' +
+        '<div style="font-size:14px; font-weight:800; margin-bottom:10px;">A社（大手通販サイト）</div>' +
+        '<div style="font-size:12px; color:var(--ink-muted); margin-bottom:10px;">プライム会員 + A社カード利用時</div>' +
+        '<div style="font-size:11px; color:var(--ink-muted);">還元率</div>' +
+        '<div style="font-size:28px; font-weight:900; color:#555;">約2.0%</div>' +
+        '<div style="margin-top:10px; font-size:12px; color:var(--ink-muted);">月間還元</div>' +
+        '<div style="font-size:22px; font-weight:800;">¥' + aMonthly.toLocaleString() + '<span style="font-size:12px;color:var(--ink-muted)">/月</span></div>' +
+        '<div style="margin-top:6px; font-size:12px; color:var(--ink-muted);">年間還元</div>' +
+        '<div style="font-size:16px; font-weight:700;">¥' + aYearly.toLocaleString() + '/年</div>' +
+      '</div>' +
+      // 楽天
+      '<div style="background:var(--pink-bg); border:2px solid var(--pink); border-radius:12px; padding:20px; text-align:center;">' +
+        '<div style="font-size:14px; font-weight:800; margin-bottom:10px;">楽天市場</div>' +
+        '<div style="font-size:12px; color:var(--ink-muted); margin-bottom:10px;">楽天カード + SPU適用時</div>' +
+        '<div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:6px;">' +
+          '<div style="background:#fff; border-radius:8px; padding:8px;">' +
+            '<div style="font-size:10px; color:var(--ink-muted);">基本</div>' +
+            '<div style="font-size:16px; font-weight:900; color:var(--pink);">3%</div>' +
+            '<div style="font-size:11px; font-weight:700;">¥' + rBaseMonthly.toLocaleString() + '/月</div>' +
+          '</div>' +
+          '<div style="background:#fff; border-radius:8px; padding:8px;">' +
+            '<div style="font-size:10px; color:var(--ink-muted);">+SPU</div>' +
+            '<div style="font-size:16px; font-weight:900; color:var(--pink);">5%</div>' +
+            '<div style="font-size:11px; font-weight:700;">¥' + rSpuMonthly.toLocaleString() + '/月</div>' +
+          '</div>' +
+          '<div style="background:#fff; border-radius:8px; padding:8px;">' +
+            '<div style="font-size:10px; color:var(--ink-muted);">+イベント</div>' +
+            '<div style="font-size:16px; font-weight:900; color:var(--pink);">10%</div>' +
+            '<div style="font-size:11px; font-weight:700;">¥' + rEventMonthly.toLocaleString() + '/月</div>' +
+          '</div>' +
+        '</div>' +
+        '<div style="margin-top:10px; font-size:12px; color:var(--ink-muted);">年間還元（SPU 5%時）</div>' +
+        '<div style="font-size:16px; font-weight:700; color:var(--pink);">¥' + (rSpuMonthly * 12).toLocaleString() + '/年</div>' +
+      '</div>';
+
+    // Points → NISA
+    const nisaEl = document.getElementById('points-nisa-result');
+    const scenarios = [
+      { label: '3%基本還元', monthly: rBaseMonthly },
+      { label: '5% SPU還元', monthly: rSpuMonthly },
+      { label: '10%イベント時', monthly: rEventMonthly }
+    ];
+    let nisaHtml = '';
+    for (const s of scenarios) {
+      const invested = s.monthly * 12 * 4; // ~4 years (2022-2026)
+      const value = simulatePointNISA(s.monthly, 2022);
+      const gain = value - invested;
+      const gainColor = gain >= 0 ? '#16a34a' : '#dc2626';
+      nisaHtml += '<div style="background:#fff; border:1px solid var(--border); border-radius:10px; padding:14px 10px; text-align:center;">' +
+        '<div style="font-size:11px; color:var(--ink-muted); margin-bottom:2px;">' + s.label + '</div>' +
+        '<div style="font-size:11px; color:var(--ink-muted);">月 ¥' + s.monthly.toLocaleString() + ' を積立</div>' +
+        '<div style="font-size:20px; font-weight:900; color:var(--pink); margin:6px 0;">¥' + value.toLocaleString() + '</div>' +
+        '<div style="font-size:11px; color:' + gainColor + '; font-weight:700;">' +
+          '元本 ¥' + invested.toLocaleString() + '<br>' +
+          (gain >= 0 ? '+' : '') + '¥' + gain.toLocaleString() + ' 運用益</div>' +
+      '</div>';
+    }
+    nisaEl.innerHTML = nisaHtml;
+  }
+
+  calcShop(); // Run with defaults
+})();
+</script>
+
+</body>
+</html>
