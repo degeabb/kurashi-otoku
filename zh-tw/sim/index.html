@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026年日本手機SIM卡方案比較 — 真實優缺點評比 | Japan Mobile SIM</title>
+<meta name="description" content="客觀比較日本10大電信商，包括樂天Mobile、ahamo、LINEMO。真實速度數據、優缺點分析，教你如何每年省下48,000日圓以上。適合在日港台人士參考。">
+<link rel="canonical" href="https://japanmobilesim.com/zh-tw/sim/">
+<link rel="alternate" hreflang="ja" href="https://japanmobilesim.com/sim/">
+<link rel="alternate" hreflang="en" href="https://japanmobilesim.com/en/sim/">
+<link rel="alternate" hreflang="zh-Hant" href="https://japanmobilesim.com/zh-tw/sim/">
+<meta property="og:title" content="2026年日本手機SIM卡方案比較 — 真實優缺點評比">
+<meta property="og:description" content="客觀比較日本10大電信商：價格、速度、弱點與推薦排名。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://japanmobilesim.com/zh-tw/sim/">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:site_name" content="Japan Mobile SIM">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="../../assets/style.css">
+<style>
+  /* Tab navigation */
+  .rank-tab {
+    background: none; border: none;
+    padding: 12px 20px;
+    font-size: 13px; font-weight: 700;
+    color: var(--ink-muted);
+    cursor: pointer; font-family: inherit;
+    border-bottom: 3px solid transparent;
+    margin-bottom: -2px;
+    transition: all .15s;
+    white-space: nowrap;
+  }
+  .rank-tab:hover { color: var(--ink); }
+  .rank-tab.active {
+    color: var(--pink);
+    border-bottom-color: var(--pink);
+  }
+
+  /* Rank badge on cards */
+  .rank-badge {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 24px; height: 24px; border-radius: 50%;
+    font-size: 12px; font-weight: 900; color: #fff;
+    flex-shrink: 0;
+  }
+  .rank-1 { background: var(--pink); }
+  .rank-2 { background: #333; }
+  .rank-3 { background: #888; }
+  .rank-other { background: var(--border); color: var(--ink-muted); }
+
+  .timeline { margin: 16px 0; }
+  }
+  .timeline-step:first-child { border-radius: 10px 0 0 10px; }
+  .timeline-step:last-child { border-radius: 0 10px 10px 0; }
+  .timeline-step.current { background: var(--crimson-light); border-color: var(--pink); }
+  .timeline-year { font-size: 13px; font-weight: 800; margin-bottom: 4px; }
+  .timeline-data { font-size: 18px; font-weight: 900; color: var(--pink); }
+  .timeline-note { font-size: 10px; color: var(--ink-muted); margin-top: 3px; }
+
+  @media (max-width: 768px) {
+    .plan-top { grid-template-columns: 1fr 1fr; }
+    .carrier-col { grid-column: 1 / -1; }
+    .cta-col { flex-direction: row; grid-column: 1 / -1; }
+    .plan-bottom { grid-template-columns: 1fr; }
+    .timeline { flex-direction: column; }
+    .timeline-step { border-radius: 0 !important; }
+    .timeline-step:first-child { border-radius: 10px 10px 0 0 !important; }
+    .timeline-step:last-child { border-radius: 0 0 10px 10px !important; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ── HEADER ── -->
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">Japan<span>MobileSIM</span></a>
+    <ul class="nav-links">
+      <li><a href="../index.html">首頁</a></li>
+      <li><a href="index.html" class="active">SIM比較</a></li>
+      <li><a href="../credit-cards/index.html">信用卡</a></li>
+    </ul>
+    <div class="lang-switcher">
+      <button class="lang-btn" data-lang="ja"><a href="../../sim/index.html" style="color:inherit;text-decoration:none;">日本語</a></button>
+      <button class="lang-btn" data-lang="en"><a href="../../en/sim/index.html" style="color:inherit;text-decoration:none;">EN</a></button>
+      <button class="lang-btn active" data-lang="zh-tw">繁中</button>
+      <button class="lang-btn" data-lang="vi">Vi</button>
+      <button class="lang-btn" data-lang="my">MY</button>
+    </div>
+  </div>
+</header>
+
+<!-- ── HERO ── -->
+<section style="padding:48px 24px 40px; border-bottom:1px solid var(--border);">
+  <div class="wrap-narrow" style="text-align:center;">
+    <p class="section-label">2026年 日本手機SIM卡 &amp; 電話方案比較</p>
+    <h1 style="font-size:clamp(22px,4vw,34px); font-weight:900;">真實優缺點完整分析</h1>
+    <p style="font-size:14px; color:var(--ink-muted); margin-top:8px;">10大電信商的價格、速度、網路品質與缺點 — 不美化、不隱瞞</p>
+  </div>
+</section>
+
+<!-- ── MAIN ── -->
+<div class="wrap" style="padding-top:32px;">
+
+  <!-- ── RANKING TABS ── -->
+  <div class="ranking-tabs" style="display:flex; gap:0; border-bottom:2px solid var(--border); margin-bottom:24px; overflow-x:auto;">
+    <button class="rank-tab active" data-tab="overall">綜合排名</button>
+    <button class="rank-tab" data-tab="cost">性價比</button>
+    <button class="rank-tab" data-tab="speed">速度最快</button>
+    <button class="rank-tab" data-tab="light">輕量用戶</button>
+    <button class="rank-tab" data-tab="foreigner">外國人推薦</button>
+  </div>
+
+  <!-- Tab descriptions -->
+  <div class="tab-desc" data-for="overall" style="margin-bottom:20px;">
+    <h2 class="section-heading">SIM卡綜合排名 <span class="tag-new">2026年3月</span></h2>
+    <p class="section-desc">根據價格、速度、服務品質與點數回饋進行綜合評分。所有價格均含稅。</p>
+  </div>
+  <div class="tab-desc" data-for="cost" style="margin-bottom:20px; display:none;">
+    <h2 class="section-heading">性價比排名</h2>
+    <p class="section-desc">以月費與數據容量的平衡度進行排名</p>
+  </div>
+  <div class="tab-desc" data-for="speed" style="margin-bottom:20px; display:none;">
+    <h2 class="section-heading">速度 &amp; 穩定性排名</h2>
+    <p class="section-desc">根據「大家的網路速度」、Kakaku.com 等評測網站的實測數據（2026年3月）。午餐尖峰時段仍能維持速度的 MNO 電信商排名較高。</p>
+    <div style="margin-top:12px; padding:14px 16px; background:var(--bg-alt); border-radius:12px; font-size:12px; color:var(--ink-soft); line-height:1.7;">
+      <strong>參考速度數據（2026年3月）：</strong>
+      ahamo 127 Mbps / povo 140 Mbps / LINEMO 119-124 Mbps / UQ mobile 107-109 Mbps / mineo 87 Mbps（午餐時段會下降）/ 樂天Mobile 62-82 Mbps / IIJmio 74 Mbps（午餐時段會下降）
+      <br><span style="color:var(--ink-faint);">資料來源：大家的網路速度、Kakaku.com Magazine、各獨立測速網站</span>
+    </div>
+  </div>
+  <div class="tab-desc" data-for="light" style="margin-bottom:20px; display:none;">
+    <h2 class="section-heading">輕量用戶排名</h2>
+    <p class="section-desc">適合每月使用 5 GB 以下、想找最便宜方案的人</p>
+  </div>
+  <div class="tab-desc" data-for="foreigner" style="margin-bottom:20px; display:none;">
+    <h2 class="section-heading">最適合外國人的方案</h2>
+    <p class="section-desc">以在留卡申辦資格、英語/中文支援、全線上申辦等條件篩選</p>
+  </div>
+
+  <!-- ═══ PLAN CARDS ═══ -->
+  <!-- Each card has data-carrier for JS reordering -->
+
+  <div id="plans-container">
+
+  <!-- 1. Rakuten Mobile -->
+  <div class="plan-card" data-carrier="rakuten">
+    <div class="plan-top">
+      <div class="carrier-col">
+        <div class="carrier-logo logo-rakuten">R</div>
+        <div>
+          <div class="carrier-name">樂天Mobile</div>
+          <div class="carrier-sub">最強方案（MNO）</div>
+        </div>
+      </div>
+      <div class="data-col">
+        <div class="data-main">&infin;</div>
+        <div class="data-note">3 GB / 20 GB / 無限量</div>
+      </div>
+      <div class="price-col">
+        <div class="price-val best">&yen;968~</div>
+        <div class="price-unit">無限量 &yen;3,168</div>
+      </div>
+      <div class="speed-col">無限速<br><small style="color:var(--ink-muted)">不限速</small></div>
+      <div class="contract-col no-contract">免綁約<br>解約金 &yen;0</div>
+      <div class="cta-col">
+        <a href="https://r10.to/hUMVON" target="_blank" rel="noopener" class="btn btn-sm btn-pink">透過員工推薦申辦 &rarr;</a>
+        <a href="https://network.mobile.rakuten.co.jp/fee/saikyo-plan/" target="_blank" rel="noopener" class="btn btn-sm btn-ghost" style="font-size:12px;">方案詳情</a>
+      </div>
+    </div>
+    <div class="plan-bottom">
+      <div class="pro-list">
+        <strong>優點</strong>
+        <ul>
+          <li>無限量數據每月 &yen;3,168 — 日本最便宜之一</li>
+          <li>透過 Rakuten Link 應用程式可免費撥打日本國內電話</li>
+          <li>100多個國家免費漫遊（最多 2 GB）</li>
+          <li>樂天市場 SPU 點數 +5倍（常在樂天購物的人非常划算）</li>
+          <li>家庭折扣 &minus;&yen;110/月；兒童折扣 &minus;&yen;440/月</li>
+          <li>階梯式計費，3 GB 只要 &yen;968 — 用多少付多少</li>
+        </ul>
+      </div>
+      <div class="con-list">
+        <strong>缺點</strong>
+        <ul>
+          <li>地下室和建築物內訊號可能較弱（Platinum Band 正在建設中）</li>
+          <li>Rakuten Link 的通話品質明顯不如 VoLTE</li>
+          <li>部分地區仍依賴 au 網路漫遊（非樂天自有網路）</li>
+          <li>實體門市數量比三大電信少</li>
+          <li>如果不使用樂天生態圈，點數回饋的價值有限</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. ahamo -->
+  <div class="plan-card" data-carrier="ahamo">
+    <div class="plan-top">
+      <div class="carrier-col">
+        <div class="carrier-logo logo-docomo">ah</div>
+        <div>
+          <div class="carrier-name">ahamo</div>
+          <div class="carrier-sub">docomo 網路（僅線上）</div>
+        </div>
+      </div>
+      <div class="data-col">
+        <div class="data-main">30 GB</div>
+        <div class="data-note">大容量選項：110 GB</div>
+      </div>
+      <div class="price-col">
+        <div class="price-val">&yen;2,970</div>
+        <div class="price-unit">大容量 &yen;4,950</div>
+      </div>
+      <div class="speed-col">1 Mbps<br><small style="color:var(--ink-muted)">超量後限速</small></div>
+      <div class="contract-col no-contract">免綁約</div>
+      <div class="cta-col">
+        <a href="https://ahamo.com/" target="_blank" rel="noopener" class="btn btn-sm btn-ghost">官方網站 &rarr;</a>
+        <a href="https://ahamo.com/plan/index.html" target="_blank" rel="noopener" class="btn btn-sm btn-ghost" style="font-size:12px;">詳情</a>
+      </div>
+    </div>
+    <div class="plan-bottom">
+      <div class="pro-list">
+        <strong>優點</strong>
+        <ul>
+          <li>使用 docomo 網路 — 覆蓋率和速度頂級</li>
+          <li>含5分鐘免費通話，無需額外付費</li>
+          <li>30 GB 只要 &yen;2,970 — 簡單明瞭、沒有隱藏費用</li>
+          <li>支援82個國家的數據漫遊</li>
+          <li>在平價電信中實測速度名列前茅</li>
+        </ul>
+      </div>
+      <div class="con-list">
+        <strong>缺點</strong>
+        <ul>
+          <li>到門市諮詢每次收費 &yen;3,300</li>
+          <li>不適用 docomo 家庭折扣（僅計入人數）</li>
+          <li>不支援數據翻月</li>
+          <li>沒有小容量方案 — 最低就是 30 GB</li>
+          <li>沒有電信商電子郵件</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. LINEMO -->
+  <div class="plan-card" data-carrier="linemo">
+    <div class="plan-top">
+      <div class="carrier-col">
+        <div class="carrier-logo logo-linemo">L</div>
+        <div>
+          <div class="carrier-name">LINEMO</div>
+          <div class="carrier-sub">SoftBank 網路（Best Plan）</div>
+        </div>
+      </div>
+      <div class="data-col">
+        <div class="data-main">10 GB</div>
+        <div class="data-note">V 30 GB</div>
+      </div>
+      <div class="price-col">
+        <div class="price-val">&yen;990~</div>
+        <div class="price-unit">V &yen;2,970</div>
+      </div>
+      <div class="speed-col">1 Mbps<br><small style="color:var(--ink-muted)">超量後限速</small></div>
+      <div class="contract-col no-contract">免綁約</div>
+      <div class="cta-col">
+        <a href="https://www.linemo.jp/" target="_blank" rel="noopener" class="btn btn-sm btn-ghost">官方網站 &rarr;</a>
+        <a href="https://www.linemo.jp/plan/" target="_blank" rel="noopener" class="btn btn-sm btn-ghost" style="font-size:12px;">詳情</a>
+      </div>
+    </div>
+    <div class="plan-bottom">
+      <div class="pro-list">
+        <strong>優點</strong>
+        <ul>
+          <li>LINE 通訊和通話不計入數據用量（LINE Giga Free）</li>
+          <li>使用 SoftBank 主幹網路，品質穩定可靠</li>
+          <li>3 GB 只要 &yen;990 — 業界最便宜之一</li>
+          <li>階梯式計費，用多少付多少</li>
+        </ul>
+      </div>
+      <div class="con-list">
+        <strong>缺點</strong>
+        <ul>
+          <li>完全沒有實體門市支援（100% 線上）</li>
+          <li>只有兩種方案層級 — 彈性有限</li>
+          <li>沒有家庭折扣</li>
+          <li>語音信箱和來電轉接需額外付費</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. IIJmio -->
+  <div class="plan-card" data-carrier="iijmio">
+    <div class="plan-top">
+      <div class="carrier-col">
+        <div class="carrier-logo logo-iij">IIJ</div>
+        <div>
+          <div class="carrier-name">IIJmio</div>
+          <div class="carrier-sub">Giga Plan（MVNO）</div>
+        </div>
+      </div>
+      <div class="data-col">
+        <div class="data-main">5 GB</div>
+        <div class="data-note">2~50 GB 可選</div>
+      </div>
+      <div class="price-col">
+        <div class="price-val">&yen;950</div>
+        <div class="price-unit">2 GB 起 &yen;850</div>
+      </div>
+      <div class="speed-col">200 kbps<br><small style="color:var(--ink-muted)">超量後限速</small></div>
+      <div class="contract-col no-contract">免綁約</div>
+      <div class="cta-col">
+        <a href="https://www.iijmio.jp/" target="_blank" rel="noopener" class="btn btn-sm btn-ghost">官方網站 &rarr;</a>
+        <a href="https://www.iijmio.jp/gigaplan/" target="_blank" rel="noopener" class="btn btn-sm btn-ghost" style="font-size:12px;">詳情</a>
+      </div>
+    </div>
+    <div class="plan-bottom">
+      <div class="pro-list">
+        <strong>優點</strong>
+        <ul>
+          <li>每 GB 單價業界最低</li>
+          <li>2 GB 到 50 GB 彈性選擇</li>
+          <li>支援 eSIM，多線路管理方便</li>
+          <li>搭配方案購機有大量優惠機種</li>
+          <li>支援數據共享和翻月</li>
+        </ul>
+      </div>
+      <div class="con-list">
+        <strong>缺點</strong>
+        <ul>
+          <li>午餐時段速度明顯下降（MVNO 通病）</li>
+          <li>幾乎沒有實體門市支援</li>
+          <li>通話方案選擇有限</li>
+          <li>需支付初期費用（SIM 卡發行費）</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5. mineo -->
+  <div class="plan-card" data-carrier="mineo">
+    <div class="plan-top">
+      <div class="carrier-col">
+        <div class="carrier-logo logo-mineo">m</div>
+        <div>
+          <div class="carrier-name">mineo</div>
+          <div class="carrier-sub">My Pita / My Soku（MVNO）</div>
+        </div>
+      </div>
+      <div class="data-col">
+        <div class="data-main">7 GB</div>
+        <div class="data-note">3~50 GB / 無限量</div>
+      </div>
+      <div class="price-col">
+        <div class="price-val">&yen;1,518</div>
+        <div class="price-unit">3 GB 起 &yen;1,298</div>
+      </div>
+      <div class="speed-col">200 kbps<br><small style="color:var(--ink-muted)">超量後限速</small></div>
+      <div class="contract-col no-contract">免綁約</div>
+      <div class="cta-col">
+        <a href="https://mineo.jp/" target="_blank" rel="noopener" class="btn btn-sm btn-ghost">官方網站 &rarr;</a>
+        <a href="https://mineo.jp/price/" target="_blank" rel="noopener" class="btn btn-sm btn-ghost" style="font-size:12px;">詳情</a>
+      </div>
+    </div>
+    <div class="plan-bottom">
+      <div class="pro-list">
+        <strong>優點</strong>
+        <ul>
+          <li>「My Soku」方案以最高 3 Mbps 提供無限量數據，僅 &yen;990（日本獨有）</li>
+          <li>可選擇三大網路（docomo / au / SoftBank）</li>
+          <li>透過 Mineoking 用戶論壇獲得強大的社群支援</li>
+          <li>「Free Tank」功能可與其他用戶共享未用數據</li>
+        </ul>
+      </div>
+      <div class="con-list">
+        <strong>缺點</strong>
+        <ul>
+          <li>My Soku 在平日午餐時段限速至 32 kbps（基本上無法使用）</li>
+          <li>尖峰時段速度下降，與所有 MVNO 相同</li>
+          <li>價格比 IIJmio 稍貴</li>
+          <li>5G 支援有限</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- 6. povo -->
+  <div class="plan-card" data-carrier="povo">
+    <div class="plan-top">
+      <div class="carrier-col">
+        <div class="carrier-logo logo-povo">pv</div>
+        <div>
+          <div class="carrier-name">povo 2.0</div>
+          <div class="carrier-sub">au 網路（按需加購制）</div>
+        </div>
+      </div>
+      <div class="data-col">
+        <div class="data-main">按需加購</div>
+        <div class="data-note">3 GB &yen;990 / 30天</div>
+      </div>
+      <div class="price-col">
+        <div class="price-val">&yen;0~</div>
+        <div class="price-unit">基本費 &yen;0</div>
+      </div>
+      <div class="speed-col">128 kbps<br><small style="color:var(--ink-muted)">基本速度</small></div>
+      <div class="contract-col no-contract">免綁約</div>
+      <div class="cta-col">
+        <a href="https://povo.jp/" target="_blank" rel="noopener" class="btn btn-sm btn-ghost">官方網站 &rarr;</a>
+        <a href="https://povo.jp/spec/" target="_blank" rel="noopener" class="btn btn-sm btn-ghost" style="font-size:12px;">詳情</a>
+      </div>
+    </div>
+    <div class="plan-bottom">
+      <div class="pro-list">
+        <strong>優點</strong>
+        <ul>
+          <li>基本費 &yen;0 — 非常適合作為備用 SIM</li>
+          <li>使用高品質的 au 網路</li>
+          <li>24小時無限量數據通行證只要 &yen;330（旅行日超方便）</li>
+          <li>不用的月份完全不花錢</li>
+        </ul>
+      </div>
+      <div class="con-list">
+        <strong>缺點</strong>
+        <ul>
+          <li>沒有月租方案 — 每次都要手動加購數據，比較麻煩</li>
+          <li>加購的數據有使用期限</li>
+          <li>180天不加購可能會被停線</li>
+          <li>沒有實體門市支援（100% 線上）</li>
+          <li>沒有無限通話選項</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- 7. UQ mobile -->
+  <div class="plan-card" data-carrier="uq">
+    <div class="plan-top">
+      <div class="carrier-col">
+        <div class="carrier-logo logo-uq">UQ</div>
+        <div>
+          <div class="carrier-name">UQ mobile</div>
+          <div class="carrier-sub">au 網路（子品牌）</div>
+        </div>
+      </div>
+      <div class="data-col">
+        <div class="data-main">20 GB</div>
+        <div class="data-note">Comicomi Plan</div>
+      </div>
+      <div class="price-col">
+        <div class="price-val">&yen;3,278</div>
+        <div class="price-unit">Mini Mini 4 GB 起 &yen;2,365</div>
+      </div>
+      <div class="speed-col">1 Mbps<br><small style="color:var(--ink-muted)">超量後限速</small></div>
+      <div class="contract-col no-contract">免綁約</div>
+      <div class="cta-col">
+        <a href="https://www.uqwimax.jp/mobile/" target="_blank" rel="noopener" class="btn btn-sm btn-ghost">官方網站 &rarr;</a>
+        <a href="https://www.uqwimax.jp/mobile/plan/" target="_blank" rel="noopener" class="btn btn-sm btn-ghost" style="font-size:12px;">詳情</a>
+      </div>
+    </div>
+    <div class="plan-bottom">
+      <div class="pro-list">
+        <strong>優點</strong>
+        <ul>
+          <li>au 網路品質穩定可靠（非 MVNO）</li>
+          <li>全國 au 和 UQ 門市提供面對面服務</li>
+          <li>支援數據翻月</li>
+          <li>可搭配家用網路享折扣</li>
+        </ul>
+      </div>
+      <div class="con-list">
+        <strong>缺點</strong>
+        <ul>
+          <li>&yen;2,365 起 — 比真正的 MVNO 貴</li>
+          <li>沒有搭配折扣的話，價格優勢不大</li>
+          <li>方案結構有點複雜</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- 8. docomo -->
+  <div class="plan-card" data-carrier="docomo">
+    <div class="plan-top">
+      <div class="carrier-col">
+        <div class="carrier-logo logo-docomo">d</div>
+        <div>
+          <div class="carrier-name">NTT docomo</div>
+          <div class="carrier-sub">docomo MAX / mini</div>
+        </div>
+      </div>
+      <div class="data-col">
+        <div class="data-main">無限量</div>
+        <div class="data-note">另有 mini 4 GB / 10 GB</div>
+      </div>
+      <div class="price-col">
+        <div class="price-val">&yen;7,315</div>
+        <div class="price-unit">mini 起 &yen;1,628</div>
+      </div>
+      <div class="speed-col">1 Mbps<br><small style="color:var(--ink-muted)">超量後限速</small></div>
+      <div class="contract-col no-contract">免綁約</div>
+      <div class="cta-col">
+        <a href="https://www.docomo.ne.jp/" target="_blank" rel="noopener" class="btn btn-sm btn-ghost">官方網站 &rarr;</a>
+        <a href="https://www.docomo.ne.jp/charge/" target="_blank" rel="noopener" class="btn btn-sm btn-ghost" style="font-size:12px;">詳情</a>
+      </div>
+    </div>
+    <div class="plan-bottom">
+      <div class="pro-list">
+        <strong>優點</strong>
+        <ul>
+          <li>日本網路品質和覆蓋率最佳</li>
+          <li>全國 docomo 門市提供完整的面對面服務</li>
+          <li>家庭和光纖網路搭配折扣力度大</li>
+          <li>d Point 點數生態圈完善</li>
+        </ul>
+      </div>
+      <div class="con-list">
+        <strong>缺點</strong>
+        <ul>
+          <li>無限量方案 &yen;7,315 是平價電信的兩倍以上</li>
+          <li>沒有搭配折扣的話非常貴</li>
+          <li>方案結構經常變動，不容易搞懂</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- 9. au -->
+  <div class="plan-card" data-carrier="au">
+    <div class="plan-top">
+      <div class="carrier-col">
+        <div class="carrier-logo logo-au">au</div>
+        <div>
+          <div class="carrier-name">au (KDDI)</div>
+          <div class="carrier-sub">Value Link Plan / Unlimited MAX+</div>
+        </div>
+      </div>
+      <div class="data-col">
+        <div class="data-main">無限量</div>
+        <div class="data-note">Unlimited MAX+</div>
+      </div>
+      <div class="price-col">
+        <div class="price-val">&yen;7,238</div>
+        <div class="price-unit">月費（含稅）</div>
+      </div>
+      <div class="speed-col">1 Mbps<br><small style="color:var(--ink-muted)">超量後限速</small></div>
+      <div class="contract-col no-contract">免綁約</div>
+      <div class="cta-col">
+        <a href="https://www.au.com/mobile/" target="_blank" rel="noopener" class="btn btn-sm btn-ghost">官方網站 &rarr;</a>
+        <a href="https://www.au.com/mobile/charge/smartphone/plan/" target="_blank" rel="noopener" class="btn btn-sm btn-ghost" style="font-size:12px;">詳情</a>
+      </div>
+    </div>
+    <div class="plan-bottom">
+      <div class="pro-list">
+        <strong>優點</strong>
+        <ul>
+          <li>豐富的娛樂搭配方案（Netflix、DAZN 等）</li>
+          <li>全國網路品質優秀</li>
+          <li>au 門市提供面對面服務</li>
+          <li>Ponta 點數整合</li>
+        </ul>
+      </div>
+      <div class="con-list">
+        <strong>缺點</strong>
+        <ul>
+          <li>每月 &yen;7,238 以上，價格偏高</li>
+          <li>即使不選娛樂附加服務，價格也不會降低</li>
+          <li>方案複雜，不容易比較</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- 10. SoftBank -->
+  <div class="plan-card" data-carrier="softbank">
+    <div class="plan-top">
+      <div class="carrier-col">
+        <div class="carrier-logo logo-soft">S</div>
+        <div>
+          <div class="carrier-name">SoftBank</div>
+          <div class="carrier-sub">Merihari Unlimited+</div>
+        </div>
+      </div>
+      <div class="data-col">
+        <div class="data-main">無限量</div>
+        <div class="data-note">另有 PayToku Unlimited</div>
+      </div>
+      <div class="price-col">
+        <div class="price-val">&yen;7,425</div>
+        <div class="price-unit">月費（含稅）</div>
+      </div>
+      <div class="speed-col">1 Mbps<br><small style="color:var(--ink-muted)">超量後限速</small></div>
+      <div class="contract-col no-contract">免綁約</div>
+      <div class="cta-col">
+        <a href="https://www.softbank.jp/mobile/" target="_blank" rel="noopener" class="btn btn-sm btn-ghost">官方網站 &rarr;</a>
+        <a href="https://www.softbank.jp/mobile/price_plan/" target="_blank" rel="noopener" class="btn btn-sm btn-ghost" style="font-size:12px;">詳情</a>
+      </div>
+    </div>
+    <div class="plan-bottom">
+      <div class="pro-list">
+        <strong>優點</strong>
+        <ul>
+          <li>PayPay 點數回饋高（搭配 PayToku 方案）</li>
+          <li>網路品質穩定</li>
+          <li>SoftBank 門市提供面對面服務</li>
+          <li>含 Yahoo! Premium 會員權益</li>
+        </ul>
+      </div>
+      <div class="con-list">
+        <strong>缺點</strong>
+        <ul>
+          <li>月費 &yen;7,425，三大電信中最貴</li>
+          <li>PayToku Unlimited &yen;9,625 價格非常高</li>
+          <li>不使用 PayPay 的話價值有限</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  </div><!-- /plans-container -->
+
+  <!-- ═══ RAKUTEN COVERAGE IMPROVEMENT ═══ -->
+  <h2 class="section-heading mt-4">樂天Mobile 的收訊問題 — 真的有改善嗎？</h2>
+  <p class="section-desc">「樂天在地下鐵收不到訊號」— 現在還是這樣嗎？讓我們看看最新數據。</p>
+
+  <div class="card mb-3">
+    <h3 style="font-size:16px; font-weight:800; margin-bottom:16px;">人口覆蓋率變化</h3>
+    <div class="timeline">
+      <div class="timeline-step">
+        <div class="timeline-year">2021</div>
+        <div class="timeline-data">73%</div>
+        <div class="timeline-note">服務初期<br>大量依賴 au 漫遊</div>
+      </div>
+      <div class="timeline-step">
+        <div class="timeline-year">2022</div>
+        <div class="timeline-data">96%</div>
+        <div class="timeline-note">達成政府目標<br>提前4年完成</div>
+      </div>
+      <div class="timeline-step">
+        <div class="timeline-year">2023</div>
+        <div class="timeline-data">99%</div>
+        <div class="timeline-note">60,000+ 基地台<br>達到 99.9%</div>
+      </div>
+      <div class="timeline-step">
+        <div class="timeline-year">2024</div>
+        <div class="timeline-data">99.9%</div>
+        <div class="timeline-note">Platinum Band<br>（700 MHz）開通</div>
+      </div>
+      <div class="timeline-step current">
+        <div class="timeline-year">2026</div>
+        <div class="timeline-data">持續擴展</div>
+        <div class="timeline-note">地下鐵覆蓋95%<br>7月前全面完成</div>
+      </div>
+    </div>
+
+    <div style="margin-top:20px;">
+      <h4 style="font-size:14px; font-weight:800; margin-bottom:10px;">地下鐵 &amp; 室內收訊改善情況</h4>
+      <div class="grid-2" style="gap:12px;">
+        <div style="background:var(--green-bg); border-radius:8px; padding:14px;">
+          <div style="font-size:12px; font-weight:700; color:var(--green); margin-bottom:6px;">已解決（截至2026年3月）</div>
+          <ul style="font-size:12px; color:#1b5e20; line-height:1.8; padding-left:16px;">
+            <li>東京Metro &amp; 都營地下鐵：約95%已覆蓋（預計7月前達100%）</li>
+            <li>小田急、東急、京成、臨海、京王、相鐵、東京單軌：地下段100%完成</li>
+            <li>頻寬從 5 MHz 擴展到 20 MHz（流量容量提升4倍）</li>
+            <li>83.2% 的用戶反映訊號改善（比2024年 +5.4個百分點）</li>
+          </ul>
+        </div>
+        <div style="background:var(--orange-bg); border-radius:8px; padding:14px;">
+          <div style="font-size:12px; font-weight:700; color:var(--orange); margin-bottom:6px;">仍在改善中</div>
+          <ul style="font-size:12px; color:#9a3412; line-height:1.8; padding-left:16px;">
+            <li>Platinum Band（700 MHz）尚未在全國部署完成</li>
+            <li>部分鄉村地區仍依賴 au 網路漫遊</li>
+            <li>大型商場和地下停車場仍可能有收訊死角</li>
+            <li>室內穿透力與三大電信的 Band 1/3/8 相比仍在發展中</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:16px; padding:14px; background:#f8fafc; border-radius:8px; font-size:13px; color:var(--ink-muted); line-height:1.7;">
+      <strong style="color:var(--ink);">我們的看法：</strong>
+      2026年的樂天Mobile 和2021年那個「連不上」的名聲已經完全不同。東京地區的地下鐵覆蓋預計在2026年7月前全面完成。不過，如果你住在鄉下或經常待在大型建築物內，ahamo（docomo 網路）仍然是更穩妥的選擇。
+      可以在樂天Mobile <a href="https://network.mobile.rakuten.co.jp/area/" style="color:var(--pink); text-decoration:underline;">官方網站</a>查看最新覆蓋地圖。
+    </div>
+  </div>
+
+  <!-- ═══ HOW TO CHOOSE ═══ -->
+  <h2 class="section-heading">哪張 SIM 卡最適合你？</h2>
+  <div class="grid-2 mb-3">
+    <div class="card">
+      <div style="font-size:14px; font-weight:800; margin-bottom:8px; color:var(--pink);">追求性價比 / 樂天生態圈用戶</div>
+      <div style="font-size:13px; color:var(--ink-muted); line-height:1.7;">
+        &rarr; <strong>樂天Mobile</strong> 是首選。無限量數據 &yen;3,168 加上 SPU 點數加碼。適合不常待在地下的人。
+      </div>
+    </div>
+    <div class="card">
+      <div style="font-size:14px; font-weight:800; margin-bottom:8px; color:var(--pink);">網路品質優先</div>
+      <div style="font-size:13px; color:var(--ink-muted); line-height:1.7;">
+        &rarr; <strong>ahamo</strong> 是最佳選擇。docomo 網路速度和穩定性頂級。30 GB 只要 &yen;2,970。
+      </div>
+    </div>
+    <div class="card">
+      <div style="font-size:14px; font-weight:800; margin-bottom:8px; color:var(--pink);">主要用 LINE / 輕度使用者</div>
+      <div style="font-size:13px; color:var(--ink-muted); line-height:1.7;">
+        &rarr; <strong>LINEMO</strong>。LINE 數據免費，3 GB 只要 &yen;990。如果 LINE 是你的主要通訊工具，這是最佳選擇。
+      </div>
+    </div>
+    <div class="card">
+      <div style="font-size:14px; font-weight:800; margin-bottom:8px; color:var(--pink);">想要最便宜 / 低用量需求</div>
+      <div style="font-size:13px; color:var(--ink-muted); line-height:1.7;">
+        &rarr; <strong>IIJmio</strong> 或 <strong>povo</strong>。IIJmio 2 GB 只要 &yen;850；povo 可維持每月 &yen;0。
+      </div>
+    </div>
+    <div class="card">
+      <div style="font-size:14px; font-weight:800; margin-bottom:8px; color:var(--pink);">需要面對面服務</div>
+      <div style="font-size:13px; color:var(--ink-muted); line-height:1.7;">
+        &rarr; <strong>UQ mobile</strong> 或 <strong>Y!mobile</strong>。可以直接到 au 或 SoftBank 門市獲得服務。
+      </div>
+    </div>
+    <div class="card">
+      <div style="font-size:14px; font-weight:800; margin-bottom:8px; color:var(--pink);">不會日語 / 剛到日本</div>
+      <div style="font-size:13px; color:var(--ink-muted); line-height:1.7;">
+        &rarr; <strong>樂天Mobile</strong>（有英語支援）或 <strong>ahamo</strong>（線上申辦流程簡單）。兩者都接受在留卡。
+      </div>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <div class="faq-section">
+    <h2 class="section-heading">常見問題</h2>
+    <div class="faq-item">
+      <div class="faq-q">樂天Mobile 在地下鐵能用嗎？</div>
+      <div class="faq-a">截至2026年3月，東京Metro 和都營地下鐵約95%的車站已覆蓋，預計7月前全面完成。小田急、東急、京成等私鐵的地下段已100%覆蓋。不過，部分地下商店街可能仍有收訊不穩的情況。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">為什麼 MVNO 午餐時段速度這麼慢？</div>
+      <div class="faq-a">MVNO 向大型電信商租用頻寬，而在中午12點到1點的午餐時段，大家同時使用手機導致頻寬壅塞。ahamo、LINEMO、povo、UQ mobile 不是 MVNO，因此不會受到這種影響。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">外國人可以申辦這些方案嗎？</div>
+      <div class="faq-a">可以 — 只要持有在留卡（中長期在留資格），基本上可以申辦這裡列出的所有方案。樂天Mobile 還提供英語支援，讓不會日語的人也能順利申辦。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">這個網站的排名是怎麼決定的？</div>
+      <div class="faq-a">我們根據價格、網路品質、用戶評價和獨特功能來評估每家電信商。雖然本站參與聯盟行銷計畫，但排名不受佣金比例影響。我們會誠實列出每家電信商的缺點。</div>
+    </div>
+  </div>
+
+</div><!-- /wrap -->
+
+<div class="wrap">
+  <div class="disclaimer">
+    <strong>免責聲明：</strong>本站參與所列電信商的聯盟行銷計畫。排名由編輯團隊獨立決定。
+    <strong>資訊準確性：</strong>資訊更新至2026年3月，可能會有變動。所列速度為理論最大值。
+  </div>
+</div>
+<footer>
+  <div class="footer-links">
+    <a href="../index.html">首頁</a>
+    <a href="index.html">SIM方案</a>
+    <a href="../credit-cards/index.html">信用卡</a>
+    <a href="#">隱私政策</a>
+    <a href="#">關於我們</a>
+  </div>
+  <p>&copy; 2026 Japan Mobile SIM (japanmobilesim.com)</p>
+</footer>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "樂天Mobile在地下鐵能用嗎？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "截至2026年3月，東京Metro和都營地下鐵約95%的車站已覆蓋，預計7月前全面完成。小田急、東急、京成等私鐵的地下段已100%覆蓋。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "為什麼MVNO午餐時段速度這麼慢？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "MVNO向大型電信商租用頻寬，而在中午12點到1點的午餐時段，大家同時使用手機導致頻寬壅塞。ahamo、LINEMO、povo、UQ mobile不是MVNO，因此不會受到這種影響。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "外國人可以申辦日本的平價SIM方案嗎？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "可以——只要持有在留卡（中長期在留資格），基本上可以申辦這裡列出的所有方案。樂天Mobile還提供英語支援，讓不會日語的人也能順利申辦。"
+      }
+    }
+  ]
+}
+</script>
+<script src="../../assets/lang.js"></script>
+<script>
+(function() {
+  // Ranking orders per tab (carrier data-carrier values)
+  // Speed ranking based on Minna no Sokudo, kakakumag, real-world data (March 2026)
+  // povo 140Mbps, ahamo 127Mbps, LINEMO 124Mbps, UQ 108Mbps,
+  // mineo 87Mbps, Rakuten 82Mbps, IIJmio 74Mbps
+  // Note: MVNOs (mineo, IIJmio) drop heavily at lunch 12pm
+  const RANKINGS = {
+    overall:     ['rakuten','ahamo','linemo','iijmio','mineo','povo','uq','docomo','au','softbank'],
+    cost:        ['iijmio','rakuten','povo','mineo','linemo','ahamo','uq','docomo','au','softbank'],
+    speed:       ['ahamo','povo','linemo','uq','softbank','au','docomo','mineo','rakuten','iijmio'],
+    light:       ['povo','iijmio','linemo','mineo','rakuten','uq','ahamo','docomo','au','softbank'],
+    foreigner:   ['rakuten','ahamo','linemo','povo','iijmio','mineo','uq','docomo','au','softbank']
+  };
+
+  const container = document.getElementById('plans-container');
+  const tabs = document.querySelectorAll('.rank-tab');
+  const descs = document.querySelectorAll('.tab-desc');
+
+  function applyTab(tabName) {
+    // Update active tab
+    tabs.forEach(t => t.classList.toggle('active', t.dataset.tab === tabName));
+    descs.forEach(d => d.style.display = d.dataset.for === tabName ? '' : 'none');
+
+    // Reorder cards
+    const order = RANKINGS[tabName] || RANKINGS.overall;
+    const cards = [...container.querySelectorAll('.plan-card')];
+
+    // Remove existing rank badges
+    cards.forEach(c => {
+      const existing = c.querySelector('.rank-badge');
+      if (existing) existing.remove();
+      c.classList.remove('pick');
+    });
+
+    // Sort and re-append
+    order.forEach((carrier, i) => {
+      const card = cards.find(c => c.dataset.carrier === carrier);
+      if (!card) return;
+      container.appendChild(card);
+
+      // Add rank badge
+      const carrierCol = card.querySelector('.carrier-col');
+      if (carrierCol) {
+        const badge = document.createElement('span');
+        badge.className = 'rank-badge ' + (i === 0 ? 'rank-1' : i === 1 ? 'rank-2' : i === 2 ? 'rank-3' : 'rank-other');
+        badge.textContent = i + 1;
+        carrierCol.insertBefore(badge, carrierCol.firstChild);
+      }
+
+      // Highlight #1
+      if (i === 0) card.classList.add('pick');
+    });
+  }
+
+  // Bind tab clicks
+  tabs.forEach(tab => {
+    tab.addEventListener('click', function() {
+      applyTab(this.dataset.tab);
+    });
+  });
+
+  // Initialize with default tab
+  applyTab('overall');
+})();
+</script>
+
+</body>
+</html>
