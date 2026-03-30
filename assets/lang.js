@@ -13,7 +13,7 @@ const SUPPORTED_LANGS = [
 ];
 
 const DEFAULT_LANG = 'en';
-const STORAGE_KEY = 'kurashi-otoku-lang';
+const STORAGE_KEY = 'japanmobilesim-lang';
 
 function detectBrowserLang() {
   const langs = navigator.languages || [navigator.language || navigator.userLanguage || ''];
