@@ -123,8 +123,24 @@
       <button class="lang-btn" data-lang="vi">Vi</button>
       <button class="lang-btn" data-lang="my">MY</button>
     </div>
+    <button class="hamburger" onclick="document.querySelector('.hamburger').classList.toggle('open');document.querySelector('.mobile-nav').classList.toggle('open')" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </header>
+<div class="mobile-nav">
+  <a href="../index.html">トップ</a>
+  <a href="../sim/index.html">格安SIM比較</a>
+  <a href="index.html" class="active">クレジットカード</a>
+  <a href="../guides/rakuten-registration/index.html">ガイド</a>
+  <div class="mobile-lang">
+    <button class="lang-btn" data-lang="ja">日本語</button>
+    <button class="lang-btn" data-lang="en">EN</button>
+    <button class="lang-btn" data-lang="zh-tw">繁中</button>
+    <button class="lang-btn" data-lang="vi">Vi</button>
+    <button class="lang-btn" data-lang="my">MY</button>
+  </div>
+</div>
 
 <!-- ── HERO ── -->
 <section style="padding:48px 16px 40px; border-bottom:1px solid var(--border-light);">

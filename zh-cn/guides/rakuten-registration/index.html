@@ -35,8 +35,26 @@
       <button class="lang-btn" data-lang="my" onclick="location.href='../../../my/guides/rakuten-registration/index.html'">MY</button>
       <button class="lang-btn" data-lang="th" onclick="location.href='../../../th/guides/rakuten-registration/index.html'">TH</button>
     </div>
+    <button class="hamburger" onclick="document.querySelector('.hamburger').classList.toggle('open');document.querySelector('.mobile-nav').classList.toggle('open')" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </header>
+<div class="mobile-nav">
+  <a href="../../index.html">首页</a>
+  <a href="../../sim/index.html">SIM比较</a>
+  <a href="../../credit-cards/index.html">信用卡</a>
+  <a href="index.html" class="active">指南</a>
+  <div class="mobile-lang">
+    <button class="lang-btn" data-lang="ja" onclick="location.href='../../../guides/rakuten-registration/index.html'">日本語</button>
+    <button class="lang-btn" data-lang="en" onclick="location.href='../../../en/guides/rakuten-registration/index.html'">EN</button>
+    <button class="lang-btn" data-lang="zh-tw" onclick="location.href='../../../zh-tw/guides/rakuten-registration/index.html'">繁中</button>
+    <button class="lang-btn active" data-lang="zh-cn">简中</button>
+    <button class="lang-btn" data-lang="vi" onclick="location.href='../../../vi/guides/rakuten-registration/index.html'">Vi</button>
+    <button class="lang-btn" data-lang="my" onclick="location.href='../../../my/guides/rakuten-registration/index.html'">MY</button>
+    <button class="lang-btn" data-lang="th" onclick="location.href='../../../th/guides/rakuten-registration/index.html'">TH</button>
+  </div>
+</div>
 
 <section class="guide-intro">
   <p class="section-label">分步指南</p>

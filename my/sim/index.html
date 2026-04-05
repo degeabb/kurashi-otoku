@@ -90,8 +90,25 @@
       <button class="lang-btn active" data-lang="my">MY</button>
       <button class="lang-btn" data-lang="th" onclick="location.href='../../th/sim/index.html'">TH</button>
     </div>
+    <button class="hamburger" onclick="document.querySelector('.hamburger').classList.toggle('open');document.querySelector('.mobile-nav').classList.toggle('open')" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </header>
+<div class="mobile-nav">
+  <a href="../index.html">ပင်မစာမျက်နှာ</a>
+  <a href="index.html" class="active">SIM နှိုင်းယှဉ်ခြင်း</a>
+  <a href="../credit-cards/index.html">ခရက်ဒစ်ကတ်</a>
+  <a href="../guides/rakuten-registration/index.html">လမ်းညွှန်</a>
+  <div class="mobile-lang">
+    <button class="lang-btn" data-lang="ja" onclick="location.href='../../sim/index.html'">日本語</button>
+    <button class="lang-btn" data-lang="en" onclick="location.href='../../en/sim/index.html'">EN</button>
+    <button class="lang-btn" data-lang="zh-tw" onclick="location.href='../../zh-tw/sim/index.html'">繁中</button>
+    <button class="lang-btn" data-lang="vi" onclick="location.href='../../vi/sim/index.html'">Vi</button>
+    <button class="lang-btn active" data-lang="my">MY</button>
+    <button class="lang-btn" data-lang="th" onclick="location.href='../../th/sim/index.html'">TH</button>
+  </div>
+</div>
 
 <!-- RAKUTEN CAMPAIGN BANNER -->
 <section style="padding:16px 24px 0;">

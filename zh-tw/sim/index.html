@@ -90,8 +90,25 @@
       <button class="lang-btn" data-lang="my" onclick="location.href='../../my/sim/index.html'">MY</button>
       <button class="lang-btn" data-lang="th" onclick="location.href='../../th/sim/index.html'">TH</button>
     </div>
+    <button class="hamburger" onclick="document.querySelector('.hamburger').classList.toggle('open');document.querySelector('.mobile-nav').classList.toggle('open')" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </header>
+<div class="mobile-nav">
+  <a href="../index.html">首頁</a>
+  <a href="index.html" class="active">SIM比較</a>
+  <a href="../credit-cards/index.html">信用卡</a>
+  <a href="../guides/rakuten-registration/index.html">指南</a>
+  <div class="mobile-lang">
+    <button class="lang-btn" data-lang="ja" onclick="location.href='../../sim/index.html'">日本語</button>
+    <button class="lang-btn" data-lang="en" onclick="location.href='../../en/sim/index.html'">EN</button>
+    <button class="lang-btn active" data-lang="zh-tw">繁中</button>
+    <button class="lang-btn" data-lang="vi" onclick="location.href='../../vi/sim/index.html'">Vi</button>
+    <button class="lang-btn" data-lang="my" onclick="location.href='../../my/sim/index.html'">MY</button>
+    <button class="lang-btn" data-lang="th" onclick="location.href='../../th/sim/index.html'">TH</button>
+  </div>
+</div>
 
 <!-- RAKUTEN CAMPAIGN BANNER -->
 <section style="padding:16px 24px 0;">

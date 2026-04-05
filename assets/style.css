@@ -69,6 +69,46 @@ header {
 .nav-links a:hover { color: var(--pink); text-decoration: none; }
 .nav-links a.active { color: var(--pink); }
 
+/* ── HAMBURGER MENU ── */
+.hamburger {
+  display: none;
+  background: none; border: none;
+  cursor: pointer; padding: 4px;
+  flex-direction: column; gap: 5px;
+  z-index: 200;
+}
+.hamburger span {
+  display: block; width: 22px; height: 2px;
+  background: var(--ink); border-radius: 2px;
+  transition: all .2s;
+}
+.hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+.mobile-nav {
+  display: none;
+  position: fixed; top: 56px; left: 0; right: 0; bottom: 0;
+  background: var(--bg);
+  z-index: 99;
+  padding: 24px;
+  flex-direction: column; gap: 0;
+  border-top: 1px solid var(--border-light);
+  overflow-y: auto;
+}
+.mobile-nav.open { display: flex; }
+.mobile-nav a {
+  display: block; padding: 16px 0;
+  font-size: 16px; font-weight: 700;
+  color: var(--ink); text-decoration: none;
+  border-bottom: 1px solid var(--border-light);
+}
+.mobile-nav a:hover, .mobile-nav a.active { color: var(--pink); text-decoration: none; }
+.mobile-nav .mobile-lang {
+  display: flex; gap: 6px; flex-wrap: wrap;
+  margin-top: 24px; padding-top: 8px;
+}
+
 .lang-switcher { display: flex; gap: 4px; }
 .lang-btn {
   border: 1px solid var(--border); background: var(--bg);
@@ -422,6 +462,8 @@ footer a:hover { color: rgba(255,255,255,.7); }
   .plan-bottom { grid-template-columns: 1fr; }
   .table-cols { display: none; }
   .nav-links { display: none; }
+  .lang-switcher { display: none; }
+  .hamburger { display: flex; }
   .grid-2 { grid-template-columns: 1fr; }
   .timeline { flex-direction: column; }
   .timeline-step { border-radius: 0 !important; }
