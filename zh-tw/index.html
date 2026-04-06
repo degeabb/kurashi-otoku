@@ -133,12 +133,11 @@
     <div style="margin-top:24px; padding:20px; border:1px solid var(--border); border-radius:8px;">
       <div style="display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:8px; margin-bottom:14px;">
         <div>
-          <div style="font-size:14px; font-weight:700;">如果把省下的錢投入 NISA 會怎樣？</div>
-          <div style="font-size:12px; color:var(--ink-muted);">模擬：將每月省下的金額透過日本免稅 NISA 帳戶投資指數基金</div>
+          <div style="font-size:14px; font-weight:700;">如果從樂天Mobile開始時（4年前）就把省下的錢投入NISA呢？</div>
+          <div style="font-size:12px; color:var(--ink-muted);">模擬：從2021年起將每月省下的金額透過日本免稅NISA帳戶投資指數基金</div>
         </div>
         <div style="display:flex; gap:4px;">
-          <button class="chip selected" data-value="2020" data-group="nisa-start" style="padding:4px 10px; font-size:11px;">從 2020 開始</button>
-          <button class="chip" data-value="2022" data-group="nisa-start" style="padding:4px 10px; font-size:11px;">從 2022 開始</button>
+          <button class="chip selected" data-value="2021" data-group="nisa-start" style="padding:4px 10px; font-size:11px;">從 2021 開始</button>
         </div>
       </div>
 
@@ -201,7 +200,7 @@
 
 <script>
 (function() {
-  const state = { mobile: 7500, card: 0.5, spend: 100000, 'nisa-start': 2020 };
+  const state = { mobile: 7500, card: 0.5, spend: 100000, 'nisa-start': 2021 };
   const TARGET_MOBILE = 3168;
   const TARGET_CARD_RATE = 1.5;
   const PRICES = {
