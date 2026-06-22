@@ -476,13 +476,13 @@ footer a:hover { color: rgba(255,255,255,.7); }
 
 /* ── FLOATING MINI CAMPAIGN BANNER (desktop) ── */
 .float-banner {
-  position: fixed; right: 20px; bottom: 20px; z-index: 210;
+  position: fixed; right: 20px; top: 50%; z-index: 210;
   width: 200px; border-radius: 12px; overflow: hidden; background: #fff;
   box-shadow: 0 6px 24px rgba(0,0,0,.22);
-  opacity: 0; transform: translateY(16px); pointer-events: none;
+  opacity: 0; transform: translate(16px, -50%); pointer-events: none;
   transition: opacity .3s ease, transform .3s ease;
 }
-.float-banner.show { opacity: 1; transform: translateY(0); pointer-events: auto; }
+.float-banner.show { opacity: 1; transform: translate(0, -50%); pointer-events: auto; }
 .float-banner a { display: block; text-decoration: none; }
 .float-banner img { width: 100%; display: block; }
 .float-banner .fb-label {
