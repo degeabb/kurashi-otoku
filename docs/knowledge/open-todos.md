@@ -1,5 +1,17 @@
 # Open TODOs
 
+## SEO / Analytics (2026-07-04 — see decisions/008)
+- [x] Fix broken Pages deploy (added `.nojekyll`; Jekyll build was erroring silently)
+- [x] Complete hreflang across all languages + x-default
+- [x] noindex on credit-cards redirect stubs
+- [x] Per-language OG share images + twitter cards (all 41 pages)
+- [x] JSON-LD: Organization/WebSite/BreadcrumbList/Article
+- [ ] **GA4** — install snippet site-wide once user provides `G-…` Measurement ID
+      (privacy policy already references Google Analytics)
+- [ ] **Google Search Console** — verify domain + submit sitemap.xml (user action)
+- [ ] **Social promo + AI post system** — X / Threads / Instagram, draft→approve model
+- [ ] Regenerate OG images if branding/taglines change (gen script: scratchpad/make_og.py)
+
 ## High Priority
 - [x] Fix referral guide inaccuracies — done 2026-06-22 (see decisions/006, 007)
   - [x] Re-contract eligibility for previously-cancelled users (decisions/006)
