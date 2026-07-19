@@ -1,2 +1,11 @@
 .DS_Store
 .venv/
+
+# Social post generator: keep the source (content.yaml, generate.py, template,
+# README) tracked, but not the generated review queue / drafts.
+social/drafts/
+social/review.html
+
+# Python bytecode
+__pycache__/
+*.pyc

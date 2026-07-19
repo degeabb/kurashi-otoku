@@ -1,0 +1,83 @@
+# Content source for the social post generator.
+#
+# This file is the SINGLE SOURCE OF TRUTH for post facts. The generator is
+# instructed to use ONLY the `facts` text below and never invent numbers/prices.
+# Keep `facts` accurate — verify prices before a run (the site has price-audit history).
+#
+# Link resolution per language:
+#   - ja lives at the site root (no /ja/ prefix); other langs live under /<lang>/.
+#   - If a language has no real page for `path` (e.g. zh-cn has no /sim/, or a page is
+#     a redirect stub), the generator falls back via `link_lang_fallback`, then to ja.
+#   - Post TEXT is always written in the audience's language even when the LINK is ja.
+
+site:
+  base_url: https://japanmobilesim.com
+  languages: [ja, en, zh-tw, zh-cn, vi, my, th]
+  brand_name: "暮らしお得 / Japan Mobile SIM"
+  # Neutral, honest voice — show pros AND cons, never pushy or hypey.
+  voice: >-
+    Honest and neutral. Show trade-offs (pros and cons), never overpromise, no hype
+    or clickbait. Helpful peer tone, not a hard sell. Numbers must match the facts exactly.
+
+items:
+  - id: sim-savings
+    type: comparison
+    path: /sim/
+    image: assets/og-{lang}.png
+    languages: all
+    link_lang_fallback: { zh-cn: zh-tw }   # zh-cn has no /sim/ page
+    facts: >-
+      10 budget SIM carriers (格安SIM) reviewed neutrally with real pros AND cons,
+      including honest signal-quality notes. Switching from a major carrier can save
+      about ¥48,000 per year. Example plan: IIJmio 5GB for ¥950/month.
+
+  - id: fixed-cost-savings
+    type: overview
+    path: /
+    image: assets/og-{lang}.png
+    languages: all
+    facts: >-
+      Reviewing your fixed monthly costs — mainly phone plan and credit cards — can save
+      ¥100,000+ per year. The site gives neutral, no-hype comparisons in multiple languages
+      for people living in Japan.
+
+  - id: rakuten-campaign
+    type: campaign
+    path: /guides/referral/
+    image: assets/og-{lang}.png
+    languages: all
+    verify_before_posting: true   # campaign terms/points change — re-check the guide first
+    facts: >-
+      Rakuten Mobile employee-referral program guide (with screenshots). Only the referrer
+      must be a Rakuten Group employee; the person being referred can be anyone. Bonus points
+      are distributed around months 4-6, and you must make one ~10-second call via the
+      Rakuten Link app to qualify. Do not state exact point amounts unless certain.
+
+  - id: rakuten-registration
+    type: guide
+    path: /guides/rakuten-registration/
+    image: assets/og-{lang}.png
+    languages: all
+    facts: >-
+      Step-by-step guide (with screenshots) to creating a Rakuten account (Rakuten ID),
+      which is needed for Rakuten Mobile, Rakuten Card, and Rakuten Ichiba.
+
+  - id: credit-cards
+    type: comparison
+    path: /credit-cards/
+    image: assets/og-{lang}.png
+    languages: all
+    link_lang_fallback: { en: ja, zh-tw: ja, zh-cn: ja, vi: ja, my: ja, th: ja }  # JA-only page
+    facts: >-
+      Credit cards compared for 2026 by reward rate (還元率), annual fee (年会費), and miles,
+      to help find the best card for your spending. Neutral comparison.
+
+  - id: money-saving-tip
+    type: evergreen
+    path: /
+    image: assets/og-{lang}.png
+    languages: all
+    facts: >-
+      The two biggest levers for cutting costs in Japan are switching your SIM/phone plan
+      and choosing the right credit card. The site gives honest side-by-side comparisons —
+      trade-offs included, not just the upsides.

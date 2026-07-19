@@ -1,0 +1,5 @@
+# Social post generator dependencies (install into the repo's .venv)
+#   .venv/bin/pip install -r social/requirements.txt
+anthropic>=0.40
+PyYAML>=6.0
+Jinja2>=3.1

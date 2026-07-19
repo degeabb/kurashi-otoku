@@ -11,7 +11,11 @@
       (privacy policy already references Google Analytics)
 - [x] **Google Search Console** — URL-prefix property auto-verified via Google Analytics
       + sitemap.xml submitted 2026-07-19 (see decisions/009)
-- [ ] **Social promo + AI post system** — X / Threads / Instagram, draft→approve model
+- [x] **Social promo + AI post system** — draft-generation MVP built 2026-07-19 in `social/`
+      (X/Threads/Instagram, 7 langs, draft→manual-post; see decisions/010). Needs user's
+      `ANTHROPIC_API_KEY` to run for real.
+  - [ ] Phase 2: optional Threads auto-post (free API) after Meta App Review
+  - [ ] Proper 1080×1080 Instagram images (currently reuses 1200×630 OG cards)
 - [ ] Regenerate OG images if branding/taglines change (gen script: scratchpad/make_og.py)
 
 ## High Priority

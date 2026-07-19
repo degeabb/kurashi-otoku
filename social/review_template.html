@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<title>Social post review queue — {{ generated_at }}</title>
+<style>
+  :root { color-scheme: light dark; }
+  * { box-sizing: border-box; }
+  body { font-family: -apple-system, "Noto Sans JP", Segoe UI, sans-serif; margin: 0;
+         background: #f6f7f9; color: #1a1a1a; line-height: 1.5; }
+  header { position: sticky; top: 0; background: #b4001e; color: #fff; padding: 14px 20px;
+           box-shadow: 0 2px 6px rgba(0,0,0,.15); z-index: 10; }
+  header h1 { margin: 0; font-size: 18px; }
+  header .meta { font-size: 13px; opacity: .9; margin-top: 2px; }
+  main { max-width: 900px; margin: 0 auto; padding: 20px; }
+  .item { margin-bottom: 34px; }
+  .item > h2 { font-size: 16px; border-bottom: 2px solid #b4001e; padding-bottom: 6px; }
+  .item .type { font-size: 12px; color: #666; font-weight: normal; }
+  .card { background: #fff; border: 1px solid #e2e4e8; border-radius: 10px;
+          padding: 14px; margin: 12px 0; box-shadow: 0 1px 3px rgba(0,0,0,.05); }
+  .card-head { display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
+               margin-bottom: 8px; }
+  .badge { font-size: 12px; font-weight: 600; padding: 2px 9px; border-radius: 20px; color: #fff; }
+  .b-x { background: #000; }
+  .b-threads { background: #333; }
+  .b-instagram { background: #c13584; }
+  .lang { font-size: 12px; color: #444; background: #eef0f3; padding: 2px 8px; border-radius: 20px; }
+  .count { margin-left: auto; font-size: 12px; font-variant-numeric: tabular-nums; color: #2a7d2a; }
+  .count.over { color: #c00; font-weight: 700; }
+  textarea { width: 100%; min-height: 90px; font: inherit; font-size: 14px; padding: 10px;
+             border: 1px solid #d6d9de; border-radius: 8px; resize: vertical; background: #fbfbfc; }
+  .row { display: flex; gap: 10px; align-items: center; margin-top: 8px; flex-wrap: wrap; }
+  button.copy { background: #b4001e; color: #fff; border: 0; padding: 7px 16px;
+                border-radius: 8px; font-weight: 600; cursor: pointer; font-size: 13px; }
+  button.copy:hover { background: #90001a; }
+  button.copy.done { background: #2a7d2a; }
+  a.link { font-size: 13px; color: #0a58ca; word-break: break-all; }
+  .imgnote { display: flex; gap: 10px; align-items: center; margin-top: 8px; font-size: 12px; color: #555; }
+  .imgnote img { width: 92px; height: auto; border: 1px solid #ddd; border-radius: 6px; }
+  .warn { color: #b46a00; font-size: 12px; margin-top: 6px; }
+  .summary { background:#fff; border:1px solid #e2e4e8; border-radius:10px; padding:12px 16px; margin-bottom:24px; font-size:14px; }
+  @media (prefers-color-scheme: dark) {
+    body { background:#16181c; color:#e6e6e6; }
+    .card,.summary { background:#20242b; border-color:#33383f; }
+    textarea { background:#171a1f; color:#e6e6e6; border-color:#3a3f47; }
+    .lang { background:#2b3038; color:#cfd3d9; }
+    a.link { color:#7aa7ff; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>📣 Social post review queue</h1>
+  <div class="meta">Generated {{ generated_at }} · {{ total }} drafts · model: {{ model }}{% if mock %} · MOCK (no API){% endif %}</div>
+</header>
+<main>
+  <div class="summary">
+    Review each draft, edit inline if needed, then <b>Copy</b> and post it manually.
+    {% if over_count %}<span class="count over">⚠ {{ over_count }} draft(s) exceed the platform character limit — fix before posting.</span>{% else %}All drafts are within platform limits. ✅{% endif %}
+    Instagram has no clickable link in captions — the draft ends with a “link in bio” CTA, so set your profile link to the site.
+  </div>
+
+  {% for item in items %}
+  <section class="item">
+    <h2>{{ item.id }} <span class="type">· {{ item.type }}</span></h2>
+    {% for d in item.drafts %}
+    <div class="card">
+      <div class="card-head">
+        <span class="badge b-{{ d.platform }}">{{ d.platform }}</span>
+        <span class="lang">{{ d.lang }}</span>
+        <span class="count {% if d.over_limit %}over{% endif %}">{{ d.effective_count }}/{{ d.char_limit }}{% if d.platform == 'x' %} (link≈23){% endif %}</span>
+      </div>
+      <textarea id="t{{ d.uid }}" spellcheck="false">{{ d.text }}</textarea>
+      <div class="row">
+        <button class="copy" onclick="cp('{{ d.uid }}', this)">Copy</button>
+        {% if d.url %}<a class="link" href="{{ d.url }}" target="_blank" rel="noopener">{{ d.url }}</a>{% endif %}
+      </div>
+      {% if d.needs_image %}
+      <div class="imgnote">
+        {% if d.image_rel %}<img src="{{ d.image_rel }}" alt="post image">{% endif %}
+        <span>Instagram requires an image — attach <code>{{ d.image_src }}</code>. Put the link ({{ d.url }}) in your bio.</span>
+      </div>
+      {% endif %}
+      {% if d.warn %}<div class="warn">⚠ {{ d.warn }}</div>{% endif %}
+    </div>
+    {% endfor %}
+  </section>
+  {% endfor %}
+</main>
+<script>
+  function cp(uid, btn) {
+    const ta = document.getElementById('t' + uid);
+    navigator.clipboard.writeText(ta.value).then(() => {
+      const old = btn.textContent;
+      btn.textContent = '✓ Copied'; btn.classList.add('done');
+      setTimeout(() => { btn.textContent = old; btn.classList.remove('done'); }, 1500);
+    });
+  }
+</script>
+</body>
+</html>
