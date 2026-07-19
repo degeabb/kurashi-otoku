@@ -6,9 +6,11 @@
 - [x] noindex on credit-cards redirect stubs
 - [x] Per-language OG share images + twitter cards (all 41 pages)
 - [x] JSON-LD: Organization/WebSite/BreadcrumbList/Article
-- [ ] **GA4** — install snippet site-wide once user provides `G-…` Measurement ID
+- [x] **GA4** — installed site-wide (`G-Z2WT21RFVT`) on all 41 real pages 2026-07-19;
+      gtag.js placed after `<meta charset>`, redirect stubs excluded
       (privacy policy already references Google Analytics)
-- [ ] **Google Search Console** — verify domain + submit sitemap.xml (user action)
+- [ ] **Google Search Console** — verify domain + submit sitemap.xml (user action;
+      GA tag now live → verify via "Google Analytics" method)
 - [ ] **Social promo + AI post system** — X / Threads / Instagram, draft→approve model
 - [ ] Regenerate OG images if branding/taglines change (gen script: scratchpad/make_og.py)
 
