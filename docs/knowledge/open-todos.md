@@ -9,8 +9,8 @@
 - [x] **GA4** — installed site-wide (`G-Z2WT21RFVT`) on all 41 real pages 2026-07-19;
       gtag.js placed after `<meta charset>`, redirect stubs excluded
       (privacy policy already references Google Analytics)
-- [ ] **Google Search Console** — verify domain + submit sitemap.xml (user action;
-      GA tag now live → verify via "Google Analytics" method)
+- [x] **Google Search Console** — URL-prefix property auto-verified via Google Analytics
+      + sitemap.xml submitted 2026-07-19 (see decisions/009)
 - [ ] **Social promo + AI post system** — X / Threads / Instagram, draft→approve model
 - [ ] Regenerate OG images if branding/taglines change (gen script: scratchpad/make_og.py)
 
