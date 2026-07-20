@@ -12,44 +12,49 @@ See `docs/decisions/010-social-post-system.md`.
 
 ## Setup (one time)
 
-1. **Anthropic API key** (separate from the Claude Code subscription — pay-as-you-go,
-   ~pennies per full run). Get one at <https://console.anthropic.com>, then:
-   ```bash
-   export ANTHROPIC_API_KEY=sk-ant-...
-   ```
-   (add it to your `~/.zshrc` to persist).
-2. **Install deps** into the repo's `.venv`:
-   ```bash
-   .venv/bin/pip install -r social/requirements.txt
-   ```
-
-## Usage
-
-Run from the repo root:
-
+Install deps into the repo's `.venv`:
 ```bash
-# Offline plumbing test — no API key, placeholder text:
-.venv/bin/python social/generate.py --mock
-
-# Cheap real test — ONE draft via the API:
-.venv/bin/python social/generate.py --dry-run
-
-# Full run — every item x 7 langs x 3 platforms:
-.venv/bin/python social/generate.py
-
-# Filtered runs:
-.venv/bin/python social/generate.py --items sim-savings,rakuten-campaign
-.venv/bin/python social/generate.py --langs ja,en --platforms x,threads
-.venv/bin/python social/generate.py --model claude-haiku-4-5-20251001   # cheaper
+.venv/bin/pip install -r social/requirements.txt
 ```
 
-Output:
+## Two ways to generate — pick one
+
+### A) No API key — write the drafts with Claude Code (default here)
+
+You only need your Claude Code subscription. Ask Claude Code (in a session) to
+"generate this batch of social posts", and it writes them into **`social/batch.yaml`**
+(format below). Then render the review page — no API call, no key, no cost beyond the
+subscription:
+```bash
+.venv/bin/python social/generate.py --from-drafts social/batch.yaml
+```
+`batch.yaml` is a list of `{item, lang, platform, text}` entries. The script still does
+the deterministic work: resolves the correct per-language link, counts characters per
+platform (flagging any over-limit), and builds `review.html`. `batch.yaml` is git-ignored
+— it's your working file; edit and re-render it freely.
+
+### B) Anthropic API key — fully self-service script
+
+Get a key at <https://console.anthropic.com> (pay-as-you-go, ~pennies per full run;
+separate from the Claude Code subscription), then:
+```bash
+export ANTHROPIC_API_KEY=sk-ant-...          # add to ~/.zshrc to persist
+
+.venv/bin/python social/generate.py --dry-run   # one cheap draft (API test)
+.venv/bin/python social/generate.py             # full run: every item x 7 langs x 3 platforms
+.venv/bin/python social/generate.py --items sim-savings --langs ja,en --platforms x,threads
+.venv/bin/python social/generate.py --model claude-haiku-4-5-20251001   # cheaper model
+```
+
+`--mock` (no key, placeholder text) is available in both paths for plumbing tests.
+
+Output (both paths):
 - `social/review.html` — **open this in a browser.** One card per draft with a live
   character count (red if over the limit), the target link, a Copy button, and (for
   Instagram) the image to attach.
 - `social/drafts/<timestamp>/` — the same drafts as plain `.txt` files.
 
-Both are git-ignored (regenerated each run).
+`review.html`, `drafts/`, and `batch.yaml` are all git-ignored (regenerated each run).
 
 ## Approve → post workflow
 

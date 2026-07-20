@@ -5,6 +5,7 @@
 # README) tracked, but not the generated review queue / drafts.
 social/drafts/
 social/review.html
+social/batch.yaml
 
 # Python bytecode
 __pycache__/

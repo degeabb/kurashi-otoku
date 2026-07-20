@@ -19,7 +19,14 @@ backend), solo operator, ~¥10K/yr budget, 7 languages.
 ## Decision
 Build a **draft-only** generator; **post manually**. This is $0 platform cost, works for X,
 needs no app review, and fits the budget. User choices: platforms = X + Threads + Instagram;
-languages = all 7; engine = local Python script + Anthropic API key.
+languages = all 7.
+
+**Generation engine (updated 2026-07-20):** the user has only a Claude Code subscription
+(no separate Anthropic API key), so the **no-key path is the default**: Claude Code writes
+the post text into `social/batch.yaml`, and `generate.py --from-drafts` renders the review
+page with zero API calls. The API-key path (`generate.py` calling Claude directly) still
+works for anyone who sets `ANTHROPIC_API_KEY`. `make_draft()` is shared by both paths, so
+link resolution / char-limit checks / HTML are identical regardless of engine.
 
 ## What was built (`social/`)
 - `content.yaml` — single source of truth: ~6 promotable items (SIM savings, fixed-cost

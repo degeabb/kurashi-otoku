@@ -224,6 +224,60 @@ def generate_text(client, model, max_tokens, site, item, lang, platform, url, mo
     return clean_text(text)
 
 
+def make_draft(site: dict, item: dict, lang: str, platform: str, text: str,
+               warn: Optional[str] = None) -> Draft:
+    """Build a Draft from post text — deterministic: link resolution, char count, image.
+
+    Shared by the API path and the no-API --from-drafts path.
+    """
+    cfg = PLATFORMS[platform]
+    cfg_url = resolve_url(item, lang, site["base_url"])
+    url = cfg_url if cfg["include_link"] else None
+    count = effective_length(text, platform, url)
+    over = count > cfg["limit"]
+    if not warn and cfg["include_link"] and url and url not in text:
+        text = f"{text}\n{url}".strip()
+        count = effective_length(text, platform, url)
+        over = count > cfg["limit"]
+        warn = "Link was missing; appended automatically — re-check length."
+    image_src = item["image"].format(lang=lang) if cfg["needs_image"] and item.get("image") else None
+    uid = re.sub(r"[^a-zA-Z0-9]+", "-", f"{item['id']}-{platform}-{lang}")
+    return Draft(
+        item_id=item["id"], platform=platform, lang=lang, text=text, url=cfg_url,
+        image_src=image_src, char_limit=cfg["limit"], effective_count=count,
+        over_limit=over, needs_image=cfg["needs_image"], warn=warn, uid=uid,
+        image_rel=("../" + image_src) if image_src else None,
+    )
+
+
+def load_drafts_file(path: Path, items_by_id: Dict[str, dict], known_langs: set) -> list:
+    """Load hand-authored drafts (no API). Returns [(item, lang, platform, text), ...]."""
+    try:
+        raw = path.read_text(encoding="utf-8")
+    except OSError as e:
+        sys.exit(f"ERROR: cannot read drafts file {path}: {e}")
+    try:
+        data = yaml.safe_load(raw)
+    except yaml.YAMLError as e:
+        sys.exit(f"ERROR: invalid YAML in {path}: {e}")
+    entries = (data or {}).get("drafts")
+    if not entries:
+        sys.exit(f"ERROR: {path} must contain a non-empty 'drafts:' list.")
+    specs = []
+    for i, e in enumerate(entries):
+        for req in ("item", "lang", "platform", "text"):
+            if req not in e:
+                sys.exit(f"ERROR: drafts[{i}] is missing '{req}'.")
+        if e["item"] not in items_by_id:
+            sys.exit(f"ERROR: drafts[{i}] references unknown item '{e['item']}'.")
+        if e["lang"] not in known_langs:
+            sys.exit(f"ERROR: drafts[{i}] has unknown lang '{e['lang']}'.")
+        if e["platform"] not in ALL_PLATFORMS:
+            sys.exit(f"ERROR: drafts[{i}] has unknown platform '{e['platform']}'.")
+        specs.append((items_by_id[e["item"]], e["lang"], e["platform"], str(e["text"]).strip()))
+    return specs
+
+
 # --------------------------------------------------------------------------- #
 # Main
 # --------------------------------------------------------------------------- #
@@ -238,18 +292,26 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--platforms", default="", help="comma-separated: x,threads,instagram")
     p.add_argument("--model", default=DEFAULT_MODEL)
     p.add_argument("--max-tokens", type=int, default=DEFAULT_MAX_TOKENS)
+    p.add_argument("--from-drafts", type=Path, default=None,
+                   help="render hand-authored drafts from a YAML file with NO API call")
     p.add_argument("--mock", action="store_true", help="no API calls; placeholder text (test plumbing)")
     p.add_argument("--dry-run", action="store_true", help="one item x one lang x one platform (cheap API test)")
     return p.parse_args()
 
 
-def main() -> None:
-    args = parse_args()
-    data = load_content(args.content)
+def build_specs(args, data: dict) -> list:
+    """Return the work list [(item, lang, platform, text_or_None), ...].
+
+    --from-drafts supplies text (no API); otherwise text is None and generated later.
+    """
     site = data["site"]
     all_langs = site["languages"]
+    items_by_id = {it["id"]: it for it in data["items"]}
 
-    items = data["items"]
+    if args.from_drafts:
+        return load_drafts_file(args.from_drafts, items_by_id, set(all_langs))
+
+    items = list(data["items"])
     if args.items:
         want = {s.strip() for s in args.items.split(",")}
         items = [it for it in items if it["id"] in want]
@@ -262,19 +324,38 @@ def main() -> None:
     bad_plats = set(platforms) - set(ALL_PLATFORMS)
     if bad_plats:
         sys.exit(f"ERROR: unknown platforms {bad_plats}; known: {ALL_PLATFORMS}")
-
     if args.dry_run:
         items, langs, platforms = items[:1], langs[:1], platforms[:1]
 
+    specs = []
+    for item in items:
+        item_langs = all_langs if item.get("languages", "all") == "all" else item["languages"]
+        for lang in langs:
+            if lang not in item_langs:
+                continue
+            for platform in platforms:
+                specs.append((item, lang, platform, None))
+    return specs
+
+
+def main() -> None:
+    args = parse_args()
+    data = load_content(args.content)
+    site = data["site"]
+    specs = build_specs(args, data)
+
+    # An API client is only needed when we must generate text (not --from-drafts / --mock).
+    need_api = not (args.from_drafts or args.mock)
     client = None
-    if not args.mock:
+    if need_api:
         try:
             from anthropic import Anthropic
         except ImportError:
             sys.exit("ERROR: anthropic not installed. Run: .venv/bin/pip install -r social/requirements.txt")
         import os
         if not os.environ.get("ANTHROPIC_API_KEY"):
-            sys.exit("ERROR: ANTHROPIC_API_KEY not set. `export ANTHROPIC_API_KEY=...` or use --mock.")
+            sys.exit("ERROR: ANTHROPIC_API_KEY not set. Use --from-drafts (no key) or --mock, "
+                     "or `export ANTHROPIC_API_KEY=...`.")
         client = Anthropic()
 
     run_label = datetime.now().strftime("%Y%m%d-%H%M%S")
@@ -286,69 +367,46 @@ def main() -> None:
     total = 0
     over_count = 0
 
-    for item in items:
-        item_langs = all_langs if item.get("languages", "all") == "all" else item["languages"]
-        for lang in langs:
-            if lang not in item_langs:
-                continue
-            cfg_url = resolve_url(item, lang, site["base_url"])
-            for platform in platforms:
-                cfg = PLATFORMS[platform]
-                url = cfg_url if cfg["include_link"] else None
-                warn = None
-                try:
-                    text = generate_text(client, args.model, args.max_tokens,
-                                         site, item, lang, platform, url, args.mock)
-                except Exception as e:  # noqa: BLE001 — keep prior (paid) drafts; flag this one
-                    text = ""
-                    warn = f"Generation failed: {e}"
-                    print(f"  ! {item['id']}/{platform}/{lang}: {e}", file=sys.stderr)
+    for item, lang, platform, text in specs:
+        warn = None
+        if text is None:  # generate via API (or mock placeholder)
+            cfg = PLATFORMS[platform]
+            url = resolve_url(item, lang, site["base_url"]) if cfg["include_link"] else None
+            try:
+                text = generate_text(client, args.model, args.max_tokens,
+                                     site, item, lang, platform, url, args.mock)
+            except Exception as e:  # noqa: BLE001 — keep prior (paid) drafts; flag this one
+                text = ""
+                warn = f"Generation failed: {e}"
+                print(f"  ! {item['id']}/{platform}/{lang}: {e}", file=sys.stderr)
 
-                count = effective_length(text, platform, url)
-                over = count > cfg["limit"]
+        d = make_draft(site, item, lang, platform, text, warn)
+        over_count += 1 if d.over_limit else 0
+        total += 1
+        (run_dir / f"{platform}-{lang}-{item['id']}.txt").write_text(d.text, encoding="utf-8")
 
-                if not warn and cfg["include_link"] and url and url not in text:
-                    text = f"{text}\n{url}".strip()
-                    count = effective_length(text, platform, url)
-                    over = count > cfg["limit"]
-                    warn = "Model omitted the link; appended automatically — re-check length."
-                over_count += 1 if over else 0
-                total += 1
+        if item["id"] not in groups:
+            groups[item["id"]] = {"id": item["id"], "type": item.get("type", ""), "drafts": []}
+            ordered_ids.append(item["id"])
+        groups[item["id"]]["drafts"].append(d)
 
-                image_src = item["image"].format(lang=lang) if cfg["needs_image"] and item.get("image") else None
-                uid = re.sub(r"[^a-zA-Z0-9]+", "-", f"{item['id']}-{platform}-{lang}")
-                d = Draft(
-                    item_id=item["id"], platform=platform,
-                    lang=lang, text=text, url=cfg_url, image_src=image_src,
-                    char_limit=cfg["limit"], effective_count=count, over_limit=over,
-                    needs_image=cfg["needs_image"], warn=warn, uid=uid,
-                    image_rel=("../" + image_src) if image_src else None,
-                )
-                (run_dir / f"{platform}-{lang}-{item['id']}.txt").write_text(text, encoding="utf-8")
-
-                if item["id"] not in groups:
-                    groups[item["id"]] = {"id": item["id"], "type": item.get("type", ""), "drafts": []}
-                    ordered_ids.append(item["id"])
-                groups[item["id"]]["drafts"].append(d)
-
-    # Render the review page. autoescape=True so model-generated text can't break out
-    # of the markup (e.g. a stray </textarea> or <script> in a draft).
+    # Render the review page. autoescape=True so draft text can't break out of the markup.
     try:
         template = Template(args.template.read_text(encoding="utf-8"), autoescape=True)
     except OSError as e:
         sys.exit(f"ERROR: cannot read template {args.template}: {e}")
     view_items = [groups[i] for i in ordered_ids]
+    model_label = "hand-authored" if args.from_drafts else ("mock" if args.mock else args.model)
     html = template.render(
         generated_at=run_label, total=total, over_count=over_count,
-        model=("mock" if args.mock else args.model), mock=args.mock, items=view_items,
+        model=model_label, mock=args.mock, items=view_items,
     )
     try:
         args.out.write_text(html, encoding="utf-8")
     except OSError as e:
         sys.exit(f"ERROR: cannot write review page {args.out}: {e}")
 
-    print(f"Generated {total} drafts across {len(view_items)} items "
-          f"({len(langs)} langs x {len(platforms)} platforms).")
+    print(f"Generated {total} drafts across {len(view_items)} items.")
     print(f"  Drafts:  {run_dir}")
     print(f"  Review:  {args.out}   ← open this in a browser")
     if over_count:
