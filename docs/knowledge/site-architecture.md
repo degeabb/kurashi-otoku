@@ -9,7 +9,7 @@ Multi-language personal finance & lifestyle affiliate portal for Japan (japanmob
 | ja | `/` (root) | 暮らし**お得** | Full site |
 | en | `/en/` | Japan**MobileSIM** | Full site |
 | zh-tw | `/zh-tw/` | Japan**MobileSIM** | Full site |
-| zh-cn | `/zh-cn/` | Japan**MobileSIM** | Guides only (no homepage/SIM page yet) |
+| zh-cn | `/zh-cn/` | Japan**MobileSIM** | Full site (home/SIM generated from zh-tw, decisions/011) |
 | vi | `/vi/` | Japan**MobileSIM** | Full site |
 | my | `/my/` | Japan**MobileSIM** | Full site |
 | th | `/th/` | Japan**MobileSIM** | Full site |
@@ -34,9 +34,7 @@ Multi-language personal finance & lifestyle affiliate portal for Japan (japanmob
 │   ├── sim/index.html
 │   ├── credit-cards/index.html  (redirect)
 │   └── guides/...
-├── zh-tw/, vi/, my/, th/  ← same pattern
-├── zh-cn/                 ← guides only
-│   └── guides/...
+├── zh-tw/, zh-cn/, vi/, my/, th/  ← same pattern
 ├── assets/
 │   ├── style.css          (shared CSS, ~480 lines)
 │   ├── lang.js            (minimal, no auto-detection)

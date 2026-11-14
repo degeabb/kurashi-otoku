@@ -32,8 +32,8 @@
 4. Set username, password (8+ chars, uppercase + special), first/last name
 5. Confirm information → complete registration
 
-### Known Inaccuracy (not yet fixed)
-- Password requirement: guide says "at least 6 characters" in some places, actual requirement is **8+ characters with uppercase and special characters**
+### Password requirement
+- Fixed 2026-11-14 (decisions/011): all languages now state **8+ characters with uppercase and special characters**
 
 ## Employee Referral Guide
 - **Path**: `[lang]/guides/referral/index.html`

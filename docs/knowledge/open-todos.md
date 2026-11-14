@@ -27,11 +27,15 @@
   - [x] Clarify it's Rakuten Group employee referral; only referrer must be an employee, referee can be anyone (2026-06-22)
 - [x] Make application entry obvious — banner CTA + floating side banner (decisions/006)
 - [ ] Add real screenshots to referral guide (all languages still have placeholders)
-- [ ] Fix password requirement in registration guide (should be 8+ chars with uppercase + special)
+- [x] Fix password requirement in registration guide — done 2026-11-14, all 7 langs (decisions/011)
 
 ## Medium Priority
-- [ ] Complete zh-cn language (homepage, SIM page, credit cards redirect) — privacy/about pages now exist (decisions/007)
-- [ ] Add 简中 button to lang-switcher on all non-guide pages
+- [x] Complete zh-cn language (homepage, SIM page, credit cards redirect) — done 2026-11-14 via OpenCC from zh-tw (decisions/011)
+  - [ ] Optional: native-speaker polish of zh-cn home/SIM wording
+- [x] Add 简中 button to lang-switcher + zh-cn hreflang on all home/SIM pages (2026-11-14)
+- [ ] **vi referral guide body has no Vietnamese diacritics** (whole page, e.g. "Huong dan tung buoc") — needs re-translation
+- [ ] Sitemap lacks privacy/about pages (all langs)
+- [ ] Burmese (my) guide-card copy on homepage written 2026-11-14 — have a native speaker check
 - [ ] **Set up Cloudflare Email Routing** for contact@japanmobilesim.com → forward to personal Gmail (user action; pages already reference this address)
 - [ ] Verify au/SoftBank prices periodically (IIJmio 5GB ¥950 confirmed correct by user 2026-06-22)
 - [ ] Bump "情報は2026年3月時点" disclaimers to current once speed-ranking data is re-measured
@@ -39,5 +43,5 @@
 
 ## Low Priority
 - [ ] Embed QR code somewhere on the site (currently just a generated asset)
-- [ ] Add guide cards section to non-JA/EN homepages (currently only JA and EN have them)
+- [x] Add guide cards section to non-JA/EN homepages — done 2026-11-14
 - [ ] Consider adding more guide topics (e.g., Rakuten Card application, MNP transfer)
