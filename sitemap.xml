@@ -7,6 +7,7 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://japanmobilesim.com/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://japanmobilesim.com/en/"/>
     <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://japanmobilesim.com/zh-tw/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://japanmobilesim.com/zh-cn/"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://japanmobilesim.com/vi/"/>
     <xhtml:link rel="alternate" hreflang="my" href="https://japanmobilesim.com/my/"/>
     <xhtml:link rel="alternate" hreflang="th" href="https://japanmobilesim.com/th/"/>
@@ -15,6 +16,7 @@
   </url>
   <url><loc>https://japanmobilesim.com/en/</loc><lastmod>2026-03-30</lastmod><priority>0.9</priority></url>
   <url><loc>https://japanmobilesim.com/zh-tw/</loc><lastmod>2026-03-30</lastmod><priority>0.9</priority></url>
+  <url><loc>https://japanmobilesim.com/zh-cn/</loc><lastmod>2026-11-14</lastmod><priority>0.9</priority></url>
   <url><loc>https://japanmobilesim.com/vi/</loc><lastmod>2026-03-30</lastmod><priority>0.9</priority></url>
   <url><loc>https://japanmobilesim.com/my/</loc><lastmod>2026-03-30</lastmod><priority>0.9</priority></url>
   <url><loc>https://japanmobilesim.com/th/</loc><lastmod>2026-03-30</lastmod><priority>0.9</priority></url>
@@ -24,6 +26,7 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://japanmobilesim.com/sim/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://japanmobilesim.com/en/sim/"/>
     <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://japanmobilesim.com/zh-tw/sim/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://japanmobilesim.com/zh-cn/sim/"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://japanmobilesim.com/vi/sim/"/>
     <xhtml:link rel="alternate" hreflang="my" href="https://japanmobilesim.com/my/sim/"/>
     <xhtml:link rel="alternate" hreflang="th" href="https://japanmobilesim.com/th/sim/"/>
@@ -32,6 +35,7 @@
   </url>
   <url><loc>https://japanmobilesim.com/en/sim/</loc><lastmod>2026-03-30</lastmod><priority>0.9</priority></url>
   <url><loc>https://japanmobilesim.com/zh-tw/sim/</loc><lastmod>2026-03-30</lastmod><priority>0.9</priority></url>
+  <url><loc>https://japanmobilesim.com/zh-cn/sim/</loc><lastmod>2026-11-14</lastmod><priority>0.9</priority></url>
   <url><loc>https://japanmobilesim.com/vi/sim/</loc><lastmod>2026-03-30</lastmod><priority>0.9</priority></url>
   <url><loc>https://japanmobilesim.com/my/sim/</loc><lastmod>2026-03-30</lastmod><priority>0.9</priority></url>
   <url><loc>https://japanmobilesim.com/th/sim/</loc><lastmod>2026-03-30</lastmod><priority>0.9</priority></url>
@@ -43,6 +47,7 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://japanmobilesim.com/guides/rakuten-registration/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://japanmobilesim.com/en/guides/rakuten-registration/"/>
     <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://japanmobilesim.com/zh-tw/guides/rakuten-registration/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://japanmobilesim.com/zh-cn/guides/rakuten-registration/"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://japanmobilesim.com/vi/guides/rakuten-registration/"/>
     <xhtml:link rel="alternate" hreflang="my" href="https://japanmobilesim.com/my/guides/rakuten-registration/"/>
     <xhtml:link rel="alternate" hreflang="th" href="https://japanmobilesim.com/th/guides/rakuten-registration/"/>
@@ -61,6 +66,7 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://japanmobilesim.com/guides/referral/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://japanmobilesim.com/en/guides/referral/"/>
     <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://japanmobilesim.com/zh-tw/guides/referral/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://japanmobilesim.com/zh-cn/guides/referral/"/>
     <xhtml:link rel="alternate" hreflang="vi" href="https://japanmobilesim.com/vi/guides/referral/"/>
     <xhtml:link rel="alternate" hreflang="my" href="https://japanmobilesim.com/my/guides/referral/"/>
     <xhtml:link rel="alternate" hreflang="th" href="https://japanmobilesim.com/th/guides/referral/"/>
