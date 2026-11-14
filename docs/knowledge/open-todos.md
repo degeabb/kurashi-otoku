@@ -38,6 +38,12 @@
 - [ ] Burmese (my) guide-card copy on homepage written 2026-11-14 — have a native speaker check
 - [ ] **Set up Cloudflare Email Routing** for contact@japanmobilesim.com → forward to personal Gmail (user action; pages already reference this address)
 - [ ] Verify au/SoftBank prices periodically (IIJmio 5GB ¥950 confirmed correct by user 2026-06-22)
+  - 2026-11-14 web check → updated SIM pages (7 langs): docomo MAX ¥7,315→¥8,448, au MAX+ ¥7,238→¥7,788,
+    Rakuten shown at regular price ¥1,078~/¥3,278 (family-discount ¥3,168 noted), ahamo shown at new
+    Dec 1 2026 tiers (40GB ¥3,135 / 60GB ¥4,125 / 120GB ¥5,115) with "¥2,970 until Nov 30" note
+  - [ ] After 2026-12-01: drop the ahamo "until Nov 30" note
+  - [ ] Not yet re-checked: mineo, UQ mobile, SoftBank "PayToku Unlimited ¥9,625" con
+- [ ] **Referral new-line points**: site/banner say 11,000; Nov 2026 sources say 12,000–13,000 — confirm on official Rakuten page, then regen banner + text
 - [ ] Bump "情報は2026年3月時点" disclaimers to current once speed-ranking data is re-measured
 - [ ] Verify guide accuracy periodically (Rakuten may change their registration flow)
 
