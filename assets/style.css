@@ -516,3 +516,9 @@ details.faq-item[open] summary { margin-bottom: 8px; }
 /* Icon bullet lists inside guide steps (emoji act as the bullet) */
 .step-points { list-style: none; padding-left: 0; margin: 4px 0 16px; }
 .step-points li { margin-bottom: 6px; padding-left: 0; }
+
+/* ── PR NOTICE (top of pages with promotional links) ── */
+.pr-notice { background: var(--bg-alt, #f6f7f9); color: var(--ink-muted); font-size: 11px; line-height: 1.6; text-align: center; padding: 6px 16px; border-bottom: 1px solid var(--border-light); }
+/* ── LEGAL NOTICE (bottom disclaimer list) ── */
+.legal-notice ul { margin: 6px 0 0; padding-left: 18px; }
+.legal-notice li { margin-bottom: 3px; }
