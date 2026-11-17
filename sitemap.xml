@@ -79,4 +79,42 @@
   <url><loc>https://japanmobilesim.com/my/guides/referral/</loc><lastmod>2026-04-05</lastmod><priority>0.8</priority></url>
   <url><loc>https://japanmobilesim.com/th/guides/referral/</loc><lastmod>2026-04-05</lastmod><priority>0.8</priority></url>
   <url><loc>https://japanmobilesim.com/zh-cn/guides/referral/</loc><lastmod>2026-04-05</lastmod><priority>0.8</priority></url>
+  <!-- Privacy Policy -->
+  <url>
+    <loc>https://japanmobilesim.com/privacy/</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://japanmobilesim.com/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://japanmobilesim.com/en/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://japanmobilesim.com/zh-tw/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://japanmobilesim.com/zh-cn/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://japanmobilesim.com/vi/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="my" href="https://japanmobilesim.com/my/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://japanmobilesim.com/th/privacy/"/>
+    <lastmod>2026-07-19</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url><loc>https://japanmobilesim.com/en/privacy/</loc><lastmod>2026-07-19</lastmod><priority>0.3</priority></url>
+  <url><loc>https://japanmobilesim.com/zh-tw/privacy/</loc><lastmod>2026-07-19</lastmod><priority>0.3</priority></url>
+  <url><loc>https://japanmobilesim.com/zh-cn/privacy/</loc><lastmod>2026-07-19</lastmod><priority>0.3</priority></url>
+  <url><loc>https://japanmobilesim.com/vi/privacy/</loc><lastmod>2026-07-19</lastmod><priority>0.3</priority></url>
+  <url><loc>https://japanmobilesim.com/my/privacy/</loc><lastmod>2026-07-19</lastmod><priority>0.3</priority></url>
+  <url><loc>https://japanmobilesim.com/th/privacy/</loc><lastmod>2026-07-19</lastmod><priority>0.3</priority></url>
+  <!-- About / 運営者情報 -->
+  <url>
+    <loc>https://japanmobilesim.com/about/</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://japanmobilesim.com/about/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://japanmobilesim.com/en/about/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://japanmobilesim.com/zh-tw/about/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://japanmobilesim.com/zh-cn/about/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://japanmobilesim.com/vi/about/"/>
+    <xhtml:link rel="alternate" hreflang="my" href="https://japanmobilesim.com/my/about/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://japanmobilesim.com/th/about/"/>
+    <lastmod>2026-07-19</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url><loc>https://japanmobilesim.com/en/about/</loc><lastmod>2026-07-19</lastmod><priority>0.3</priority></url>
+  <url><loc>https://japanmobilesim.com/zh-tw/about/</loc><lastmod>2026-07-19</lastmod><priority>0.3</priority></url>
+  <url><loc>https://japanmobilesim.com/zh-cn/about/</loc><lastmod>2026-07-19</lastmod><priority>0.3</priority></url>
+  <url><loc>https://japanmobilesim.com/vi/about/</loc><lastmod>2026-07-19</lastmod><priority>0.3</priority></url>
+  <url><loc>https://japanmobilesim.com/my/about/</loc><lastmod>2026-07-19</lastmod><priority>0.3</priority></url>
+  <url><loc>https://japanmobilesim.com/th/about/</loc><lastmod>2026-07-19</lastmod><priority>0.3</priority></url>
 </urlset>

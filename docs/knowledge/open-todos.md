@@ -33,8 +33,8 @@
 - [x] Complete zh-cn language (homepage, SIM page, credit cards redirect) — done 2026-11-14 via OpenCC from zh-tw (decisions/011)
   - [ ] Optional: native-speaker polish of zh-cn home/SIM wording
 - [x] Add 简中 button to lang-switcher + zh-cn hreflang on all home/SIM pages (2026-11-14)
-- [ ] **vi referral guide body has no Vietnamese diacritics** (whole page, e.g. "Huong dan tung buoc") — needs re-translation
-- [ ] Sitemap lacks privacy/about pages (all langs)
+- [x] vi referral guide diacritics restored (2026-11-17)
+- [x] Sitemap: privacy/about pages added, all 7 langs (2026-11-17)
 - [ ] Burmese (my) guide-card copy on homepage written 2026-11-14 — have a native speaker check
 - [x] **Cloudflare Email Routing** — done 2026-11-17: contact@japanmobilesim.com → owner's Gmail (rule Active; MX route1-3.mx.cloudflare.net + SPF verified). Catch-all disabled (drop).
   - [ ] Optional: "Send mail as" contact@ from Gmail (needs SMTP relay) so replies don't expose personal address
@@ -43,7 +43,9 @@
     Rakuten shown at regular price ¥1,078~/¥3,278 (family-discount ¥3,168 noted), ahamo shown at new
     Dec 1 2026 tiers (40GB ¥3,135 / 60GB ¥4,125 / 120GB ¥5,115) with "¥2,970 until Nov 30" note
   - [ ] After 2026-12-01: drop the ahamo "until Nov 30" note
-  - [ ] Not yet re-checked: mineo, UQ mobile, SoftBank "PayToku Unlimited ¥9,625" con
+  - 2026-11-17 official-page check (mineo.jp, uqwimax.jp, softbank.jp): My Soku ¥990 is max 1.5 Mbps (was 3);
+    UQ con ¥2,948→¥2,728 (Tokutoku 2 w/ discounts); SoftBank con replaced (PayToku Unlimited closed to new
+    sign-ups 2026-06-01) with Teigaku Unlimited ¥8,008. My Pita / Comicomi Value / Tokutoku 2 / PayToku2 confirmed.
 - [ ] **Referral new-line points**: site/banner say 11,000; Nov 2026 sources say 12,000–13,000 — confirm on official Rakuten page, then regen banner + text
 - [ ] Bump "情報は2026年3月時点" disclaimers to current once speed-ranking data is re-measured
 - [ ] Verify guide accuracy periodically (Rakuten may change their registration flow)
