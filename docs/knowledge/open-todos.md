@@ -18,6 +18,13 @@
   - [ ] Proper 1080×1080 Instagram images (currently reuses 1200×630 OG cards)
 - [ ] Regenerate OG images if branding/taglines change (gen script: scratchpad/make_og.py)
 
+## Legal / accuracy (2026-11-17, see decisions/012)
+- [x] Unsupported superlatives on SIM page (国内最安クラス, 業界最安, 最速, 国内最高水準, "best choice") replaced with
+      checkable facts (price vs docomo/au/SoftBank, ¥/GB, measured Mbps) in 7 langs
+- [x] vi SIM page: stale prices fixed (¥3.168, ¥7.315, ¥7.238, ¥9.625 — missed earlier because vi uses '.' separators)
+- [x] Privacy §2 (7 langs): button-click tracking disclosed + Google partner-sites link + GA opt-out add-on; last-updated Nov 2026
+- [ ] Note: price-replacement scripts must also match vi '.' thousands separators
+
 ## UX (2026-11-17)
 - [x] Referral guide: apply button inside step 1; sticky bar + floating banner on all 14 guide pages
 - [x] Referral guide: "Before you start" checklist, screenshots capped at 400px (tap to enlarge, width/height set), collapsible FAQ
@@ -29,7 +36,7 @@
 - [ ] **Stale claim**: SIM page coverage section/FAQ say Tokyo subway coverage "complete by July 2026 (予定)" and
       "as of March 2026" — it's past July; re-check Rakuten's current subway status and update (7 langs)
 - [ ] Points timeline graphic (login month → months 4/5/6) on referral guide
-- [ ] Fix headline inconsistency: meta/title "¥100,000+/year" vs hero "¥63,984"
+- [x] Homepage title/meta "¥100,000+/year" → "up to ¥63,984/year" to match the page (7 langs, 2026-11-17)
 - [ ] SIM page "March 2026" label → "Prices checked Nov 2026 · speed data Mar 2026"
 - [ ] Language suggestion bar (no auto-redirect); dropdown switcher on mobile
 - [ ] Verify all pages on a real phone (headless screenshots can't go below ~500px)
