@@ -496,9 +496,11 @@ footer a:hover { color: rgba(255,255,255,.7); }
   font-size: 14px; line-height: 22px; text-align: center; cursor: pointer;
 }
 /* Desktop: float banner only, hide the bottom bar */
-@media (min-width: 751px) { #sticky-cta { display: none !important; } }
+/* Wide desktop (≥1441px): floating banner fits beside the 1032px content, so hide the bottom bar */
+@media (min-width: 1441px) { #sticky-cta { display: none !important; } }
 /* Mobile: bottom bar only, hide the float banner */
-@media (max-width: 750px) { .float-banner { display: none !important; } }
+/* Below 1441px the floating banner would cover content — use the bottom bar instead */
+@media (max-width: 1440px) { .float-banner { display: none !important; } }
 
 /* ── GUIDE SCREENSHOTS: capped width, tap to enlarge ── */
 .step-img--shot { max-width: 400px; margin-left: auto; margin-right: auto; }
@@ -534,3 +536,5 @@ details.faq-item[open] summary { margin-bottom: 8px; }
 .speed-val small { font-weight: 400; color: var(--ink-muted); font-size: 11px; }
 .speed-note { font-size: 11px; color: var(--ink-faint); margin: 10px 0 0; line-height: 1.6; }
 @media (max-width: 750px) { .speed-row { grid-template-columns: 84px 1fr 92px; gap: 6px; font-size: 12px; } .speed-val small { display: block; } }
+.pr-notice a { color: inherit; text-decoration: underline; }
+.speed-bar--up span { background: var(--green); }
