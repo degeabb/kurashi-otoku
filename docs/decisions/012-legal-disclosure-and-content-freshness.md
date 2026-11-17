@@ -22,9 +22,14 @@
 3. SIM page subway claims corrected (7 langs, incl. FAQ JSON-LD): ~95% by Mar 2026, July target,
    some stations upgraded from Aug 2026, no official completion announcement found as of Nov 2026.
 
+## Update (same day)
+- Owner confirmed: they receive a referrer reward from Rakuten for sign-ups via their link, paid as
+  miscellaneous income (雑所得). The reward terms are **confidential** — the site must only state that the
+  operator receives a reward from Rakuten; never publish rate, duration or payment form.
+- PR line, legal notice, referral-guide FAQ, About, Privacy (§3 renamed "Referral link & compensation")
+  and SIM FAQ ("how rankings are decided" → explicit conflict-of-interest note) updated in 7 langs.
+  The incorrect "Rakuten Affiliate / affiliate programs" claims are gone.
+
 ## Open
-- About / Privacy pages and SIM FAQ ("how are rankings decided") still say the site participates in
-  affiliate programs incl. Rakuten Affiliate — **owner to confirm** whether any affiliate account/reward
-  exists before rewording (7 langs).
 - Owner to confirm Rakuten's internal rules allow publicly posting the employee referral link and
   stating employee status on a personal site.
