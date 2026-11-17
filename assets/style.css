@@ -499,3 +499,15 @@ footer a:hover { color: rgba(255,255,255,.7); }
 @media (min-width: 751px) { #sticky-cta { display: none !important; } }
 /* Mobile: bottom bar only, hide the float banner */
 @media (max-width: 750px) { .float-banner { display: none !important; } }
+
+/* ── GUIDE SCREENSHOTS: capped width, tap to enlarge ── */
+.step-img--shot { max-width: 400px; margin-left: auto; margin-right: auto; }
+.step-img--shot a { display: block; cursor: zoom-in; }
+.step-img--shot img { height: auto; }
+
+/* ── COLLAPSIBLE FAQ (details/summary) ── */
+details.faq-item summary { cursor: pointer; list-style: none; position: relative; padding-right: 28px; margin-bottom: 0; }
+details.faq-item summary::-webkit-details-marker { display: none; }
+details.faq-item summary::after { content: "+"; position: absolute; right: 4px; top: 0; color: var(--pink); font-weight: 900; font-size: 18px; line-height: 1.2; }
+details.faq-item[open] summary::after { content: "−"; }
+details.faq-item[open] summary { margin-bottom: 8px; }

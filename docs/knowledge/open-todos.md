@@ -18,6 +18,18 @@
   - [ ] Proper 1080×1080 Instagram images (currently reuses 1200×630 OG cards)
 - [ ] Regenerate OG images if branding/taglines change (gen script: scratchpad/make_og.py)
 
+## UX (2026-11-17)
+- [x] Referral guide: apply button inside step 1; sticky bar + floating banner on all 14 guide pages
+- [x] Referral guide: "Before you start" checklist, screenshots capped at 400px (tap to enlarge, width/height set), collapsible FAQ
+- [x] GA4 `affiliate_click` event (assets/track.js, 43 pages) with `cta_location` (sticky_bar / float_banner /
+      guide_step / guide_bottom / sim_plan_card / top_banner / inline) + `page_lang`
+  - [ ] Owner: register `cta_location` and `page_lang` as event-scoped custom dimensions in GA4 (Admin → Custom definitions)
+- [ ] Points timeline graphic (login month → months 4/5/6) on referral guide
+- [ ] Fix headline inconsistency: meta/title "¥100,000+/year" vs hero "¥63,984"
+- [ ] SIM page "March 2026" label → "Prices checked Nov 2026 · speed data Mar 2026"
+- [ ] Language suggestion bar (no auto-redirect); dropdown switcher on mobile
+- [ ] Verify all pages on a real phone (headless screenshots can't go below ~500px)
+
 ## High Priority
 - [x] Fix referral guide inaccuracies — done 2026-06-22 (see decisions/006, 007)
   - [x] Re-contract eligibility for previously-cancelled users (decisions/006)
