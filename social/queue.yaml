@@ -1,3 +1,66 @@
 # Approved Threads posts. Added via weekly pull requests; merging = approval.
 # Each entry: id, date (JST, YYYY-MM-DD), lang, item, text (include the site link; #PR is added automatically).
-posts: []
+posts:
+  - id: 2026-11-18-ja-sim-unlimited
+    date: 2026-11-18
+    lang: ja
+    item: sim-savings
+    text: |-
+      スマホ代、無制限プランだけで比べても差は大きいです。
+      楽天モバイル ¥3,278／月、ドコモ ¥8,448、au ¥7,788、ソフトバンク（テイガク無制限）¥8,008（いずれも割引なし・2026年11月確認）。
+      ただし平均速度はau・ドコモが上位。料金と速度のどちらを優先するかで選び方が変わります。10社のメリット・デメリットをまとめました👇
+      https://japanmobilesim.com/sim/
+  - id: 2026-11-19-en-referral-guide
+    date: 2026-11-19
+    lang: en
+    item: rakuten-campaign
+    text: |-
+      Applying for Rakuten Mobile? Through a Rakuten Group employee's referral link you get 14,000 points when switching with your number, or 13,000 for other sign-ups (applications from Sept 17, 2026).
+      Two easy-to-miss rules: log in via the link BEFORE applying, and make a 10+ second Rakuten Link call by the end of the 2nd month.
+      Step-by-step guide with real screenshots (disclosure: I'm a Rakuten Group employee):
+      https://japanmobilesim.com/en/guides/referral/
+  - id: 2026-11-20-ja-speed
+    date: 2026-11-20
+    lang: ja
+    item: sim-savings
+    text: |-
+      スマホ回線の速度、平均で比べると？（みんなのネット回線速度・2026年11月）
+      下り：au 162Mbps／ドコモ 149／ソフトバンク 143、楽天モバイルは105
+      上り：楽天モバイル 26Mbpsが10社で最速
+      ※投稿された測定値の平均で、場所や時間帯で大きく変わります。IIJmio・mineoなどは昼12時台に遅くなりがち。グラフで比較👇
+      https://japanmobilesim.com/sim/
+  - id: 2026-11-21-en-fixed-costs
+    date: 2026-11-21
+    lang: en
+    item: fixed-cost-savings
+    text: |-
+      Living in Japan? Your phone plan and credit card are the two fixed costs easiest to cut.
+      In our calculator example, moving from a major carrier + low-reward card to a budget SIM + higher-reward card saves up to about ¥63,984 a year.
+      Honest comparisons, downsides included, in 7 languages:
+      https://japanmobilesim.com/en/
+  - id: 2026-11-22-ja-referral-guide
+    date: 2026-11-22
+    lang: ja
+    item: rakuten-campaign
+    text: |-
+      楽天モバイルを楽天従業員の紹介リンクから申し込むと、電話番号そのまま乗り換えで14,000ポイント、それ以外は13,000ポイント（2026年9月17日以降の申し込み）。
+      見落としがちな条件は2つ：①申し込み前に紹介リンクからログイン ②翌々月末までにRakuten Linkで10秒以上通話。
+      実際の申し込み画面で手順を解説しています（運営者は楽天グループ従業員です）👇
+      https://japanmobilesim.com/guides/referral/
+  - id: 2026-11-23-en-rakuten-id
+    date: 2026-11-23
+    lang: en
+    item: rakuten-registration
+    text: |-
+      No Rakuten ID yet? You need one for Rakuten Mobile, Rakuten Card and Rakuten Ichiba, and it takes about 5 minutes.
+      Here's every step with screenshots:
+      https://japanmobilesim.com/en/guides/rakuten-registration/
+  - id: 2026-11-24-ja-light-plans
+    date: 2026-11-24
+    lang: ja
+    item: sim-savings
+    text: |-
+      データをあまり使わない人は小容量プランが割安です。
+      IIJmio 5GB ¥950／月、LINEMO 3GB ¥990／月（2026年11月確認）。
+      ただしIIJmioなどのMVNOは昼12時台に遅くなりやすい点は要注意。使い方別の選び方はこちら👇
+      https://japanmobilesim.com/sim/
