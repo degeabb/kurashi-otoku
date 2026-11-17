@@ -25,11 +25,13 @@ items:
     path: /sim/
     image: assets/og-{lang}.png
     languages: all
-    link_lang_fallback: { zh-cn: zh-tw }   # zh-cn has no /sim/ page
     facts: >-
-      10 budget SIM carriers (格安SIM) reviewed neutrally with real pros AND cons,
-      including honest signal-quality notes. Switching from a major carrier can save
-      about ¥48,000 per year. Example plan: IIJmio 5GB for ¥950/month.
+      10 mobile carriers compared neutrally with real pros AND cons (prices checked Nov 2026).
+      Unlimited data: Rakuten Mobile ¥3,278/month vs docomo ¥8,448, au ¥7,788, SoftBank
+      Teigaku Unlimited ¥8,008 (no discounts). Light use: IIJmio 5GB ¥950/month, LINEMO 3GB ¥990.
+      Measured average speeds (みんなのネット回線速度, Nov 2026): fastest download au 162 Mbps,
+      docomo 149, SoftBank 143; Rakuten Mobile 105 Mbps download but the fastest upload of the
+      10 (26 Mbps). MVNOs like IIJmio and mineo slow down at lunchtime.
 
   - id: fixed-cost-savings
     type: overview
@@ -37,8 +39,9 @@ items:
     image: assets/og-{lang}.png
     languages: all
     facts: >-
-      Reviewing your fixed monthly costs — mainly phone plan and credit cards — can save
-      ¥100,000+ per year. The site gives neutral, no-hype comparisons in multiple languages
+      Reviewing your fixed monthly costs — mainly phone plan and credit cards — can save up to
+      about ¥63,984 per year in the site's calculator example (major carrier + low-reward card
+      switched to a budget SIM + higher-reward card). The site gives neutral, no-hype comparisons in multiple languages
       for people living in Japan.
 
   - id: rakuten-campaign
@@ -48,10 +51,14 @@ items:
     languages: all
     verify_before_posting: true   # campaign terms/points change — re-check the guide first
     facts: >-
-      Rakuten Mobile employee-referral program guide (with screenshots). Only the referrer
-      must be a Rakuten Group employee; the person being referred can be anyone. Bonus points
-      are distributed around months 4-6, and you must make one ~10-second call via the
-      Rakuten Link app to qualify. Do not state exact point amounts unless certain.
+      Step-by-step guide (real screenshots) to applying for Rakuten Mobile through a Rakuten
+      Group employee's referral link. Anyone except Rakuten employees can use it, including
+      people adding a 2nd line or re-contracting (max 5 lines). Points for applications from
+      2026-09-17: 14,000 points when switching with your number (MNP), 13,000 points for other
+      sign-ups; paid in 3 installments in months 4-6 after the referral login. You must log in
+      via the referral link before applying and make a 10+ second call from the Rakuten Link app
+      by the end of the 2nd month. The site operator is a Rakuten Group employee and receives a
+      reward from Rakuten for sign-ups via the link (never state any reward details).
 
   - id: rakuten-registration
     type: guide

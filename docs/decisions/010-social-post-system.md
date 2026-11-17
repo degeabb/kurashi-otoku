@@ -53,3 +53,16 @@ native pages native); all resolved URLs return HTTP 200. CJK weighting unit-chec
 - Proper 1080×1080 Instagram images (extend the OG generator; currently reuses 1200×630 OG cards).
 - `workflow_dispatch` GitHub Action wrapper for cloud runs.
 - LINE Official Account as a future channel.
+
+## Update 2026-11-17 — Phase 2: Threads auto-posting
+Owner choices: **Threads only** (free API; X now costs $0.015/post, $0.20 with a link — stays manual),
+**1 post/day at 20:00 JST**, **Japanese + English alternating**, **weekly approval** by merging a PR.
+- `social/post_threads.py` + `.github/workflows/threads-post.yml` (daily) post the earliest due entry
+  from `social/queue.yaml`, max one per run; record to `social/posted.yaml`.
+- Guards in code: `#PR` prefix (stealth-marketing rule), ≤500 chars, must link to the site, blocks
+  confidential referral-reward terms. 13 tests in `social/test_post_threads.py`.
+- `threads-token-refresh.yml` refreshes the 60-day token weekly and stores it back via a
+  fine-grained PAT (`SECRETS_PAT`). Own-account posting needs no Meta App Review (tester role).
+- Drafting: Claude Code writes each week's batch as a PR. A scheduled cloud routine can take this
+  over once GitHub is connected to the owner's Claude account.
+- `content.yaml` facts refreshed (Nov 2026 prices, speeds, 14,000/13,000 points; ¥63,984 not ¥100,000).

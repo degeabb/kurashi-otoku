@@ -103,3 +103,11 @@ Every post promotes a site that earns a Rakuten referral reward, so it is advert
 Japan's stealth-marketing rule (景品表示法 告示, Oct 2023). `generate.py` prefixes **#PR** to every
 draft (API, mock and `--from-drafts`) unless it already has `#PR` / `#広告` / `#ad` / `#sponsored`,
 and the tag counts toward the character limit. Keep it when you post. Tests: `social/test_generate.py`.
+
+## Threads auto-posting (Phase 2, 2026-11-17)
+Threads only · 1 post/day at 20:00 JST · Japanese and English alternating · weekly approval.
+- Weekly: next week's drafts are added to `social/queue.yaml` in a **pull request** — review on the
+  GitHub app and **merge to approve**. Edit or delete entries in the PR before merging.
+- Daily: `.github/workflows/threads-post.yml` runs `post_threads.py`, which publishes the earliest
+  due, unposted entry and records it in `social/posted.yaml`.
+- One-time account setup: **`social/THREADS_SETUP.md`**.

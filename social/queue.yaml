@@ -1,0 +1,3 @@
+# Approved Threads posts. Added via weekly pull requests; merging = approval.
+# Each entry: id, date (JST, YYYY-MM-DD), lang, item, text (include the site link; #PR is added automatically).
+posts: []

@@ -1,0 +1,31 @@
+name: Threads token refresh
+
+on:
+  schedule:
+    - cron: "0 0 * * 1"          # every Monday 09:00 JST (token lasts 60 days)
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Refresh token and store it back as a secret
+        env:
+          THREADS_ACCESS_TOKEN: ${{ secrets.THREADS_ACCESS_TOKEN }}
+          GH_TOKEN: ${{ secrets.SECRETS_PAT }}   # fine-grained PAT: this repo, "Secrets: read & write"
+        run: |
+          NEW="$(python social/refresh_threads_token.py)"
+          echo "::add-mask::$NEW"
+          if [ "$NEW" != "$THREADS_ACCESS_TOKEN" ]; then
+            gh secret set THREADS_ACCESS_TOKEN --body "$NEW" --repo "$GITHUB_REPOSITORY"
+            echo "Stored the refreshed token."
+          else
+            echo "Token value unchanged (expiry extended)."
+          fi
