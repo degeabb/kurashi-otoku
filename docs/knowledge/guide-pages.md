@@ -38,7 +38,11 @@
 ## Employee Referral Guide
 - **Path**: `[lang]/guides/referral/index.html`
 - **Languages**: JA, EN, zh-tw, zh-cn, vi, my, th (7 total)
-- **Screenshots**: ALL placeholder (no real screenshots yet)
+- **Audience**: the general public applying via the site owner's employee referral link (r10.to/hUMVON) — NOT employees
+- **Structure** (rewritten 2026-11-17): 14,000/13,000 cards → conditions → 8 steps (login, password, member info,
+  plan, phone number/MNP, identity check, delivery/payment/options, activation + Rakuten Link call) → FAQ → CTA
+- **Screenshots**: `assets/guides/referee-01..07*.webp` (JA UI, personal data masked); sources in `guide_screenshots/referee-flow/`
+- **Generator**: body built from per-language string tables (zh-cn = OpenCC tw2sp of zh-tw + vocab fixes, Japanese UI labels protected)
 
 ### Known Inaccuracies (not yet fixed)
 The referral guide has factual issues identified via web research:

@@ -26,7 +26,10 @@
   - [ ] Point amounts are only in the banner IMAGE — new-line amount now outdated (see 'Banner is outdated' below)
   - [x] Clarify it's Rakuten Group employee referral; only referrer must be an employee, referee can be anyone (2026-06-22)
 - [x] Make application entry obvious — banner CTA + floating side banner (decisions/006)
-- [ ] Add real screenshots to referral guide (all languages still have placeholders)
+- [x] Referral guide rewritten from the APPLICANT's side with 7 real screenshots, 7 langs (2026-11-17).
+      Owner applied via own employee referral link; personal data replaced with dummies + blurred/pixelated.
+      Masked sources: guide_screenshots/referee-flow/ ; web images: assets/guides/referee-0*.webp
+  - [ ] Missing screenshot: plan selection (Rakuten最強プラン / プランのみ申し込む) — step 4 is text-only
 - [x] Fix password requirement in registration guide — done 2026-11-14, all 7 langs (decisions/011)
 
 ## Medium Priority
@@ -38,7 +41,6 @@
       2nd+ line & re-contract eligible (max 5 lines), referee can't be a Rakuten employee, login via referral URL
       (or within 7 days after applying), Link call deadline counted from referral login, points 期間限定 6 months,
       amounts 14,000 MNP / 13,000 other shown in referee card
-  - [ ] Referrer reward ("You earn bonus points for each successful referral") is NOT stated in the public rules — owner to confirm
 - [ ] JA credit-cards page: lang-switcher buttons have no links (decorative); 简中 not added there
 - [x] Sitemap: privacy/about pages added, all 7 langs (2026-11-17)
 - [ ] Burmese (my) guide-card copy on homepage written 2026-11-14 — have a native speaker check
