@@ -25,6 +25,12 @@
 - [x] Privacy §2 (7 langs): button-click tracking disclosed + Google partner-sites link + GA opt-out add-on; last-updated Nov 2026
 - [ ] Note: price-replacement scripts must also match vi '.' thousands separators
 
+- [x] Speed comparison (SIM page, speed tab, 7 langs): bar chart of みんなのネット回線速度 average download + ping
+      for all 10 carriers (retrieved 2026-11-17, sources linked: /speeds/mobile_major_carrier/services and
+      /speeds/mvno/services); "Fastest Speed" ranking re-ordered to match the data.
+  - [ ] Refresh speed data quarterly (values are user-submitted averages and drift); Opensignal blocks automated
+        fetching — check its Japan report manually if an independent second source is wanted
+
 ## UX (2026-11-17)
 - [x] Referral guide: apply button inside step 1; sticky bar + floating banner on all 14 guide pages
 - [x] Referral guide: "Before you start" checklist, screenshots capped at 400px (tap to enlarge, width/height set), collapsible FAQ

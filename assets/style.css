@@ -522,3 +522,15 @@ details.faq-item[open] summary { margin-bottom: 8px; }
 /* ── LEGAL NOTICE (bottom disclaimer list) ── */
 .legal-notice ul { margin: 6px 0 0; padding-left: 18px; }
 .legal-notice li { margin-bottom: 3px; }
+
+/* ── SPEED COMPARISON CHART (SIM page, speed tab) ── */
+.speed-chart { margin-top: 12px; padding: 16px; background: var(--bg-alt); border-radius: 12px; }
+.speed-chart-title { font-size: 13px; font-weight: 800; margin-bottom: 10px; color: var(--ink); }
+.speed-row { display: grid; grid-template-columns: 110px 1fr 120px; align-items: center; gap: 10px; margin-bottom: 6px; font-size: 13px; }
+.speed-name { font-weight: 700; color: var(--ink); white-space: nowrap; }
+.speed-bar { background: #fff; border-radius: 6px; height: 12px; overflow: hidden; }
+.speed-bar span { display: block; height: 100%; background: var(--pink); border-radius: 6px; }
+.speed-val { font-weight: 800; color: var(--ink); white-space: nowrap; }
+.speed-val small { font-weight: 400; color: var(--ink-muted); font-size: 11px; }
+.speed-note { font-size: 11px; color: var(--ink-faint); margin: 10px 0 0; line-height: 1.6; }
+@media (max-width: 750px) { .speed-row { grid-template-columns: 84px 1fr 92px; gap: 6px; font-size: 12px; } .speed-val small { display: block; } }

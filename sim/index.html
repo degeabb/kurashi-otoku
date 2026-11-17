@@ -198,11 +198,20 @@ gtag('config', 'G-Z2WT21RFVT');
   </div>
   <div class="tab-desc" data-for="speed" style="margin-bottom:20px; display:none;">
     <h2 class="section-heading">速度・安定性ランキング</h2>
-    <p class="section-desc">みんなのネット回線速度・価格.com実測・複数サイトの2026年3月データに基づく。昼12時台に速度低下しないMNO回線が上位</p>
-    <div style="margin-top:12px; padding:14px 16px; background:var(--bg-alt); border-radius:12px; font-size:12px; color:var(--ink-soft); line-height:1.7;">
-      <strong>参考実測値（2026年3月）：</strong>
-      ahamo 127Mbps / povo 140Mbps / LINEMO 119-124Mbps / UQ mobile 107-109Mbps / mineo 87Mbps（昼は低下） / 楽天モバイル 62-82Mbps / IIJmio 74Mbps（昼は低下）
-      <br><span style="color:var(--ink-faint);">出典：みんなのネット回線速度、価格.comマガジン、各比較サイト実測データ</span>
+    <p class="section-desc">みんなのネット回線速度の平均下り速度（2026年11月17日取得）が速い順に掲載。MVNO（mineo・IIJmio）は昼12時台に遅くなりやすい点に注意してください。</p>
+    <div class="speed-chart" role="img" aria-label="平均下り速度（Mbps）">
+      <div class="speed-chart-title">平均下り速度（Mbps）</div>
+      <div class="speed-row"><span class="speed-name">au</span><span class="speed-bar"><span style="width:100.0%"></span></span><span class="speed-val">162<small> Mbps · 40 ms</small></span></div>
+      <div class="speed-row"><span class="speed-name">NTT docomo</span><span class="speed-bar"><span style="width:91.9%"></span></span><span class="speed-val">149<small> Mbps · 43 ms</small></span></div>
+      <div class="speed-row"><span class="speed-name">SoftBank</span><span class="speed-bar"><span style="width:87.8%"></span></span><span class="speed-val">143<small> Mbps · 38 ms</small></span></div>
+      <div class="speed-row"><span class="speed-name">UQ mobile</span><span class="speed-bar"><span style="width:83.4%"></span></span><span class="speed-val">135<small> Mbps · 38 ms</small></span></div>
+      <div class="speed-row"><span class="speed-name">ahamo</span><span class="speed-bar"><span style="width:80.8%"></span></span><span class="speed-val">131<small> Mbps · 46 ms</small></span></div>
+      <div class="speed-row"><span class="speed-name">povo</span><span class="speed-bar"><span style="width:75.8%"></span></span><span class="speed-val">123<small> Mbps · 40 ms</small></span></div>
+      <div class="speed-row"><span class="speed-name">LINEMO</span><span class="speed-bar"><span style="width:71.7%"></span></span><span class="speed-val">116<small> Mbps · 38 ms</small></span></div>
+      <div class="speed-row"><span class="speed-name">楽天モバイル</span><span class="speed-bar"><span style="width:64.4%"></span></span><span class="speed-val">105<small> Mbps · 52 ms</small></span></div>
+      <div class="speed-row"><span class="speed-name">mineo</span><span class="speed-bar"><span style="width:47.6%"></span></span><span class="speed-val">77<small> Mbps · 67 ms</small></span></div>
+      <div class="speed-row"><span class="speed-name">IIJmio</span><span class="speed-bar"><span style="width:39.0%"></span></span><span class="speed-val">63<small> Mbps · 57 ms</small></span></div>
+      <p class="speed-note">利用者が投稿した測定値の平均です。場所・時間帯・端末によって大きく変わり、通信速度を保証するものではありません。<br>出典：<a href="https://minsoku.net/speeds/mobile_major_carrier/services" target="_blank" rel="noopener">みんなのネット回線速度（携帯キャリア）</a> / <a href="https://minsoku.net/speeds/mvno/services" target="_blank" rel="noopener">（格安SIM）</a></p>
     </div>
   </div>
   <div class="tab-desc" data-for="light" style="margin-bottom:20px; display:none;">
@@ -303,7 +312,7 @@ gtag('config', 'G-Z2WT21RFVT');
           <li>5分かけ放題が標準付帯</li>
           <li>40GB ¥3,135はシンプルでわかりやすい</li>
           <li>海外82ヵ国でデータ通信可能</li>
-          <li>実測約127Mbps（2026年3月の各種調査）</li>
+          <li>平均下り約131Mbps（みんなのネット回線速度、2026年11月）</li>
         </ul>
       </div>
       <div class="con-list">
@@ -850,7 +859,7 @@ gtag('config', 'G-Z2WT21RFVT');
       <li>掲載内容は一般的な情報提供であり、金融・法律・投資の助言ではありません。</li>
       <li>当サイトの情報を利用して生じたいかなる損害についても、運営者は責任を負いかねます。</li>
       <li>会社名・サービス名・ロゴ等は各社の商標または登録商標です。</li>
-      <li>通信速度は規格上の最大値、実測値は2026年3月時点の各種調査によるものです。</li>
+      <li>通信速度は規格上の最大値、実測値はみんなのネット回線速度の平均（2026年11月取得）です。</li>
     </ul>
   </div>
 </div>
@@ -909,7 +918,7 @@ gtag('config', 'G-Z2WT21RFVT');
   const RANKINGS = {
     overall:     ['rakuten','ahamo','linemo','iijmio','mineo','povo','uq','docomo','au','softbank'],
     cost:        ['iijmio','rakuten','povo','mineo','linemo','ahamo','uq','docomo','au','softbank'],
-    speed:       ['ahamo','povo','linemo','uq','softbank','au','docomo','mineo','rakuten','iijmio'],
+    speed:       ['au','docomo','softbank','uq','ahamo','povo','linemo','rakuten','mineo','iijmio'],
     light:       ['povo','iijmio','linemo','mineo','rakuten','uq','ahamo','docomo','au','softbank'],
     foreigner:   ['rakuten','ahamo','linemo','povo','iijmio','mineo','uq','docomo','au','softbank']
   };

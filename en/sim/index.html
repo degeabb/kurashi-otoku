@@ -198,11 +198,20 @@ gtag('config', 'G-Z2WT21RFVT');
   </div>
   <div class="tab-desc" data-for="speed" style="margin-bottom:20px; display:none;">
     <h2 class="section-heading">Speed &amp; Reliability Ranking</h2>
-    <p class="section-desc">Based on real-world speed data from Minna no Net Kaisen Sokudo, Kakaku.com, and other review sites as of March 2026. MNO carriers that maintain speed during the lunchtime rush rank highest.</p>
-    <div style="margin-top:12px; padding:14px 16px; background:var(--bg-alt); border-radius:12px; font-size:12px; color:var(--ink-soft); line-height:1.7;">
-      <strong>Reference speed data (March 2026):</strong>
-      ahamo 127 Mbps / povo 140 Mbps / LINEMO 119-124 Mbps / UQ mobile 107-109 Mbps / mineo 87 Mbps (drops at lunch) / Rakuten Mobile 62-82 Mbps / IIJmio 74 Mbps (drops at lunch)
-      <br><span style="color:var(--ink-faint);">Sources: Minna no Net Kaisen Sokudo, Kakaku.com Magazine, various independent speed-test sites</span>
+    <p class="section-desc">Ranked by average download speed from Minna no Net Kaisen Sokudo (retrieved 17 Nov 2026). Note that MVNOs (mineo, IIJmio) tend to slow down at lunchtime (12:00–13:00).</p>
+    <div class="speed-chart" role="img" aria-label="Average download speed (Mbps)">
+      <div class="speed-chart-title">Average download speed (Mbps)</div>
+      <div class="speed-row"><span class="speed-name">au</span><span class="speed-bar"><span style="width:100.0%"></span></span><span class="speed-val">162<small> Mbps · 40 ms</small></span></div>
+      <div class="speed-row"><span class="speed-name">NTT docomo</span><span class="speed-bar"><span style="width:91.9%"></span></span><span class="speed-val">149<small> Mbps · 43 ms</small></span></div>
+      <div class="speed-row"><span class="speed-name">SoftBank</span><span class="speed-bar"><span style="width:87.8%"></span></span><span class="speed-val">143<small> Mbps · 38 ms</small></span></div>
+      <div class="speed-row"><span class="speed-name">UQ mobile</span><span class="speed-bar"><span style="width:83.4%"></span></span><span class="speed-val">135<small> Mbps · 38 ms</small></span></div>
+      <div class="speed-row"><span class="speed-name">ahamo</span><span class="speed-bar"><span style="width:80.8%"></span></span><span class="speed-val">131<small> Mbps · 46 ms</small></span></div>
+      <div class="speed-row"><span class="speed-name">povo</span><span class="speed-bar"><span style="width:75.8%"></span></span><span class="speed-val">123<small> Mbps · 40 ms</small></span></div>
+      <div class="speed-row"><span class="speed-name">LINEMO</span><span class="speed-bar"><span style="width:71.7%"></span></span><span class="speed-val">116<small> Mbps · 38 ms</small></span></div>
+      <div class="speed-row"><span class="speed-name">Rakuten Mobile</span><span class="speed-bar"><span style="width:64.4%"></span></span><span class="speed-val">105<small> Mbps · 52 ms</small></span></div>
+      <div class="speed-row"><span class="speed-name">mineo</span><span class="speed-bar"><span style="width:47.6%"></span></span><span class="speed-val">77<small> Mbps · 67 ms</small></span></div>
+      <div class="speed-row"><span class="speed-name">IIJmio</span><span class="speed-bar"><span style="width:39.0%"></span></span><span class="speed-val">63<small> Mbps · 57 ms</small></span></div>
+      <p class="speed-note">Averages of user-submitted tests. Real speed varies a lot by place, time and device, and is not guaranteed.<br>Source: <a href="https://minsoku.net/speeds/mobile_major_carrier/services" target="_blank" rel="noopener">みんなのネット回線速度（携帯キャリア）</a> / <a href="https://minsoku.net/speeds/mvno/services" target="_blank" rel="noopener">（格安SIM）</a></p>
     </div>
   </div>
   <div class="tab-desc" data-for="light" style="margin-bottom:20px; display:none;">
@@ -302,7 +311,7 @@ gtag('config', 'G-Z2WT21RFVT');
           <li>5-minute call allowance included at no extra charge</li>
           <li>40 GB for ¥3,135 — simple, no surprises</li>
           <li>Data roaming available in 82 countries</li>
-          <li>Measured around 127 Mbps in March 2026 surveys</li>
+          <li>Average download around 131 Mbps (Minna no Net Kaisen Sokudo, Nov 2026)</li>
         </ul>
       </div>
       <div class="con-list">
@@ -834,7 +843,7 @@ gtag('config', 'G-Z2WT21RFVT');
       <li>Content is general information, not financial, legal or investment advice.</li>
       <li>The operator accepts no liability for any loss arising from use of this site.</li>
       <li>Company names, service names and logos are trademarks or registered trademarks of their respective owners.</li>
-      <li>Speeds are theoretical maximums; measured speeds are from third-party surveys as of March 2026.</li>
+      <li>Speeds are theoretical maximums; measured speeds are averages from Minna no Net Kaisen Sokudo (retrieved November 2026).</li>
     </ul>
   </div>
 </div>
@@ -892,7 +901,7 @@ gtag('config', 'G-Z2WT21RFVT');
   const RANKINGS = {
     overall:     ['rakuten','ahamo','linemo','iijmio','mineo','povo','uq','docomo','au','softbank'],
     cost:        ['iijmio','rakuten','povo','mineo','linemo','ahamo','uq','docomo','au','softbank'],
-    speed:       ['ahamo','povo','linemo','uq','softbank','au','docomo','mineo','rakuten','iijmio'],
+    speed:       ['au','docomo','softbank','uq','ahamo','povo','linemo','rakuten','mineo','iijmio'],
     light:       ['povo','iijmio','linemo','mineo','rakuten','uq','ahamo','docomo','au','softbank'],
     foreigner:   ['rakuten','ahamo','linemo','povo','iijmio','mineo','uq','docomo','au','softbank']
   };

@@ -198,11 +198,20 @@ gtag('config', 'G-Z2WT21RFVT');
   </div>
   <div class="tab-desc" data-for="speed" style="margin-bottom:20px; display:none;">
     <h2 class="section-heading">速度 &amp; 穩定性排名</h2>
-    <p class="section-desc">根據「大家的網路速度」、Kakaku.com 等評測網站的實測數據（2026年3月）。午餐尖峰時段仍能維持速度的 MNO 電信商排名較高。</p>
-    <div style="margin-top:12px; padding:14px 16px; background:var(--bg-alt); border-radius:12px; font-size:12px; color:var(--ink-soft); line-height:1.7;">
-      <strong>參考速度數據（2026年3月）：</strong>
-      ahamo 127 Mbps / povo 140 Mbps / LINEMO 119-124 Mbps / UQ mobile 107-109 Mbps / mineo 87 Mbps（午餐時段會下降）/ 樂天Mobile 62-82 Mbps / IIJmio 74 Mbps（午餐時段會下降）
-      <br><span style="color:var(--ink-faint);">資料來源：大家的網路速度、Kakaku.com Magazine、各獨立測速網站</span>
+    <p class="section-desc">依「大家的網路速度」（みんなのネット回線速度）平均下載速度由快到慢排序（2026年11月17日取得）。MVNO（mineo、IIJmio）在中午12點時段容易變慢，請留意。</p>
+    <div class="speed-chart" role="img" aria-label="平均下載速度（Mbps）">
+      <div class="speed-chart-title">平均下載速度（Mbps）</div>
+      <div class="speed-row"><span class="speed-name">au</span><span class="speed-bar"><span style="width:100.0%"></span></span><span class="speed-val">162<small> Mbps · 40 ms</small></span></div>
+      <div class="speed-row"><span class="speed-name">NTT docomo</span><span class="speed-bar"><span style="width:91.9%"></span></span><span class="speed-val">149<small> Mbps · 43 ms</small></span></div>
+      <div class="speed-row"><span class="speed-name">SoftBank</span><span class="speed-bar"><span style="width:87.8%"></span></span><span class="speed-val">143<small> Mbps · 38 ms</small></span></div>
+      <div class="speed-row"><span class="speed-name">UQ mobile</span><span class="speed-bar"><span style="width:83.4%"></span></span><span class="speed-val">135<small> Mbps · 38 ms</small></span></div>
+      <div class="speed-row"><span class="speed-name">ahamo</span><span class="speed-bar"><span style="width:80.8%"></span></span><span class="speed-val">131<small> Mbps · 46 ms</small></span></div>
+      <div class="speed-row"><span class="speed-name">povo</span><span class="speed-bar"><span style="width:75.8%"></span></span><span class="speed-val">123<small> Mbps · 40 ms</small></span></div>
+      <div class="speed-row"><span class="speed-name">LINEMO</span><span class="speed-bar"><span style="width:71.7%"></span></span><span class="speed-val">116<small> Mbps · 38 ms</small></span></div>
+      <div class="speed-row"><span class="speed-name">樂天Mobile</span><span class="speed-bar"><span style="width:64.4%"></span></span><span class="speed-val">105<small> Mbps · 52 ms</small></span></div>
+      <div class="speed-row"><span class="speed-name">mineo</span><span class="speed-bar"><span style="width:47.6%"></span></span><span class="speed-val">77<small> Mbps · 67 ms</small></span></div>
+      <div class="speed-row"><span class="speed-name">IIJmio</span><span class="speed-bar"><span style="width:39.0%"></span></span><span class="speed-val">63<small> Mbps · 57 ms</small></span></div>
+      <p class="speed-note">為用戶上傳測速結果的平均值。實際速度會因地點、時段和裝置而有很大差異，並非保證值。<br>資料來源：<a href="https://minsoku.net/speeds/mobile_major_carrier/services" target="_blank" rel="noopener">みんなのネット回線速度（携帯キャリア）</a> / <a href="https://minsoku.net/speeds/mvno/services" target="_blank" rel="noopener">（格安SIM）</a></p>
     </div>
   </div>
   <div class="tab-desc" data-for="light" style="margin-bottom:20px; display:none;">
@@ -302,7 +311,7 @@ gtag('config', 'G-Z2WT21RFVT');
           <li>含5分鐘免費通話，無需額外付費</li>
           <li>40 GB 只要 ¥3,135 — 簡單明瞭、沒有隱藏費用</li>
           <li>支援82個國家的數據漫遊</li>
-          <li>實測約 127 Mbps（2026年3月各調查）</li>
+          <li>平均下載約 131 Mbps（大家的網路速度，2026年11月）</li>
         </ul>
       </div>
       <div class="con-list">
@@ -834,7 +843,7 @@ gtag('config', 'G-Z2WT21RFVT');
       <li>內容僅為一般資訊，並非理財、法律或投資建議。</li>
       <li>因使用本站資訊而產生的任何損失，站長概不負責。</li>
       <li>公司名稱、服務名稱及標誌為各公司的商標或註冊商標。</li>
-      <li>通訊速度為規格上的最大值；實測速度來自2026年3月的第三方調查。</li>
+      <li>通訊速度為規格上的最大值；實測速度為「大家的網路速度」的平均值（2026年11月取得）。</li>
     </ul>
   </div>
 </div>
@@ -892,7 +901,7 @@ gtag('config', 'G-Z2WT21RFVT');
   const RANKINGS = {
     overall:     ['rakuten','ahamo','linemo','iijmio','mineo','povo','uq','docomo','au','softbank'],
     cost:        ['iijmio','rakuten','povo','mineo','linemo','ahamo','uq','docomo','au','softbank'],
-    speed:       ['ahamo','povo','linemo','uq','softbank','au','docomo','mineo','rakuten','iijmio'],
+    speed:       ['au','docomo','softbank','uq','ahamo','povo','linemo','rakuten','mineo','iijmio'],
     light:       ['povo','iijmio','linemo','mineo','rakuten','uq','ahamo','docomo','au','softbank'],
     foreigner:   ['rakuten','ahamo','linemo','povo','iijmio','mineo','uq','docomo','au','softbank']
   };
