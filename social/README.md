@@ -97,3 +97,9 @@ Over-limit drafts are flagged red in `review.html` and never silently truncated.
 - Proper 1080×1080 Instagram images (extend the OG image generator).
 - A `workflow_dispatch` GitHub Action to run this in the cloud.
 - LINE Official Account as a channel.
+
+## Ad disclosure (#PR) — required
+Every post promotes a site that earns a Rakuten referral reward, so it is advertising under
+Japan's stealth-marketing rule (景品表示法 告示, Oct 2023). `generate.py` prefixes **#PR** to every
+draft (API, mock and `--from-drafts`) unless it already has `#PR` / `#広告` / `#ad` / `#sponsored`,
+and the tag counts toward the character limit. Keep it when you post. Tests: `social/test_generate.py`.

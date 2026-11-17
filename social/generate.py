@@ -163,7 +163,8 @@ def build_system(site: dict) -> str:
         "- Write ENTIRELY and natively in the requested language; do not translate literally.\n"
         "- Use ONLY the facts provided. NEVER invent prices, percentages, point amounts, dates, or claims.\n"
         "- Neutral and honest: acknowledge trade-offs; no hype, no clickbait, no ALL-CAPS shouting.\n"
-        "- Output ONLY the post text. No explanations, no surrounding quotes, no markdown, no labels."
+        "- Output ONLY the post text. No explanations, no surrounding quotes, no markdown, no labels.\n"
+        "- Do NOT add #PR or any ad-disclosure tag yourself; it is added automatically."
     )
 
 
@@ -195,6 +196,21 @@ def build_user(item: dict, lang: str, platform: str, url: str) -> str:
         "link is in the profile/bio (phrased in the target language).\n"
         "- Open with a strong one-line hook, keep it concise, then add up to ~12 relevant hashtags."
     )
+
+
+# Every post promotes a site that earns a referral reward, so it is advertising under
+# Japan's stealth-marketing rule (景品表示法 告示, Oct 2023). The disclosure is added in
+# code — never left to the model or the person drafting — and counted toward the limit.
+DISCLOSURE_TAG = "#PR"
+_DISCLOSURE_RE = re.compile(r"(?<![\w#])#(?:PR|広告|ad|sponsored)(?![\w])", re.IGNORECASE)
+
+
+def with_disclosure(text: str) -> str:
+    """Prefix the PR tag unless the post already carries an ad-disclosure hashtag."""
+    text = text.strip()
+    if not text or _DISCLOSURE_RE.search(text):
+        return text
+    return f"{DISCLOSURE_TAG} {text}"
 
 
 def clean_text(text: str) -> str:
@@ -233,6 +249,7 @@ def make_draft(site: dict, item: dict, lang: str, platform: str, text: str,
     cfg = PLATFORMS[platform]
     cfg_url = resolve_url(item, lang, site["base_url"])
     url = cfg_url if cfg["include_link"] else None
+    text = with_disclosure(text)
     count = effective_length(text, platform, url)
     over = count > cfg["limit"]
     if not warn and cfg["include_link"] and url and url not in text:

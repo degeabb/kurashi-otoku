@@ -31,5 +31,6 @@
   The incorrect "Rakuten Affiliate / affiliate programs" claims are gone.
 
 ## Open
-- Owner to confirm Rakuten's internal rules allow publicly posting the employee referral link and
-  stating employee status on a personal site.
+- (Resolved 2026-11-17) Owner confirmed Rakuten encourages posting the employee referral link on the web
+  and social media (Threads, X, Instagram, etc.).
+- Social posts: generator now enforces a #PR prefix on every draft (see social/README.md).
