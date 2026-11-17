@@ -36,7 +36,8 @@
 - [ ] **vi referral guide body has no Vietnamese diacritics** (whole page, e.g. "Huong dan tung buoc") — needs re-translation
 - [ ] Sitemap lacks privacy/about pages (all langs)
 - [ ] Burmese (my) guide-card copy on homepage written 2026-11-14 — have a native speaker check
-- [ ] **Set up Cloudflare Email Routing** for contact@japanmobilesim.com → forward to personal Gmail (user action; pages already reference this address)
+- [x] **Cloudflare Email Routing** — done 2026-11-17: contact@japanmobilesim.com → owner's Gmail (rule Active; MX route1-3.mx.cloudflare.net + SPF verified). Catch-all disabled (drop).
+  - [ ] Optional: "Send mail as" contact@ from Gmail (needs SMTP relay) so replies don't expose personal address
 - [ ] Verify au/SoftBank prices periodically (IIJmio 5GB ¥950 confirmed correct by user 2026-06-22)
   - 2026-11-14 web check → updated SIM pages (7 langs): docomo MAX ¥7,315→¥8,448, au MAX+ ¥7,238→¥7,788,
     Rakuten shown at regular price ¥1,078~/¥3,278 (family-discount ¥3,168 noted), ahamo shown at new
