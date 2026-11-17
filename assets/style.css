@@ -511,3 +511,5 @@ details.faq-item summary::-webkit-details-marker { display: none; }
 details.faq-item summary::after { content: "+"; position: absolute; right: 4px; top: 0; color: var(--pink); font-weight: 900; font-size: 18px; line-height: 1.2; }
 details.faq-item[open] summary::after { content: "−"; }
 details.faq-item[open] summary { margin-bottom: 8px; }
+.step-img--wide a { display: block; cursor: zoom-in; }
+.step-img--wide img { height: auto; }
