@@ -10,3 +10,6 @@ social/batch.yaml
 # Python bytecode
 __pycache__/
 *.pyc
+
+# Screenshot sources & clean (unwatermarked) originals: keep local only, never publish
+guide_screenshots/

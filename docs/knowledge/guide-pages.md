@@ -41,7 +41,8 @@
 - **Audience**: the general public applying via the site owner's employee referral link (r10.to/hUMVON) — NOT employees
 - **Structure** (rewritten 2026-11-17): 14,000/13,000 cards → conditions → 8 steps (login, password, member info,
   plan, phone number/MNP, identity check, delivery/payment/options, activation + Rakuten Link call) → FAQ → CTA
-- **Screenshots**: `assets/guides/referee-01..07*.webp` (JA UI, personal data masked); sources in `guide_screenshots/referee-flow/`
+- **Screenshots**: `assets/guides/referee-*.webp` (personal data masked, watermarked). Sources + clean originals live in
+  `guide_screenshots/` which is gitignored (local only, not published) since 2026-11-17. Re-run the watermark when replacing images.
 - **Generator**: body built from per-language string tables (zh-cn = OpenCC tw2sp of zh-tw + vocab fixes, Japanese UI labels protected)
 
 ### Known Inaccuracies (not yet fixed)
