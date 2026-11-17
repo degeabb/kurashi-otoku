@@ -29,7 +29,8 @@
 - [x] Referral guide rewritten from the APPLICANT's side with 7 real screenshots, 7 langs (2026-11-17).
       Owner applied via own employee referral link; personal data replaced with dummies + blurred/pixelated.
       Masked sources: guide_screenshots/referee-flow/ ; web images: assets/guides/referee-0*.webp
-  - [ ] Missing screenshot: plan selection (Rakuten最強プラン / プランのみ申し込む) — step 4 is text-only
+  - [x] Plan selection screenshot added (JA: referee-04a-plan-ja.webp, others: EN UI referee-04a-plan.webp); step order fixed to
+        match checkout (本人確認 → 電話番号 → 受け取り・お支払い)
 - [x] Fix password requirement in registration guide — done 2026-11-14, all 7 langs (decisions/011)
 
 ## Medium Priority
