@@ -57,7 +57,7 @@
 - [ ] **Banner is outdated**: official page (campaign 2162, checked 2026-11-17) says applications from 2026-09-17 get
       MNP 14,000 (5k/5k/4k) / new line **13,000** (5k/4k/4k); Turbo 7,000 unchanged. Banner images still show 11,000.
       JA pages: replaced 2026-11-17 with official creative `assets/rakuten-campaign-banner-ja.webp` (14,000/13,000).
-      [ ] Non-JA pages still use outdated `assets/rakuten-campaign-banner-en.avif` (shows 11,000).
+      Non-JA pages: replaced 2026-11-17 with official EN creative `assets/rakuten-campaign-banner-en.webp`.
 - [ ] Bump "情報は2026年3月時点" disclaimers to current once speed-ranking data is re-measured
 - [ ] Verify guide accuracy periodically (Rakuten may change their registration flow)
 

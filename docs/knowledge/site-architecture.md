@@ -63,7 +63,7 @@ Multi-language personal finance & lifestyle affiliate portal for Japan (japanmob
 - Components: `.btn`, `.chip`, `.tag`, `.plan-card`, `.guide-step`, `.timeline`, `.faq-item`
 
 ## Navigation
-- Desktop: logo + nav-links (Home, SIM, Credit Cards, Guides) + lang-switcher
+- Desktop: logo + nav-links (Home, SIM, Credit Cards, Guides → referral application guide since 2026-11-17) + lang-switcher
 - Mobile: hamburger button → full-screen overlay with same links + lang buttons
 - Language switcher buttons link to equivalent page in each language
 
