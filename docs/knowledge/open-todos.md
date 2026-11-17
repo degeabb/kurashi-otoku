@@ -34,6 +34,12 @@
   - [ ] Optional: native-speaker polish of zh-cn home/SIM wording
 - [x] Add 简中 button to lang-switcher + zh-cn hreflang on all home/SIM pages (2026-11-14)
 - [x] vi referral guide diacritics restored (2026-11-17)
+- [x] Referral guide aligned with official campaign rules (code 2162, page dated 2026-11-06), 7 langs (2026-11-17):
+      2nd+ line & re-contract eligible (max 5 lines), referee can't be a Rakuten employee, login via referral URL
+      (or within 7 days after applying), Link call deadline counted from referral login, points 期間限定 6 months,
+      amounts 14,000 MNP / 13,000 other shown in referee card
+  - [ ] Referrer reward ("You earn bonus points for each successful referral") is NOT stated in the public rules — owner to confirm
+- [ ] JA credit-cards page: lang-switcher buttons have no links (decorative); 简中 not added there
 - [x] Sitemap: privacy/about pages added, all 7 langs (2026-11-17)
 - [ ] Burmese (my) guide-card copy on homepage written 2026-11-14 — have a native speaker check
 - [x] **Cloudflare Email Routing** — done 2026-11-17: contact@japanmobilesim.com → owner's Gmail (rule Active; MX route1-3.mx.cloudflare.net + SPF verified). Catch-all disabled (drop).

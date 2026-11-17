@@ -39,7 +39,7 @@ Multi-language personal finance & lifestyle affiliate portal for Japan (japanmob
 │   ├── style.css          (shared CSS, ~480 lines)
 │   ├── lang.js            (minimal, no auto-detection)
 │   ├── guides/            (screenshot images)
-│   ├── rakuten-campaign-banner.avif (JA)
+│   ├── rakuten-campaign-banner-ja.webp (JA, official creative, 14,000/13,000 — 2026-11-17)
 │   ├── rakuten-campaign-banner-en.avif (non-JA)
 │   └── qr-japanmobilesim.png
 ├── guide_screenshots/     (source files, not in site)
