@@ -23,7 +23,7 @@
   - [x] Re-contract eligibility for previously-cancelled users (decisions/006)
   - [x] Point distribution timeline → months 4-6 (decisions/007)
   - [x] Rakuten Link 10-sec call requirement added (decisions/007)
-  - [ ] Point amounts 7,000/14,000/11,000 are in the banner IMAGE (rakuten-campaign-banner.avif); verified current but require image regen to change
+  - [ ] Point amounts are only in the banner IMAGE — new-line amount now outdated (see 'Banner is outdated' below)
   - [x] Clarify it's Rakuten Group employee referral; only referrer must be an employee, referee can be anyone (2026-06-22)
 - [x] Make application entry obvious — banner CTA + floating side banner (decisions/006)
 - [ ] Add real screenshots to referral guide (all languages still have placeholders)
@@ -46,7 +46,10 @@
   - 2026-11-17 official-page check (mineo.jp, uqwimax.jp, softbank.jp): My Soku ¥990 is max 1.5 Mbps (was 3);
     UQ con ¥2,948→¥2,728 (Tokutoku 2 w/ discounts); SoftBank con replaced (PayToku Unlimited closed to new
     sign-ups 2026-06-01) with Teigaku Unlimited ¥8,008. My Pita / Comicomi Value / Tokutoku 2 / PayToku2 confirmed.
-- [ ] **Referral new-line points**: site/banner say 11,000; Nov 2026 sources say 12,000–13,000 — confirm on official Rakuten page, then regen banner + text
+- [ ] **Banner is outdated**: official page (campaign 2162, checked 2026-11-17) says applications from 2026-09-17 get
+      MNP 14,000 (5k/5k/4k) / new line **13,000** (5k/4k/4k); Turbo 7,000 unchanged. Banner images still show 11,000.
+      Site HTML text has no point amounts → only `assets/rakuten-campaign-banner{,-en}.avif` need replacing
+      (ideally the updated official creative from Rakuten's referral materials, not an edited copy).
 - [ ] Bump "情報は2026年3月時点" disclaimers to current once speed-ranking data is re-measured
 - [ ] Verify guide accuracy periodically (Rakuten may change their registration flow)
 

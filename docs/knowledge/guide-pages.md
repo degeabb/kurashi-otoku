@@ -43,7 +43,7 @@
 ### Known Inaccuracies (not yet fixed)
 The referral guide has factual issues identified via web research:
 1. It's specifically a **Rakuten Group employee referral** — only Rakuten employees can be referrers (guide is too generic)
-2. Point amounts should be: Referrer 7,000pts / Referee 14,000pts (MNP) or 11,000pts (new line)
+2. Point amounts (official, applications from 2026-09-17): Referee 14,000pts (MNP) or 13,000pts (new line); Rakuten Turbo 7,000pts. (2025-09-01 → 2026-09-16 new line was 11,000.) Granted over 3 months from the 4th month after referral login; 期間限定, 6-month validity
 3. Points distributed over **months 4-6** (guide says 1-2 months)
 4. Referee must make a **10+ second call via Rakuten Link app** (not mentioned)
 5. Points are "limited-time points" with 6-month expiry
