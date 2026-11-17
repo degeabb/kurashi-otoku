@@ -513,3 +513,6 @@ details.faq-item[open] summary::after { content: "−"; }
 details.faq-item[open] summary { margin-bottom: 8px; }
 .step-img--wide a { display: block; cursor: zoom-in; }
 .step-img--wide img { height: auto; }
+/* Icon bullet lists inside guide steps (emoji act as the bullet) */
+.step-points { list-style: none; padding-left: 0; margin: 4px 0 16px; }
+.step-points li { margin-bottom: 6px; padding-left: 0; }

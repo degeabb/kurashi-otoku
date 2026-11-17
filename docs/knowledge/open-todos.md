@@ -24,6 +24,10 @@
 - [x] GA4 `affiliate_click` event (assets/track.js, 43 pages) with `cta_location` (sticky_bar / float_banner /
       guide_step / guide_bottom / sim_plan_card / top_banner / inline) + `page_lang`
   - [ ] Owner: register `cta_location` and `page_lang` as event-scoped custom dimensions in GA4 (Admin → Custom definitions)
+- [x] Less text (2026-11-17): referral steps 4/5/8 → emoji bullet lists; SIM "Which SIM" cards get icons
+      (💰📶💬🪙🏪🌏); FAQs on SIM (7 langs) + credit-cards are tap-to-open
+- [ ] **Stale claim**: SIM page coverage section/FAQ say Tokyo subway coverage "complete by July 2026 (予定)" and
+      "as of March 2026" — it's past July; re-check Rakuten's current subway status and update (7 langs)
 - [ ] Points timeline graphic (login month → months 4/5/6) on referral guide
 - [ ] Fix headline inconsistency: meta/title "¥100,000+/year" vs hero "¥63,984"
 - [ ] SIM page "March 2026" label → "Prices checked Nov 2026 · speed data Mar 2026"
